@@ -6,19 +6,14 @@ const QuizTimer = ({ initialTime = 300 }) => { // default = 5 minute
   const navigate = useNavigate();
   const location = useLocation();
 
-  // const { 
-  //   time
-  // } = useContext(QuizContext);
-
   useEffect(() => {
     if (timeLeft <= 0) {
       if (location.pathname === "/dashboard") {
         navigate("/result");
-      }
-
-      if (location.pathname === "/vsbot") {
+      } else if (location.pathname === "/vsbot") {
         navigate("/multiend");
       }
+      
       return;
     }
 
@@ -27,7 +22,7 @@ const QuizTimer = ({ initialTime = 300 }) => { // default = 5 minute
     }, 1000);
 
       return () => clearInterval(timer);
-    }, [timeLeft, navigate, location]);
+    }, [navigate, timeLeft, location.pathname]);
 
 
   // Convert seconds to MM:SS
