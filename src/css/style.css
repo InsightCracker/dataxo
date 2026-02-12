@@ -845,9 +845,18 @@ ul {
   border-radius: 15px;
 }
 
+.badge h1 {
+  font-size: 1.5rem;
+}
+
 .badge h2 {
   font-size: 3rem;
+  font-weight: bold;
   margin: 0;
+}
+
+.badge span {
+  font-size: 2rem;
 }
 
 .badge p {
@@ -855,22 +864,69 @@ ul {
   font-size: 1rem;
 }
 
+.share-msg {
+  background-color: #ccc;
+  box-shadow: 0 8px 20px rgba(0,0,0,0.2);
+  font-size: .9rem;
+  padding: .3rem 1rem;
+  border-radius: 5px;
+}
+
+.share-msg p {
+  color: rgba(10, 14, 39, 0.95);
+}
+
+.quick-share-btn {
+  background: rgba(10, 14, 39, 0.95);
+  margin: 1rem 0;
+  padding: 1rem 0;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
 .share-buttons button {
   margin: 5px;
-  padding: 10px 15px;
+  padding: 10px;
   border: none;
-  border-radius: 10px;
+  border-radius: 100%;
   background-color: #fff;
-  color: #2575fc;
+  color: rgba(10, 14, 39, 0.95);
   font-weight: bold;
+  font-size: 1.3rem;
   cursor: pointer;
   transition: transform 0.2s;
 }
 
-.share-buttons button:hover {
+.share-buttons button:hover,
+.quick-share-btn:hover,
+.other-share-btn div:hover {
   transform: scale(1.05);
 }
 
+.other-share-btn {
+  display: flex;
+  justify-content: space-around;
+  margin-top: 1.5rem;
+}
+
+.other-share-btn div {
+  width: 45%;
+  padding: .5rem 0;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: .9rem;
+  font-weight: bold;
+}
+
+.other-share-btn-left {
+  background: rgba(10, 14, 39, 0.623);
+  color: #ccc;
+}
+
+.other-share-btn-right {
+  color: rgba(10, 14, 39, 0.95);
+  background-color: #ccc;
+}
 
 
 @media (max-width: 768px) {
@@ -902,5 +958,9 @@ ul {
 @media (max-width: 350px) {
   .question-missed {
     gap: 1rem;
+  }
+
+  .quiz-share-card {
+  max-width: 300px;
   }
 }

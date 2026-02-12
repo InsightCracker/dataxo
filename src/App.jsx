@@ -18,7 +18,7 @@ import QuizShareCard from './util/QuizShareCard';
 
 function App() {
   const [questions, setQuestions] = useState([]);
-  const [categories, setCategories] = useState('Easy');
+  const [categories, setCategories] = useState('');
   const [score, setScore] = useState(0);
   const [wrongAnswer, setWrongAnswer] = useState(0);
   const [botScore, setBotScore] = useState(0);
@@ -101,7 +101,12 @@ function App() {
             <Route path="/multiend" element={<MultiEnd />} />
             <Route path="/vsbot" element={<VsBot />} />
             <Route path="/help" element={<Help />} />
-            <Route path="/share" element={<QuizShareCard score={score} questions={questions} />} />
+            <Route path="/share" element={<QuizShareCard 
+                score={score} 
+                questions={questions} 
+                categories={categories}
+              />} 
+            />
           </Routes>
         </QuizContext.Provider>
         </TimerProvider>

@@ -72,9 +72,8 @@ const Home = () => {
             <div className="content">
               <h3>Excel</h3>
               <p>Excel is a spreadsheet tool for organizing, analyzing, and visualizing data.</p>
-              <div className="btns-box">
-                <a 
-                  onClick={() => setCategories("Excel")} 
+              <div className="btns-box" onClick={() => setCategories("Excel")}>
+                <a  
                   href="/dashboard" 
                   className="btn card-btn"
                 >Quick Play</a>
