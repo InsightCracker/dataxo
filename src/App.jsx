@@ -103,6 +103,7 @@ function App() {
             <Route path="/help" element={<Help />} />
             <Route path="/share" element={<QuizShareCard 
                 score={score} 
+                setScore={setScore}
                 questions={questions} 
                 categories={categories}
               />} 

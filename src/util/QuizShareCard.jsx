@@ -1,5 +1,10 @@
-import { useEffect, useState } from "react";
-import { useNavigate } from 'react-router-dom';
+import { 
+  useEffect, 
+  useState, 
+  useContext 
+} from "react";
+import { useNavigate, useLocation } from 'react-router-dom';
+import { QuizContext } from "../Helpers/Contexts";
 import confetti from "canvas-confetti";
 
 import {
@@ -17,9 +22,19 @@ const getBadgeEmoji = (percentage) => {
 };
 
 // Quiz Share Card Component
-const QuizShareCard = ({ score, questions, categories }) => {
+const QuizShareCard = ({ 
+  score, 
+  setScore,
+  categories 
+}) => {
+  const { 
+    questions,
+    setWrongAnswer
+  } = useContext(QuizContext);
+
   const navigate = useNavigate();
-  const [percentage, setpercentage] = useState(Math.round((score / questions.length) * 100))
+  const location = useLocation();
+  const [percentage, setpercentage] = useState(Math.round((score / questions?.length || 0) * 100));
     
 
   const result = {
@@ -83,47 +98,65 @@ const QuizShareCard = ({ score, questions, categories }) => {
     }
   };
 
+  const retry = () => {
+    if (location.pathname === "/result") {
+      navigate("/home");
+    } else if (location.pathname === "/multiend") {
+      navigate("/vsbot");
+    }
+    setpercentage(0),
+    setScore(0),
+    setWrongAnswer(0)
+  };
+
   const goToDashboard = () => {
-    setpercentage(0)
-    navigate('/dashboard')
-  }
+    navigate('/home'),
+    setpercentage(0),
+    setScore(0),
+    setWrongAnswer(0)
+  };
 
   return (
-    <div className="quiz-share-card">
-      <div className="badge">
-        <h1>{getBadgeEmoji(percentage)}</h1>
-        <h2>{result.percentage}<span>%</span></h2>
-        <p>Great Job!</p>
-      </div>
+    <div className="container-quiz-share">
+      <div className="quiz-share-card">
+        <div className="badge">
+          <h1>{getBadgeEmoji(percentage)}</h1>
+          <h2>{result.percentage}<span>%</span></h2>
+          <p>Great Job!</p>
+        </div>
 
-      <div className="share-msg">
-        <p>{result.message}</p>
-      </div>
-
-      <div 
-        onClick={() => share()} 
-        className="quick-share-btn"
-      >
-        <button>Quick Share</button>
-      </div>
-
-      <div className="share-buttons">
-        <button onClick={() => share("whatsapp")}><FaWhatsapp /></button>
-        <button onClick={() => share("twitter")}><FaTwitter /></button>
-        <button onClick={() => share("facebook")}><FaFacebook /></button>
-        <button onClick={() => share("linkedin")}><FaLinkedinIn /></button>
-      </div>
-
-      <div className="other-share-btn">
-        <div className="other-share-btn-left">
-          Try Again
+        <div className="share-msg">
+          <p>{result.message}</p>
         </div>
 
         <div 
-          className="other-share-btn-right"
-          onClick={goToDashboard}
+          onClick={() => share()} 
+          className="quick-share-btn"
         >
-          Go to Dashboard
+          <button>Quick Share</button>
+        </div>
+
+        <div className="share-buttons">
+          <button onClick={() => share("whatsapp")}><FaWhatsapp /></button>
+          <button onClick={() => share("twitter")}><FaTwitter /></button>
+          <button onClick={() => share("facebook")}><FaFacebook /></button>
+          <button onClick={() => share("linkedin")}><FaLinkedinIn /></button>
+        </div>
+
+        <div className="other-share-btn">
+          <div 
+            className="other-share-btn-left"
+            onClick={retry}
+          >
+            Try Again
+          </div>
+
+          <div 
+            className="other-share-btn-right"
+            onClick={goToDashboard}
+          >
+            Go to Dashboard
+          </div>
         </div>
       </div>
     </div>

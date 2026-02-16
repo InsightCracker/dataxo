@@ -1,4 +1,4 @@
-import { useContext } from "react";
+import { useContext, useState } from "react";
 import { useNavigate } from 'react-router-dom';
 import { QuizContext } from "../Helpers/Contexts";
 import { 
@@ -14,8 +14,13 @@ import {
   FaSpinner 
 } from "react-icons/fa6";
 
+
+import QuizShareCard from "../util/QuizShareCard";
+
+
 const MultiEnd = () => {
   const navigate = useNavigate();
+  const [show, setShow] = useState(false)
 
   const {
     score,
@@ -47,12 +52,27 @@ const MultiEnd = () => {
   }
   
   return (
-    <Box className="result-screen">
+    <Box className="result-screen" sx={{
+          backgroundColor: show
+            ? "rgba(255,255,255,0.2)"
+            : "transparent",
+
+          backdropFilter: show ? "blur(10px)" : "blur(0px)",
+          WebkitBackdropFilter: show ? "blur(10px)" : "blur(0px)",
+        }}>
       <Box sx={{
           display: 'flex',
           justifyContent: 'center',
           alignItems: 'center',
-          flexDir: 'column'
+          flexDir: 'column',
+          position: 'relative',
+
+          backgroundColor: show
+            ? "rgba(255,255,255,0.2)"
+            : "transparent",
+
+          backdropFilter: show ? "blur(10px)" : "blur(0px)",
+          WebkitBackdropFilter: show ? "blur(10px)" : "blur(0px)",
         }}>
           {/* Navbar */}
           <div className="resultpage-navbar">
@@ -101,7 +121,7 @@ const MultiEnd = () => {
             <p>Retry Quiz</p>
           </Box>
 
-          <Box className="quiz-btn" onClick={console.log('share')}>
+          <Box className="quiz-btn">
             <div>
               <p><FaTrophy /></p>
             </div>
@@ -110,7 +130,10 @@ const MultiEnd = () => {
             </div>
           </Box>
 
-          <Box className="quiz-btn" onClick={console.log('share')}>
+          <Box 
+            onClick={() => setShow(true)}
+            className="quiz-btn"
+          >
             <div>
               <p><FaShareNodes /></p>
             </div>
@@ -126,6 +149,13 @@ const MultiEnd = () => {
             <div>
               <p>Back to Dashboard</p>
             </div>
+          </Box>
+
+          <Box 
+            style={{ display: show ? "block" : "none" }} 
+            className="quiz-share-dialogue-box"
+          >
+            <QuizShareCard />
           </Box>
       </Box>
     </Box>

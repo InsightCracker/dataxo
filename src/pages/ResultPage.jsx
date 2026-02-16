@@ -15,6 +15,8 @@ import {
   FaTrophy 
 } from "react-icons/fa6";
 
+import QuizShareCard from "../util/QuizShareCard";
+
 const ResultPage = () => {
   const navigate = useNavigate();
 

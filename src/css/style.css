@@ -826,16 +826,24 @@ ul {
 }
 
 /* Share Card */
+.container-quiz-share {
+  display: flex;
+  justify-content: center;
+  align-items: center; 
+}
+
 .quiz-share-card {
   max-width: 350px;
-  margin: 20px auto;
+  position:absolute;
+  top: 0;
+  z-index: 1000;
+  margin: 20px 0;
   padding: 20px;
   background: linear-gradient(135deg, #6a11cb 0%, #2575fc 100%);
   color: white;
   border-radius: 20px;
   text-align: center;
   box-shadow: 0 8px 20px rgba(0,0,0,0.2);
-  font-family: 'Arial', sans-serif;
 }
 
 .badge {
