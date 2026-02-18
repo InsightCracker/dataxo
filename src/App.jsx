@@ -14,6 +14,7 @@ import Help from "./pages/Help";
 import FirstPage from "./pages/FirstPage";
 import Dashboard from './pages/Dashboard';
 import QuizShareCard from './util/QuizShareCard';
+import PDFConverter from './pages/PDFConverter';
 
 import { QuizContext } from "./Helpers/Contexts";
 import { TimerProvider } from './util/TimerProvider';
@@ -132,6 +133,7 @@ function App() {
                 categories={categories}
               />} 
             />
+            <Route path="/converter" element={<PDFConverter />} />
           </Routes>
         </QuizContext.Provider>
         </TimerProvider>

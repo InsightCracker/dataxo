@@ -2758,5 +2758,741 @@
     "tags": ["excel", "trick", "conditional formatting"],
     "category": "excel",
     "difficulty": "Intermediate"
+  },
+  {
+    "id": 129,
+    "question": "Which SQL clause is used to filter records?",
+    "description": "where clause",
+    "answers": {
+      "answer_a": "FILTER",
+      "answer_b": "WHERE",
+      "answer_c": "HAVING",
+      "answer_d": "SELECT"
+    },
+    "multiple_correct_answers": "false",
+    "correct_answers": {
+      "answer_a_correct": "false",
+      "answer_b_correct": "true",
+      "answer_c_correct": "false",
+      "answer_d_correct": "false"
+    },
+    "explanation": "The WHERE clause filters rows based on a specified condition.",
+    "tip": "Use WHERE before GROUP BY or ORDER BY.",
+    "tags": ["sql", "beginner", "filter"],
+    "category": "sql",
+    "difficulty": "Beginner"
+  },
+  {
+    "id": 130,
+    "question": "Which SQL statement is used to remove all rows from a table without deleting the table itself?",
+    "description": "truncate statement",
+    "answers": {
+      "answer_a": "DELETE",
+      "answer_b": "TRUNCATE",
+      "answer_c": "DROP",
+      "answer_d": "REMOVE"
+    },
+    "multiple_correct_answers": "false",
+    "correct_answers": {
+      "answer_a_correct": "false",
+      "answer_b_correct": "true",
+      "answer_c_correct": "false",
+      "answer_d_correct": "false"
+    },
+    "explanation": "TRUNCATE removes all rows from a table quickly and resets identity counters.",
+    "tip": "Unlike DELETE, TRUNCATE cannot be rolled back in some databases.",
+    "tags": ["sql", "beginner", "table"],
+    "category": "sql",
+    "difficulty": "Beginner"
+  },
+  {
+    "id": 131,
+    "question": "Which SQL function returns the number of rows in a table?",
+    "description": "count aggregate function",
+    "answers": {
+      "answer_a": "SUM()",
+      "answer_b": "COUNT()",
+      "answer_c": "ROWNUM()",
+      "answer_d": "TOTAL()"
+    },
+    "multiple_correct_answers": "false",
+    "correct_answers": {
+      "answer_a_correct": "false",
+      "answer_b_correct": "true",
+      "answer_c_correct": "false",
+      "answer_d_correct": "false"
+    },
+    "explanation": "COUNT() returns the number of rows that match a condition or all rows.",
+    "tip": "Use COUNT(*) to count all rows including NULLs.",
+    "tags": ["sql", "beginner", "aggregate"],
+    "category": "sql",
+    "difficulty": "Beginner"
+  },
+  {
+    "id": 132,
+    "question": "Which SQL clause is used to group rows that have the same values in a column?",
+    "description": "group by clause",
+    "answers": {
+      "answer_a": "GROUP BY",
+      "answer_b": "ORDER BY",
+      "answer_c": "HAVING",
+      "answer_d": "UNION"
+    },
+    "multiple_correct_answers": "false",
+    "correct_answers": {
+      "answer_a_correct": "true",
+      "answer_b_correct": "false",
+      "answer_c_correct": "false",
+      "answer_d_correct": "false"
+    },
+    "explanation": "GROUP BY aggregates rows with the same values in specified columns.",
+    "tip": "Use with aggregate functions like COUNT(), SUM(), AVG().",
+    "tags": ["sql", "intermediate", "aggregate"],
+    "category": "sql",
+    "difficulty": "Intermediate"
+  },
+  {
+    "id": 133,
+    "question": "Which clause is used to filter aggregated results?",
+    "description": "having clause",
+    "answers": {
+      "answer_a": "WHERE",
+      "answer_b": "HAVING",
+      "answer_c": "FILTER",
+      "answer_d": "GROUP BY"
+    },
+    "multiple_correct_answers": "false",
+    "correct_answers": {
+      "answer_a_correct": "false",
+      "answer_b_correct": "true",
+      "answer_c_correct": "false",
+      "answer_d_correct": "false"
+    },
+    "explanation": "HAVING filters groups after aggregation, unlike WHERE which filters rows before aggregation.",
+    "tip": "Always use HAVING with GROUP BY for aggregated data.",
+    "tags": ["sql", "intermediate", "aggregate"],
+    "category": "sql",
+    "difficulty": "Intermediate"
+  },
+  {
+    "id": 134,
+    "question": "What will `SELECT DISTINCT city FROM customers` do?",
+    "description": "distinct keyword",
+    "answers": {
+      "answer_a": "Return all cities including duplicates",
+      "answer_b": "Return unique cities only",
+      "answer_c": "Return an error",
+      "answer_d": "Return NULL values only"
+    },
+    "multiple_correct_answers": "false",
+    "correct_answers": {
+      "answer_a_correct": "false",
+      "answer_b_correct": "true",
+      "answer_c_correct": "false",
+      "answer_d_correct": "false"
+    },
+    "explanation": "DISTINCT returns unique values, removing duplicates from the result.",
+    "tip": "Use DISTINCT on multiple columns to get unique combinations.",
+    "tags": ["sql", "intermediate", "select"],
+    "category": "sql",
+    "difficulty": "Intermediate"
+  },
+  {
+    "id": 135,
+    "question": "Which SQL keyword is used to combine the result of two queries and remove duplicates?",
+    "description": "union vs union all",
+    "answers": {
+      "answer_a": "UNION",
+      "answer_b": "UNION ALL",
+      "answer_c": "JOIN",
+      "answer_d": "MERGE"
+    },
+    "multiple_correct_answers": "false",
+    "correct_answers": {
+      "answer_a_correct": "true",
+      "answer_b_correct": "false",
+      "answer_c_correct": "false",
+      "answer_d_correct": "false"
+    },
+    "explanation": "UNION merges results and removes duplicates. UNION ALL keeps duplicates.",
+    "tip": "Column order and data types must match in both queries.",
+    "tags": ["sql", "intermediate", "combine"],
+    "category": "sql",
+    "difficulty": "Intermediate"
+  },
+  {
+    "id": 136,
+    "question": "What type of JOIN returns all records from the left table and matching records from the right table?",
+    "description": "left join",
+    "answers": {
+      "answer_a": "INNER JOIN",
+      "answer_b": "LEFT JOIN",
+      "answer_c": "RIGHT JOIN",
+      "answer_d": "FULL OUTER JOIN"
+    },
+    "multiple_correct_answers": "false",
+    "correct_answers": {
+      "answer_a_correct": "false",
+      "answer_b_correct": "true",
+      "answer_c_correct": "false",
+      "answer_d_correct": "false"
+    },
+    "explanation": "LEFT JOIN returns all rows from the left table and matching rows from the right table. Non-matching right table rows are NULL.",
+    "tip": "Use RIGHT JOIN to reverse the logic.",
+    "tags": ["sql", "intermediate", "join"],
+    "category": "sql",
+    "difficulty": "Intermediate"
+  },
+  {
+    "id": 137,
+    "question": "Which SQL keyword is used to rename a column or table in the result set?",
+    "description": "alias using as",
+    "answers": {
+      "answer_a": "AS",
+      "answer_b": "RENAME",
+      "answer_c": "ALIAS",
+      "answer_d": "LABEL"
+    },
+    "multiple_correct_answers": "false",
+    "correct_answers": {
+      "answer_a_correct": "true",
+      "answer_b_correct": "false",
+      "answer_c_correct": "false",
+      "answer_d_correct": "false"
+    },
+    "explanation": "AS is used to create column or table aliases in SQL results.",
+    "tip": "Optional keyword; you can write `column_name alias_name` without AS in most SQL dialects.",
+    "tags": ["sql", "beginner", "alias"],
+    "category": "sql",
+    "difficulty": "Beginner"
+  },
+  {
+    "id": 138,
+    "question": "Which SQL function returns the largest value in a column?",
+    "description": "max aggregate function",
+    "answers": {
+      "answer_a": "MAX()",
+      "answer_b": "MIN()",
+      "answer_c": "TOP()",
+      "answer_d": "GREATEST()"
+    },
+    "multiple_correct_answers": "false",
+    "correct_answers": {
+      "answer_a_correct": "true",
+      "answer_b_correct": "false",
+      "answer_c_correct": "false",
+      "answer_d_correct": "false"
+    },
+    "explanation": "MAX() returns the largest value in a column or expression.",
+    "tip": "Use with GROUP BY to find maximum per group.",
+    "tags": ["sql", "intermediate", "aggregate"],
+    "category": "sql",
+    "difficulty": "Intermediate"
+  },
+  {
+    "id": 139,
+    "question": "Which SQL function returns the current date in the database?",
+    "description": "current date functions",
+    "answers": {
+      "answer_a": "NOW()",
+      "answer_b": "CURDATE()",
+      "answer_c": "GETDATE()",
+      "answer_d": "All of the above depending on database"
+    },
+    "multiple_correct_answers": "false",
+    "correct_answers": {
+      "answer_a_correct": "false",
+      "answer_b_correct": "false",
+      "answer_c_correct": "false",
+      "answer_d_correct": "true"
+    },
+    "explanation": "Different SQL dialects have different functions for current date/time.",
+    "tip": "MySQL: NOW()/CURDATE(), SQL Server: GETDATE(), Oracle: SYSDATE.",
+    "tags": ["sql", "intermediate", "date"],
+    "category": "sql",
+    "difficulty": "Intermediate"
+  },
+  {
+    "id": 140,
+    "question": "Which SQL statement is used to change existing data in a table?",
+    "description": "update statement",
+    "answers": {
+      "answer_a": "ALTER",
+      "answer_b": "UPDATE",
+      "answer_c": "MODIFY",
+      "answer_d": "SET"
+    },
+    "multiple_correct_answers": "false",
+    "correct_answers": {
+      "answer_a_correct": "false",
+      "answer_b_correct": "true",
+      "answer_c_correct": "false",
+      "answer_d_correct": "false"
+    },
+    "explanation": "UPDATE modifies existing rows in a table.",
+    "tip": "Always include a WHERE clause to avoid updating all rows accidentally.",
+    "tags": ["sql", "beginner", "dml"],
+    "category": "sql",
+    "difficulty": "Beginner"
+  },
+  {
+    "id": 141,
+    "question": "Which SQL statement deletes a table and its structure permanently?",
+    "description": "drop table statement",
+    "answers": {
+      "answer_a": "DELETE TABLE",
+      "answer_b": "REMOVE TABLE",
+      "answer_c": "DROP TABLE",
+      "answer_d": "TRUNCATE TABLE"
+    },
+    "multiple_correct_answers": "false",
+    "correct_answers": {
+      "answer_a_correct": "false",
+      "answer_b_correct": "false",
+      "answer_c_correct": "true",
+      "answer_d_correct": "false"
+    },
+    "explanation": "DROP TABLE removes the table and all its data permanently.",
+    "tip": "TRUNCATE only removes rows, table remains.",
+    "tags": ["sql", "beginner", "dml"],
+    "category": "sql",
+    "difficulty": "Beginner"
+  },
+  {
+    "id": 142,
+    "question": "Which SQL statement adds new rows to a table?",
+    "description": "insert statement",
+    "answers": {
+      "answer_a": "INSERT INTO",
+      "answer_b": "UPDATE",
+      "answer_c": "CREATE",
+      "answer_d": "ADD ROW"
+    },
+    "multiple_correct_answers": "false",
+    "correct_answers": {
+      "answer_a_correct": "true",
+      "answer_b_correct": "false",
+      "answer_c_correct": "false",
+      "answer_d_correct": "false"
+    },
+    "explanation": "INSERT INTO adds new rows to a table.",
+    "tip": "You can insert multiple rows at once with a VALUES list.",
+    "tags": ["sql", "beginner", "dml"],
+    "category": "sql",
+    "difficulty": "Beginner"
+  },
+  {
+    "id": 143,
+    "question": "Which SQL operator is used to match a pattern in a WHERE clause?",
+    "description": "like operator",
+    "answers": {
+      "answer_a": "MATCH",
+      "answer_b": "LIKE",
+      "answer_c": "PATTERN",
+      "answer_d": "REGEX"
+    },
+    "multiple_correct_answers": "false",
+    "correct_answers": {
+      "answer_a_correct": "false",
+      "answer_b_correct": "true",
+      "answer_c_correct": "false",
+      "answer_d_correct": "false"
+    },
+    "explanation": "LIKE allows pattern matching using % (any number of characters) and _ (single character).",
+    "tip": "Use ESCAPE to match literal % or _ characters.",
+    "tags": ["sql", "intermediate", "pattern"],
+    "category": "sql",
+    "difficulty": "Intermediate"
+  },
+  {
+    "id": 144,
+    "question": "Which SQL keyword is used to sort the result set?",
+    "description": "order by clause",
+    "answers": {
+      "answer_a": "SORT",
+      "answer_b": "ORDER BY",
+      "answer_c": "GROUP BY",
+      "answer_d": "ARRANGE"
+    },
+    "multiple_correct_answers": "false",
+    "correct_answers": {
+      "answer_a_correct": "false",
+      "answer_b_correct": "true",
+      "answer_c_correct": "false",
+      "answer_d_correct": "false"
+    },
+    "explanation": "ORDER BY sorts the result set by one or more columns in ascending or descending order.",
+    "tip": "Default order is ascending (ASC).",
+    "tags": ["sql", "beginner", "sort"],
+    "category": "sql",
+    "difficulty": "Beginner"
+  },
+  {
+    "id": 145,
+    "question": "What does `INNER JOIN` do?",
+    "description": "inner join explanation",
+    "answers": {
+      "answer_a": "Returns all records from left table",
+      "answer_b": "Returns all records from right table",
+      "answer_c": "Returns only matching records from both tables",
+      "answer_d": "Returns all records from both tables"
+    },
+    "multiple_correct_answers": "false",
+    "correct_answers": {
+      "answer_a_correct": "false",
+      "answer_b_correct": "false",
+      "answer_c_correct": "true",
+      "answer_d_correct": "false"
+    },
+    "explanation": "INNER JOIN returns rows that have matching values in both tables.",
+    "tip": "Use LEFT JOIN to include unmatched rows from left table.",
+    "tags": ["sql", "intermediate", "join"],
+    "category": "sql",
+    "difficulty": "Intermediate"
+  },
+  {
+    "id": 146,
+    "question": "What does this query return?\n`SELECT * FROM employees e1 WHERE salary > (SELECT AVG(salary) FROM employees e2)`",
+    "description": "subquery for above-average salaries",
+    "answers": {
+      "answer_a": "All employees",
+      "answer_b": "Employees with salary equal to average",
+      "answer_c": "Employees with salary above average",
+      "answer_d": "Error"
+    },
+    "multiple_correct_answers": "false",
+    "correct_answers": {
+      "answer_a_correct": "false",
+      "answer_b_correct": "false",
+      "answer_c_correct": "true",
+      "answer_d_correct": "false"
+    },
+    "explanation": "The subquery calculates the average salary. The main query selects employees earning above that average.",
+    "tip": "Subqueries can return single values to compare in WHERE clauses.",
+    "tags": ["sql", "advanced", "subquery"],
+    "category": "sql",
+    "difficulty": "Advanced"
+  },
+  {
+    "id": 147,
+    "question": "What is the difference between `WHERE` and `HAVING`?",
+    "description": "filtering vs aggregated filtering",
+    "answers": {
+      "answer_a": "WHERE filters aggregated results",
+      "answer_b": "HAVING filters rows before aggregation",
+      "answer_c": "WHERE filters rows before aggregation, HAVING filters aggregated results",
+      "answer_d": "No difference"
+    },
+    "multiple_correct_answers": "false",
+    "correct_answers": {
+      "answer_a_correct": "false",
+      "answer_b_correct": "false",
+      "answer_c_correct": "true",
+      "answer_d_correct": "false"
+    },
+    "explanation": "WHERE filters raw rows, HAVING filters after aggregation.",
+    "tip": "Always use HAVING with GROUP BY to filter aggregates.",
+    "tags": ["sql", "advanced", "aggregate"],
+    "category": "sql",
+    "difficulty": "Advanced"
+  },
+  {
+    "id": 148,
+    "question": "Which window function returns the position of a row within its partition?",
+    "description": "row_number function",
+    "answers": {
+      "answer_a": "RANK()",
+      "answer_b": "ROW_NUMBER()",
+      "answer_c": "DENSE_RANK()",
+      "answer_d": "POSITION()"
+    },
+    "multiple_correct_answers": "false",
+    "correct_answers": {
+      "answer_a_correct": "false",
+      "answer_b_correct": "true",
+      "answer_c_correct": "false",
+      "answer_d_correct": "false"
+    },
+    "explanation": "ROW_NUMBER() assigns a unique sequential number to rows within a partition.",
+    "tip": "RANK() and DENSE_RANK() handle ties differently.",
+    "tags": ["sql", "advanced", "window function"],
+    "category": "sql",
+    "difficulty": "Advanced"
+  },
+  {
+    "id": 149,
+    "question": "What is the difference between `RANK()` and `DENSE_RANK()`?",
+    "description": "window function tie handling",
+    "answers": {
+      "answer_a": "RANK() skips numbers on ties, DENSE_RANK() does not",
+      "answer_b": "RANK() does not skip numbers, DENSE_RANK() skips numbers",
+      "answer_c": "Both are identical",
+      "answer_d": "Both always return unique values"
+    },
+    "multiple_correct_answers": "false",
+    "correct_answers": {
+      "answer_a_correct": "true",
+      "answer_b_correct": "false",
+      "answer_c_correct": "false",
+      "answer_d_correct": "false"
+    },
+    "explanation": "RANK() leaves gaps after ties; DENSE_RANK() numbers continuously.",
+    "tip": "Use DENSE_RANK() if you don’t want gaps in rank numbers.",
+    "tags": ["sql", "advanced", "window function"],
+    "category": "sql",
+    "difficulty": "Advanced"
+  },
+  {
+    "id": 150,
+    "question": "Which SQL construct allows you to reference the result of a query within itself?",
+    "description": "common table expression cte",
+    "answers": {
+      "answer_a": "Subquery",
+      "answer_b": "JOIN",
+      "answer_c": "CTE (WITH clause)",
+      "answer_d": "UNION"
+    },
+    "multiple_correct_answers": "false",
+    "correct_answers": {
+      "answer_a_correct": "false",
+      "answer_b_correct": "false",
+      "answer_c_correct": "true",
+      "answer_d_correct": "false"
+    },
+    "explanation": "CTEs allow a query to reference itself, useful for recursion and cleaner queries.",
+    "tip": "Start with WITH cte_name AS (SELECT ...)",
+    "tags": ["sql", "advanced", "cte"],
+    "category": "sql",
+    "difficulty": "Advanced"
+  },
+  {
+    "id": 151,
+    "question": "What does a `SELF JOIN` do?",
+    "description": "joining a table to itself",
+    "answers": {
+      "answer_a": "Joins two different tables",
+      "answer_b": "Joins a table with itself",
+      "answer_c": "Joins a table to a view",
+      "answer_d": "Creates a duplicate table"
+    },
+    "multiple_correct_answers": "false",
+    "correct_answers": {
+      "answer_a_correct": "false",
+      "answer_b_correct": "true",
+      "answer_c_correct": "false",
+      "answer_d_correct": "false"
+    },
+    "explanation": "A SELF JOIN allows comparison between rows in the same table.",
+    "tip": "Use aliases to distinguish the same table.",
+    "tags": ["sql", "advanced", "join"],
+    "category": "sql",
+    "difficulty": "Advanced"
+  },
+  {
+    "id": 152,
+    "question": "Which SQL clause is evaluated first in a SELECT query?",
+    "description": "execution order",
+    "answers": {
+      "answer_a": "FROM",
+      "answer_b": "WHERE",
+      "answer_c": "SELECT",
+      "answer_d": "ORDER BY"
+    },
+    "multiple_correct_answers": "false",
+    "correct_answers": {
+      "answer_a_correct": "true",
+      "answer_b_correct": "false",
+      "answer_c_correct": "false",
+      "answer_d_correct": "false"
+    },
+    "explanation": "FROM is processed first to identify the source table(s). Then WHERE, GROUP BY, HAVING, SELECT, ORDER BY.",
+    "tip": "Understanding execution order helps with query optimization.",
+    "tags": ["sql", "advanced", "execution order"],
+    "category": "sql",
+    "difficulty": "Advanced"
+  },
+  {
+    "id": 153,
+    "question": "What does `EXISTS` check in a subquery?",
+    "description": "exists operator",
+    "answers": {
+      "answer_a": "Whether a row meets a condition",
+      "answer_b": "Whether a table exists",
+      "answer_c": "Whether a column exists",
+      "answer_d": "Whether the subquery returns at least one row"
+    },
+    "multiple_correct_answers": "false",
+    "correct_answers": {
+      "answer_a_correct": "false",
+      "answer_b_correct": "false",
+      "answer_c_correct": "false",
+      "answer_d_correct": "true"
+    },
+    "explanation": "EXISTS returns TRUE if the subquery returns at least one row.",
+    "tip": "Often used in correlated subqueries.",
+    "tags": ["sql", "advanced", "subquery"],
+    "category": "sql",
+    "difficulty": "Advanced"
+  },
+  {
+    "id": 154,
+    "question": "What is the difference between `INNER JOIN` and `OUTER JOIN`?",
+    "description": "join type trap",
+    "answers": {
+      "answer_a": "INNER JOIN returns unmatched rows",
+      "answer_b": "OUTER JOIN returns unmatched rows in addition to matched rows",
+      "answer_c": "INNER JOIN includes NULLs, OUTER JOIN ignores NULLs",
+      "answer_d": "No difference"
+    },
+    "multiple_correct_answers": "false",
+    "correct_answers": {
+      "answer_a_correct": "false",
+      "answer_b_correct": "true",
+      "answer_c_correct": "false",
+      "answer_d_correct": "false"
+    },
+    "explanation": "OUTER JOIN includes unmatched rows from left, right, or both tables depending on LEFT, RIGHT, or FULL OUTER JOIN.",
+    "tip": "INNER JOIN only includes rows with matches in both tables.",
+    "tags": ["sql", "advanced", "join"],
+    "category": "sql",
+    "difficulty": "Advanced"
+  },
+  {
+    "id": 155,
+    "question": "Which SQL function calculates cumulative totals?",
+    "description": "window function cumulative sum",
+    "answers": {
+      "answer_a": "SUM() with GROUP BY",
+      "answer_b": "SUM() OVER (ORDER BY ...)",
+      "answer_c": "COUNT() OVER (PARTITION BY ...)",
+      "answer_d": "CUMSUM()"
+    },
+    "multiple_correct_answers": "false",
+    "correct_answers": {
+      "answer_a_correct": "false",
+      "answer_b_correct": "true",
+      "answer_c_correct": "false",
+      "answer_d_correct": "false"
+    },
+    "explanation": "SUM() OVER (ORDER BY ...) calculates running totals as a window function.",
+    "tip": "Cumulative calculations need ORDER BY inside OVER clause.",
+    "tags": ["sql", "advanced", "window function"],
+    "category": "sql",
+    "difficulty": "Advanced"
+  },
+  {
+    "id": 156,
+    "question": "Which statement is true about correlated subqueries?",
+    "description": "correlated vs non-correlated",
+    "answers": {
+      "answer_a": "They execute once for the entire query",
+      "answer_b": "They execute once per row of the outer query",
+      "answer_c": "They cannot reference outer query columns",
+      "answer_d": "They are faster than non-correlated subqueries"
+    },
+    "multiple_correct_answers": "false",
+    "correct_answers": {
+      "answer_a_correct": "false",
+      "answer_b_correct": "true",
+      "answer_c_correct": "false",
+      "answer_d_correct": "false"
+    },
+    "explanation": "Correlated subqueries reference outer query columns and are executed per outer row.",
+    "tip": "Use with caution; performance can be slow on large tables.",
+    "tags": ["sql", "advanced", "subquery"],
+    "category": "sql",
+    "difficulty": "Advanced"
+  },
+  {
+    "id": 157,
+    "question": "What will happen if you perform `SELECT * FROM table1 t1 CROSS JOIN table2 t2`?",
+    "description": "cross join cartesian product",
+    "answers": {
+      "answer_a": "Rows matched by condition",
+      "answer_b": "All rows from table1 repeated for each row of table2",
+      "answer_c": "Only rows with same column values",
+      "answer_d": "Error"
+    },
+    "multiple_correct_answers": "false",
+    "correct_answers": {
+      "answer_a_correct": "false",
+      "answer_b_correct": "true",
+      "answer_c_correct": "false",
+      "answer_d_correct": "false"
+    },
+    "explanation": "CROSS JOIN returns the Cartesian product of two tables (all combinations).",
+    "tip": "Be careful with large tables; result set can explode.",
+    "tags": ["sql", "advanced", "join"],
+    "category": "sql",
+    "difficulty": "Advanced"
+  },
+  {
+    "id": 158,
+    "question": "What does `SELECT CASE WHEN salary > 5000 THEN 'High' ELSE 'Low' END FROM employees` do?",
+    "description": "case expression",
+    "answers": {
+      "answer_a": "Filters employees",
+      "answer_b": "Creates a new column with 'High' or 'Low' based on condition",
+      "answer_c": "Updates salary column",
+      "answer_d": "Throws error"
+    },
+    "multiple_correct_answers": "false",
+    "correct_answers": {
+      "answer_a_correct": "false",
+      "answer_b_correct": "true",
+      "answer_c_correct": "false",
+      "answer_d_correct": "false"
+    },
+    "explanation": "CASE returns values conditionally, creating computed output per row.",
+    "tip": "CASE can be used in SELECT, ORDER BY, or WHERE.",
+    "tags": ["sql", "advanced", "conditional"],
+    "category": "sql",
+    "difficulty": "Advanced"
+  },
+  {
+    "id": 159,
+    "question": "Which function removes duplicate rows in a SELECT query without using DISTINCT?",
+    "description": "row_number deduplication",
+    "answers": {
+      "answer_a": "ROW_NUMBER() with PARTITION BY and filter",
+      "answer_b": "GROUP BY",
+      "answer_c": "COUNT()",
+      "answer_d": "UNION ALL"
+    },
+    "multiple_correct_answers": "false",
+    "correct_answers": {
+      "answer_a_correct": "true",
+      "answer_b_correct": "false",
+      "answer_c_correct": "false",
+      "answer_d_correct": "false"
+    },
+    "explanation": "ROW_NUMBER() can be used to assign a number per duplicate group and then filter to 1.",
+    "tip": "Useful when DISTINCT is insufficient for complex conditions.",
+    "tags": ["sql", "advanced", "window function"],
+    "category": "sql",
+    "difficulty": "Advanced"
+  },
+  {
+    "id": 160,
+    "question": "Which SQL clause can be used to pivot data?",
+    "description": "pivoting data",
+    "answers": {
+      "answer_a": "GROUP BY",
+      "answer_b": "PIVOT",
+      "answer_c": "UNPIVOT",
+      "answer_d": "ORDER BY"
+    },
+    "multiple_correct_answers": "false",
+    "correct_answers": {
+      "answer_a_correct": "false",
+      "answer_b_correct": "true",
+      "answer_c_correct": "false",
+      "answer_d_correct": "false"
+    },
+    "explanation": "PIVOT transforms rows into columns, summarizing data.",
+    "tip": "Syntax varies by database (SQL Server, Oracle, etc.).",
+    "tags": ["sql", "advanced", "pivot"],
+    "category": "sql",
+    "difficulty": "Advanced"
   }
 ]

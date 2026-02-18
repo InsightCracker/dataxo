@@ -110,7 +110,7 @@ const QuizShareCard = ({
 
     if (location.pathname === "/result") {
       setRefresh(prev => !prev);
-      navigate("/dashboard");
+      navigate("/solo");
     } else if (location.pathname === "/multiend") {
       setRefresh(prev => !prev);
       navigate("/vsbot");

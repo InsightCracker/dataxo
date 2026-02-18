@@ -964,6 +964,10 @@ ul {
   .footer-bottom p{
     font-size: .8rem;
   }
+
+  .question-board {
+    padding: 0 .5rem;
+  }
 }
 
 @media (max-width: 350px) {
