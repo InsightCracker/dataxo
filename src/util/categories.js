@@ -8,8 +8,8 @@ export const categoriesList = [
     description: "SQL (Structured Query Language) is a programming language used to manage and query relational databases."
   },
   {
-    name: "data modelling",
-    description: "Data modelling is the process of structuring and organizing data so it can be stored, understood, and used effectively."
+    name: "data modeling",
+    description: "Data modeling is the process of structuring and organizing data so it can be stored, understood, and used effectively."
   },
   {
     name: "data cleaning",

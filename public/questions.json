@@ -3494,5 +3494,3340 @@
     "tags": ["sql", "advanced", "pivot"],
     "category": "sql",
     "difficulty": "Advanced"
+  },
+  {
+    "id": 161,
+    "question": "What does this query return?\n`SELECT employee_id, COUNT(*) OVER (PARTITION BY department_id) FROM employees`",
+    "description": "window function count per partition",
+    "answers": {
+      "answer_a": "Total employees in table",
+      "answer_b": "Number of employees per department repeated on each row",
+      "answer_c": "Error",
+      "answer_d": "Only first employee per department"
+    },
+    "multiple_correct_answers": "false",
+    "correct_answers": {
+      "answer_a_correct": "false",
+      "answer_b_correct": "true",
+      "answer_c_correct": "false",
+      "answer_d_correct": "false"
+    },
+    "explanation": "COUNT() OVER(PARTITION BY ...) counts rows per group but returns it on every row.",
+    "tip": "Use window functions to compute aggregates without collapsing rows.",
+    "tags": ["sql", "advanced", "window function"],
+    "category": "sql",
+    "difficulty": "Advanced"
+  },
+  {
+    "id": 162,
+    "question": "What is the result of a `FULL OUTER JOIN` between table A and table B?",
+    "description": "full outer join explanation",
+    "answers": {
+      "answer_a": "Only rows that match in both tables",
+      "answer_b": "All rows from table A",
+      "answer_c": "All rows from table B",
+      "answer_d": "All rows from both tables, matching where possible and NULL elsewhere"
+    },
+    "multiple_correct_answers": "false",
+    "correct_answers": {
+      "answer_a_correct": "false",
+      "answer_b_correct": "false",
+      "answer_c_correct": "false",
+      "answer_d_correct": "true"
+    },
+    "explanation": "FULL OUTER JOIN includes all rows from both tables, filling NULLs where there is no match.",
+    "tip": "LEFT JOIN + RIGHT JOIN can sometimes mimic FULL OUTER JOIN.",
+    "tags": ["sql", "advanced", "join"],
+    "category": "sql",
+    "difficulty": "Advanced"
+  },
+  {
+    "id": 163,
+    "question": "What does `SELECT COALESCE(NULL, 5, 10)` return?",
+    "description": "coalesce function",
+    "answers": {
+      "answer_a": "NULL",
+      "answer_b": "5",
+      "answer_c": "10",
+      "answer_d": "Error"
+    },
+    "multiple_correct_answers": "false",
+    "correct_answers": {
+      "answer_a_correct": "false",
+      "answer_b_correct": "true",
+      "answer_c_correct": "false",
+      "answer_d_correct": "false"
+    },
+    "explanation": "COALESCE() returns the first non-NULL value from the list.",
+    "tip": "Useful for replacing NULLs in SELECT queries.",
+    "tags": ["sql", "advanced", "functions"],
+    "category": "sql",
+    "difficulty": "Advanced"
+  },
+  {
+    "id": 164,
+    "question": "Which SQL statement is used to find the second highest salary from employees?",
+    "description": "nth highest value using subquery",
+    "answers": {
+      "answer_a": "SELECT MAX(salary) FROM employees",
+      "answer_b": "SELECT salary FROM employees WHERE salary < (SELECT MAX(salary) FROM employees)",
+      "answer_c": "SELECT MIN(salary) FROM employees",
+      "answer_d": "SELECT TOP 2 salary FROM employees"
+    },
+    "multiple_correct_answers": "false",
+    "correct_answers": {
+      "answer_a_correct": "false",
+      "answer_b_correct": "true",
+      "answer_c_correct": "false",
+      "answer_d_correct": "false"
+    },
+    "explanation": "The subquery finds the maximum, and the outer query finds the max less than that → second highest.",
+    "tip": "ROW_NUMBER() or DENSE_RANK() can also solve this.",
+    "tags": ["sql", "advanced", "subquery"],
+    "category": "sql",
+    "difficulty": "Advanced"
+  },
+  {
+    "id": 165,
+    "question": "What happens if you use `GROUP BY` without aggregate functions?",
+    "description": "group by without aggregates",
+    "answers": {
+      "answer_a": "Error",
+      "answer_b": "Query returns unique combinations of grouped columns",
+      "answer_c": "Query ignores GROUP BY",
+      "answer_d": "Only first row returned"
+    },
+    "multiple_correct_answers": "false",
+    "correct_answers": {
+      "answer_a_correct": "false",
+      "answer_b_correct": "true",
+      "answer_c_correct": "false",
+      "answer_d_correct": "false"
+    },
+    "explanation": "GROUP BY without aggregation simply returns unique rows for grouped columns.",
+    "tip": "Useful to remove duplicates on selected columns.",
+    "tags": ["sql", "advanced", "group by"],
+    "category": "sql",
+    "difficulty": "Advanced"
+  },
+  {
+    "id": 166,
+    "question": "What is a correlated subquery?",
+    "description": "subquery referencing outer query",
+    "answers": {
+      "answer_a": "A subquery that executes once",
+      "answer_b": "A subquery that references columns from the outer query and executes per row",
+      "answer_c": "A subquery without WHERE clause",
+      "answer_d": "A subquery that can’t return results"
+    },
+    "multiple_correct_answers": "false",
+    "correct_answers": {
+      "answer_a_correct": "false",
+      "answer_b_correct": "true",
+      "answer_c_correct": "false",
+      "answer_d_correct": "false"
+    },
+    "explanation": "Correlated subqueries depend on outer query columns and run once per outer row.",
+    "tip": "Performance may be slow on large tables.",
+    "tags": ["sql", "advanced", "subquery"],
+    "category": "sql",
+    "difficulty": "Advanced"
+  },
+  {
+    "id": 167,
+    "question": "Which SQL clause is used to limit the number of rows returned?",
+    "description": "limit or top clause",
+    "answers": {
+      "answer_a": "LIMIT / TOP",
+      "answer_b": "WHERE",
+      "answer_c": "HAVING",
+      "answer_d": "ROW_NUMBER()"
+    },
+    "multiple_correct_answers": "false",
+    "correct_answers": {
+      "answer_a_correct": "true",
+      "answer_b_correct": "false",
+      "answer_c_correct": "false",
+      "answer_d_correct": "false"
+    },
+    "explanation": "LIMIT (MySQL/Postgres) or TOP (SQL Server) restricts the number of rows returned.",
+    "tip": "Use ORDER BY with LIMIT/TOP to control which rows are returned.",
+    "tags": ["sql", "advanced", "limit"],
+    "category": "sql",
+    "difficulty": "Advanced"
+  },
+  {
+    "id": 168,
+    "question": "What is the result of `SELECT SUM(salary) OVER(PARTITION BY department_id ORDER BY hire_date)`?",
+    "description": "cumulative sum with window function",
+    "answers": {
+      "answer_a": "Total salary for department repeated on each row",
+      "answer_b": "Cumulative salary over hire_date per department",
+      "answer_c": "Error",
+      "answer_d": "Sum of all salaries in table"
+    },
+    "multiple_correct_answers": "false",
+    "correct_answers": {
+      "answer_a_correct": "false",
+      "answer_b_correct": "true",
+      "answer_c_correct": "false",
+      "answer_d_correct": "false"
+    },
+    "explanation": "SUM() OVER with ORDER BY calculates running total per partition.",
+    "tip": "Cumulative sums are common in reporting.",
+    "tags": ["sql", "advanced", "window function"],
+    "category": "sql",
+    "difficulty": "Advanced"
+  },
+  {
+    "id": 169,
+    "question": "What happens if you use `UNION` vs `UNION ALL`?",
+    "description": "union vs union all",
+    "answers": {
+      "answer_a": "UNION removes duplicates, UNION ALL keeps duplicates",
+      "answer_b": "UNION keeps duplicates, UNION ALL removes duplicates",
+      "answer_c": "Both are identical",
+      "answer_d": "UNION requires same number of rows"
+    },
+    "multiple_correct_answers": "false",
+    "correct_answers": {
+      "answer_a_correct": "true",
+      "answer_b_correct": "false",
+      "answer_c_correct": "false",
+      "answer_d_correct": "false"
+    },
+    "explanation": "UNION removes duplicates from combined result sets; UNION ALL does not.",
+    "tip": "UNION can be slower due to duplicate elimination.",
+    "tags": ["sql", "advanced", "combine"],
+    "category": "sql",
+    "difficulty": "Advanced"
+  },
+  {
+    "id": 170,
+    "question": "Which SQL function returns the first non-null value in a list of expressions?",
+    "description": "coalesce function trick",
+    "answers": {
+      "answer_a": "NVL()",
+      "answer_b": "COALESCE()",
+      "answer_c": "ISNULL()",
+      "answer_d": "NULLIF()"
+    },
+    "multiple_correct_answers": "false",
+    "correct_answers": {
+      "answer_a_correct": "false",
+      "answer_b_correct": "true",
+      "answer_c_correct": "false",
+      "answer_d_correct": "false"
+    },
+    "explanation": "COALESCE() returns the first non-NULL expression.",
+    "tip": "Useful in SELECT to replace NULLs with default values.",
+    "tags": ["sql", "advanced", "functions"],
+    "category": "sql",
+    "difficulty": "Advanced"
+  },
+  {
+    "id": 171,
+    "question": "Which SQL construct allows recursion to find hierarchical data like organizational charts?",
+    "description": "recursive CTE",
+    "answers": {
+      "answer_a": "Subquery",
+      "answer_b": "Recursive CTE using WITH clause",
+      "answer_c": "UNION ALL",
+      "answer_d": "INNER JOIN"
+    },
+    "multiple_correct_answers": "false",
+    "correct_answers": {
+      "answer_a_correct": "false",
+      "answer_b_correct": "true",
+      "answer_c_correct": "false",
+      "answer_d_correct": "false"
+    },
+    "explanation": "Recursive CTEs (WITH ... AS ...) can reference themselves to traverse hierarchical data.",
+    "tip": "Use anchor member + recursive member with UNION ALL.",
+    "tags": ["sql", "advanced", "cte", "recursive"],
+    "category": "sql",
+    "difficulty": "Advanced"
+  },
+  {
+    "id": 172,
+    "question": "What will `SELECT CASE WHEN score >= 90 THEN 'A' WHEN score >= 80 THEN 'B' ELSE 'C' END FROM grades` return?",
+    "description": "nested CASE expression",
+    "answers": {
+      "answer_a": "Grades as A, B, or C based on score",
+      "answer_b": "Only 'A' grades",
+      "answer_c": "Only scores above 80",
+      "answer_d": "Error due to nested CASE"
+    },
+    "multiple_correct_answers": "false",
+    "correct_answers": {
+      "answer_a_correct": "true",
+      "answer_b_correct": "false",
+      "answer_c_correct": "false",
+      "answer_d_correct": "false"
+    },
+    "explanation": "CASE evaluates conditions in order and returns corresponding value.",
+    "tip": "Order matters; first true condition is returned.",
+    "tags": ["sql", "advanced", "conditional"],
+    "category": "sql",
+    "difficulty": "Advanced"
+  },
+  {
+    "id": 173,
+    "question": "What does the UNPIVOT operator do?",
+    "description": "unpivoting data",
+    "answers": {
+      "answer_a": "Transforms rows into columns",
+      "answer_b": "Transforms columns into rows",
+      "answer_c": "Removes duplicates",
+      "answer_d": "Filters NULL values"
+    },
+    "multiple_correct_answers": "false",
+    "correct_answers": {
+      "answer_a_correct": "false",
+      "answer_b_correct": "true",
+      "answer_c_correct": "false",
+      "answer_d_correct": "false"
+    },
+    "explanation": "UNPIVOT converts columns into rows, useful for normalized output.",
+    "tip": "Commonly used for reporting and analytics.",
+    "tags": ["sql", "advanced", "pivot"],
+    "category": "sql",
+    "difficulty": "Advanced"
+  },
+  {
+    "id": 174,
+    "question": "What is the difference between `INNER JOIN` and `NATURAL JOIN`?",
+    "description": "tricky join condition",
+    "answers": {
+      "answer_a": "INNER JOIN joins all rows, NATURAL JOIN joins only matching columns by name",
+      "answer_b": "INNER JOIN requires ON clause, NATURAL JOIN automatically joins on columns with same names",
+      "answer_c": "They are identical",
+      "answer_d": "NATURAL JOIN ignores matching column names"
+    },
+    "multiple_correct_answers": "false",
+    "correct_answers": {
+      "answer_a_correct": "false",
+      "answer_b_correct": "true",
+      "answer_c_correct": "false",
+      "answer_d_correct": "false"
+    },
+    "explanation": "NATURAL JOIN automatically joins tables using columns with the same names, unlike INNER JOIN which requires explicit ON condition.",
+    "tip": "Use NATURAL JOIN carefully to avoid unexpected joins.",
+    "tags": ["sql", "advanced", "join"],
+    "category": "sql",
+    "difficulty": "Advanced"
+  },
+  {
+    "id": 175,
+    "question": "Which SQL statement can be used to replace NULLs with a default value in a column?",
+    "description": "handling nulls",
+    "answers": {
+      "answer_a": "ISNULL(column, value)",
+      "answer_b": "COALESCE(column, value)",
+      "answer_c": "NVL(column, value)",
+      "answer_d": "All of the above depending on database"
+    },
+    "multiple_correct_answers": "false",
+    "correct_answers": {
+      "answer_a_correct": "false",
+      "answer_b_correct": "false",
+      "answer_c_correct": "false",
+      "answer_d_correct": "true"
+    },
+    "explanation": "Different databases use different functions to replace NULLs: ISNULL (SQL Server), NVL (Oracle), COALESCE (ANSI standard).",
+    "tip": "COALESCE is portable across most SQL databases.",
+    "tags": ["sql", "advanced", "nulls"],
+    "category": "sql",
+    "difficulty": "Advanced"
+  },
+  {
+    "id": 176,
+    "question": "What is the result of joining a table on a column that contains NULLs using INNER JOIN?",
+    "description": "inner join null behavior",
+    "answers": {
+      "answer_a": "Rows with NULLs are included",
+      "answer_b": "Rows with NULLs are excluded",
+      "answer_c": "Query fails",
+      "answer_d": "NULLs are converted to 0"
+    },
+    "multiple_correct_answers": "false",
+    "correct_answers": {
+      "answer_a_correct": "false",
+      "answer_b_correct": "true",
+      "answer_c_correct": "false",
+      "answer_d_correct": "false"
+    },
+    "explanation": "INNER JOIN excludes rows with NULLs in join columns because NULL cannot match any value.",
+    "tip": "Use OUTER JOIN to include NULLs if needed.",
+    "tags": ["sql", "advanced", "join"],
+    "category": "sql",
+    "difficulty": "Advanced"
+  },
+  {
+    "id": 177,
+    "question": "Which SQL construct allows calculating running averages or sums without collapsing rows?",
+    "description": "window function running aggregate",
+    "answers": {
+      "answer_a": "GROUP BY",
+      "answer_b": "WINDOW FUNCTION with OVER()",
+      "answer_c": "CTE",
+      "answer_d": "HAVING"
+    },
+    "multiple_correct_answers": "false",
+    "correct_answers": {
+      "answer_a_correct": "false",
+      "answer_b_correct": "true",
+      "answer_c_correct": "false",
+      "answer_d_correct": "false"
+    },
+    "explanation": "Window functions (SUM(), AVG(), ROW_NUMBER()) with OVER() allow running calculations while preserving individual rows.",
+    "tip": "Use PARTITION BY to reset calculations per group.",
+    "tags": ["sql", "advanced", "window function"],
+    "category": "sql",
+    "difficulty": "Advanced"
+  },
+  {
+    "id": 178,
+    "question": "Which SQL statement allows combining multiple CTEs into one query?",
+    "description": "multiple CTEs",
+    "answers": {
+      "answer_a": "WITH cte1 AS (...), cte2 AS (...) SELECT ...",
+      "answer_b": "SELECT * FROM cte1 JOIN cte2",
+      "answer_c": "UNION CTE1, CTE2",
+      "answer_d": "CREATE CTE1, CTE2"
+    },
+    "multiple_correct_answers": "false",
+    "correct_answers": {
+      "answer_a_correct": "true",
+      "answer_b_correct": "false",
+      "answer_c_correct": "false",
+      "answer_d_correct": "false"
+    },
+    "explanation": "Multiple CTEs can be defined with commas after WITH and used in a single SELECT.",
+    "tip": "Order of definition matters; later CTEs can reference earlier ones.",
+    "tags": ["sql", "advanced", "cte"],
+    "category": "sql",
+    "difficulty": "Advanced"
+  },
+  {
+    "id": 179,
+    "question": "What does `SELECT NULLIF(salary, 0) FROM employees` do?",
+    "description": "nullif function",
+    "answers": {
+      "answer_a": "Replaces NULL with 0",
+      "answer_b": "Returns NULL if salary is 0, else returns salary",
+      "answer_c": "Converts 0 to 1",
+      "answer_d": "Throws error if salary is 0"
+    },
+    "multiple_correct_answers": "false",
+    "correct_answers": {
+      "answer_a_correct": "false",
+      "answer_b_correct": "true",
+      "answer_c_correct": "false",
+      "answer_d_correct": "false"
+    },
+    "explanation": "NULLIF(a, b) returns NULL if a equals b, otherwise returns a.",
+    "tip": "Useful for avoiding divide-by-zero errors.",
+    "tags": ["sql", "advanced", "functions"],
+    "category": "sql",
+    "difficulty": "Advanced"
+  },
+  {
+    "id": 180,
+    "question": "Which SQL query generates a sequence of numbers from 1 to 10 without a table?",
+    "description": "generate series / numbers",
+    "answers": {
+      "answer_a": "SELECT 1 TO 10",
+      "answer_b": "SELECT * FROM (VALUES(1),(2),...(10))",
+      "answer_c": "SELECT generate_series(1,10)",
+      "answer_d": "SELECT RANGE(1,10)"
+    },
+    "multiple_correct_answers": "false",
+    "correct_answers": {
+      "answer_a_correct": "false",
+      "answer_b_correct": "false",
+      "answer_c_correct": "true",
+      "answer_d_correct": "false"
+    },
+    "explanation": "Some databases (PostgreSQL) support generate_series(start, stop) to produce a series without a table.",
+    "tip": "Other databases require recursive CTEs or derived tables to generate sequences.",
+    "tags": ["sql", "advanced", "trick question"],
+    "category": "sql",
+    "difficulty": "Advanced"
+  },
+  {
+    "id": 181,
+    "question": "Which SQL statement is used to retrieve all columns from the table `employees`?",
+    "description": "basic select",
+    "answers": {
+      "answer_a": "SELECT * FROM employees",
+      "answer_b": "GET ALL FROM employees",
+      "answer_c": "SELECT employees",
+      "answer_d": "SHOW ALL FROM employees"
+    },
+    "multiple_correct_answers": "false",
+    "correct_answers": {
+      "answer_a_correct": "true",
+      "answer_b_correct": "false",
+      "answer_c_correct": "false",
+      "answer_d_correct": "false"
+    },
+    "explanation": "SELECT * returns all columns of a table.",
+    "tip": "Use * carefully on large tables to avoid performance issues.",
+    "tags": ["sql", "beginner", "select"],
+    "category": "sql",
+    "difficulty": "Beginner"
+  },
+  {
+    "id": 182,
+    "question": "Which clause is used to filter records in SQL?",
+    "description": "where clause",
+    "answers": {
+      "answer_a": "WHERE",
+      "answer_b": "HAVING",
+      "answer_c": "FILTER",
+      "answer_d": "SELECT"
+    },
+    "multiple_correct_answers": "false",
+    "correct_answers": {
+      "answer_a_correct": "true",
+      "answer_b_correct": "false",
+      "answer_c_correct": "false",
+      "answer_d_correct": "false"
+    },
+    "explanation": "WHERE filters rows before aggregation.",
+    "tip": "Use HAVING to filter after GROUP BY.",
+    "tags": ["sql", "beginner", "filter"],
+    "category": "sql",
+    "difficulty": "Beginner"
+  },
+  {
+    "id": 183,
+    "question": "Which SQL function counts the number of rows in a table?",
+    "description": "aggregate function count",
+    "answers": {
+      "answer_a": "SUM()",
+      "answer_b": "COUNT()",
+      "answer_c": "TOTAL()",
+      "answer_d": "NUMBER()"
+    },
+    "multiple_correct_answers": "false",
+    "correct_answers": {
+      "answer_a_correct": "false",
+      "answer_b_correct": "true",
+      "answer_c_correct": "false",
+      "answer_d_correct": "false"
+    },
+    "explanation": "COUNT() returns the total number of rows matching the query.",
+    "tip": "Use COUNT(*) to include all rows, including those with NULLs.",
+    "tags": ["sql", "beginner", "aggregate"],
+    "category": "sql",
+    "difficulty": "Beginner"
+  },
+  {
+    "id": 184,
+    "question": "Which keyword is used to sort SQL query results?",
+    "description": "order by clause",
+    "answers": {
+      "answer_a": "SORT BY",
+      "answer_b": "ORDER BY",
+      "answer_c": "GROUP BY",
+      "answer_d": "FILTER BY"
+    },
+    "multiple_correct_answers": "false",
+    "correct_answers": {
+      "answer_a_correct": "false",
+      "answer_b_correct": "true",
+      "answer_c_correct": "false",
+      "answer_d_correct": "false"
+    },
+    "explanation": "ORDER BY sorts query results by specified columns.",
+    "tip": "Add ASC or DESC for ascending or descending order.",
+    "tags": ["sql", "beginner", "sort"],
+    "category": "sql",
+    "difficulty": "Beginner"
+  },
+  {
+    "id": 185,
+    "question": "Which SQL operator is used to search for a pattern in a column?",
+    "description": "like operator",
+    "answers": {
+      "answer_a": "MATCH",
+      "answer_b": "LIKE",
+      "answer_c": "PATTERN",
+      "answer_d": "SEARCH"
+    },
+    "multiple_correct_answers": "false",
+    "correct_answers": {
+      "answer_a_correct": "false",
+      "answer_b_correct": "true",
+      "answer_c_correct": "false",
+      "answer_d_correct": "false"
+    },
+    "explanation": "LIKE allows pattern matching with % (any characters) and _ (single character).",
+    "tip": "Use LIKE '%value%' to search anywhere in the string.",
+    "tags": ["sql", "beginner", "filter"],
+    "category": "sql",
+    "difficulty": "Beginner"
+  },
+  {
+    "id": 186,
+    "question": "What is the difference between `INNER JOIN` and `LEFT JOIN`?",
+    "description": "basic join understanding",
+    "answers": {
+      "answer_a": "INNER JOIN returns all rows, LEFT JOIN returns matched only",
+      "answer_b": "INNER JOIN returns matched rows only, LEFT JOIN returns all rows from left table and matched rows from right table",
+      "answer_c": "Both are identical",
+      "answer_d": "LEFT JOIN always excludes NULLs"
+    },
+    "multiple_correct_answers": "false",
+    "correct_answers": {
+      "answer_a_correct": "false",
+      "answer_b_correct": "true",
+      "answer_c_correct": "false",
+      "answer_d_correct": "false"
+    },
+    "explanation": "INNER JOIN returns only matching rows, LEFT JOIN returns all left table rows with NULLs for unmatched right rows.",
+    "tip": "RIGHT JOIN is the mirror of LEFT JOIN.",
+    "tags": ["sql", "intermediate", "join"],
+    "category": "sql",
+    "difficulty": "Intermediate"
+  },
+  {
+    "id": 187,
+    "question": "Which SQL clause is used to filter aggregated results?",
+    "description": "having clause",
+    "answers": {
+      "answer_a": "WHERE",
+      "answer_b": "HAVING",
+      "answer_c": "GROUP BY",
+      "answer_d": "FILTER"
+    },
+    "multiple_correct_answers": "false",
+    "correct_answers": {
+      "answer_a_correct": "false",
+      "answer_b_correct": "true",
+      "answer_c_correct": "false",
+      "answer_d_correct": "false"
+    },
+    "explanation": "HAVING filters results after aggregation (GROUP BY).",
+    "tip": "WHERE filters rows before aggregation.",
+    "tags": ["sql", "intermediate", "aggregate"],
+    "category": "sql",
+    "difficulty": "Intermediate"
+  },
+  {
+    "id": 188,
+    "question": "What does `SELECT DISTINCT department_id FROM employees` do?",
+    "description": "distinct keyword",
+    "answers": {
+      "answer_a": "Returns all department IDs including duplicates",
+      "answer_b": "Returns unique department IDs",
+      "answer_c": "Counts department IDs",
+      "answer_d": "Returns department IDs sorted"
+    },
+    "multiple_correct_answers": "false",
+    "correct_answers": {
+      "answer_a_correct": "false",
+      "answer_b_correct": "true",
+      "answer_c_correct": "false",
+      "answer_d_correct": "false"
+    },
+    "explanation": "DISTINCT removes duplicate values in the selected column(s).",
+    "tip": "DISTINCT can be applied to multiple columns.",
+    "tags": ["sql", "intermediate", "filter"],
+    "category": "sql",
+    "difficulty": "Intermediate"
+  },
+  {
+    "id": 189,
+    "question": "Which SQL function returns the largest value of a column?",
+    "description": "aggregate function max",
+    "answers": {
+      "answer_a": "MIN()",
+      "answer_b": "MAX()",
+      "answer_c": "TOP()",
+      "answer_d": "SUM()"
+    },
+    "multiple_correct_answers": "false",
+    "correct_answers": {
+      "answer_a_correct": "false",
+      "answer_b_correct": "true",
+      "answer_c_correct": "false",
+      "answer_d_correct": "false"
+    },
+    "explanation": "MAX() returns the maximum value in a column.",
+    "tip": "Use MIN() for the smallest value.",
+    "tags": ["sql", "beginner", "aggregate"],
+    "category": "sql",
+    "difficulty": "Beginner"
+  },
+  {
+    "id": 190,
+    "question": "Which operator is used to combine multiple conditions in SQL WHERE clause?",
+    "description": "logical operators",
+    "answers": {
+      "answer_a": "AND / OR / NOT",
+      "answer_b": "COMBINE",
+      "answer_c": "JOIN",
+      "answer_d": "FILTER"
+    },
+    "multiple_correct_answers": "false",
+    "correct_answers": {
+      "answer_a_correct": "true",
+      "answer_b_correct": "false",
+      "answer_c_correct": "false",
+      "answer_d_correct": "false"
+    },
+    "explanation": "AND, OR, NOT combine multiple conditions logically.",
+    "tip": "Use parentheses to control precedence.",
+    "tags": ["sql", "beginner", "filter"],
+    "category": "sql",
+    "difficulty": "Beginner"
+  },
+  {
+    "id": 191,
+    "question": "Which SQL keyword is used to specify multiple values in a WHERE condition?",
+    "description": "IN operator",
+    "answers": {
+      "answer_a": "BETWEEN",
+      "answer_b": "IN",
+      "answer_c": "LIKE",
+      "answer_d": "ALL"
+    },
+    "multiple_correct_answers": "false",
+    "correct_answers": {
+      "answer_a_correct": "false",
+      "answer_b_correct": "true",
+      "answer_c_correct": "false",
+      "answer_d_correct": "false"
+    },
+    "explanation": "IN allows you to specify a list of values to match in a column.",
+    "tip": "Equivalent to multiple OR conditions but cleaner.",
+    "tags": ["sql", "intermediate", "filter"],
+    "category": "sql",
+    "difficulty": "Intermediate"
+  },
+  {
+    "id": 192,
+    "question": "Which aggregate function returns the average value of a column?",
+    "description": "AVG function",
+    "answers": {
+      "answer_a": "SUM()",
+      "answer_b": "COUNT()",
+      "answer_c": "AVG()",
+      "answer_d": "MAX()"
+    },
+    "multiple_correct_answers": "false",
+    "correct_answers": {
+      "answer_a_correct": "false",
+      "answer_b_correct": "false",
+      "answer_c_correct": "true",
+      "answer_d_correct": "false"
+    },
+    "explanation": "AVG() calculates the mean of numeric column values.",
+    "tip": "NULL values are ignored by AVG().",
+    "tags": ["sql", "beginner", "aggregate"],
+    "category": "sql",
+    "difficulty": "Beginner"
+  },
+  {
+    "id": 193,
+    "question": "What does the SQL clause `GROUP BY department_id` do?",
+    "description": "group by usage",
+    "answers": {
+      "answer_a": "Filters rows by department_id",
+      "answer_b": "Groups rows by department_id to apply aggregate functions",
+      "answer_c": "Sorts rows by department_id",
+      "answer_d": "Deletes duplicate department_id rows"
+    },
+    "multiple_correct_answers": "false",
+    "correct_answers": {
+      "answer_a_correct": "false",
+      "answer_b_correct": "true",
+      "answer_c_correct": "false",
+      "answer_d_correct": "false"
+    },
+    "explanation": "GROUP BY organizes rows into groups for aggregation.",
+    "tip": "Always aggregate columns not in GROUP BY with functions like SUM, AVG, COUNT.",
+    "tags": ["sql", "intermediate", "aggregate"],
+    "category": "sql",
+    "difficulty": "Intermediate"
+  },
+  {
+    "id": 194,
+    "question": "Which SQL function returns the length of a string?",
+    "description": "string length function",
+    "answers": {
+      "answer_a": "LENGTH() or LEN() depending on DB",
+      "answer_b": "SIZE()",
+      "answer_c": "CHAR_COUNT()",
+      "answer_d": "STRLEN()"
+    },
+    "multiple_correct_answers": "false",
+    "correct_answers": {
+      "answer_a_correct": "true",
+      "answer_b_correct": "false",
+      "answer_c_correct": "false",
+      "answer_d_correct": "false"
+    },
+    "explanation": "LENGTH() (MySQL/Postgres) or LEN() (SQL Server) returns the number of characters in a string.",
+    "tip": "Use TRIM() first if you want to ignore leading/trailing spaces.",
+    "tags": ["sql", "intermediate", "functions"],
+    "category": "sql",
+    "difficulty": "Intermediate"
+  },
+  {
+    "id": 195,
+    "question": "Which SQL operator is used to check if a value is NULL?",
+    "description": "null check",
+    "answers": {
+      "answer_a": "IS NULL",
+      "answer_b": "= NULL",
+      "answer_c": "NULLIF",
+      "answer_d": "NOT NULL"
+    },
+    "multiple_correct_answers": "false",
+    "correct_answers": {
+      "answer_a_correct": "true",
+      "answer_b_correct": "false",
+      "answer_c_correct": "false",
+      "answer_d_correct": "false"
+    },
+    "explanation": "IS NULL correctly checks for NULL values; using = NULL will not work.",
+    "tip": "Use IS NOT NULL to check for non-NULL values.",
+    "tags": ["sql", "beginner", "nulls"],
+    "category": "sql",
+    "difficulty": "Beginner"
+  },
+  {
+    "id": 196,
+    "question": "What will this query return?\n`SELECT name FROM employees WHERE salary > ALL (SELECT salary FROM managers)`",
+    "description": "ALL subquery operator",
+    "answers": {
+      "answer_a": "Employees earning more than at least one manager",
+      "answer_b": "Employees earning more than all managers",
+      "answer_c": "All employees",
+      "answer_d": "Error"
+    },
+    "multiple_correct_answers": "false",
+    "correct_answers": {
+      "answer_a_correct": "false",
+      "answer_b_correct": "true",
+      "answer_c_correct": "false",
+      "answer_d_correct": "false"
+    },
+    "explanation": "ALL compares each value to ensure it is greater than every value returned by the subquery.",
+    "tip": "Use ANY to compare with at least one value.",
+    "tags": ["sql", "intermediate", "subquery"],
+    "category": "sql",
+    "difficulty": "Intermediate"
+  },
+  {
+    "id": 197,
+    "question": "Which SQL operator is used to check a range of values?",
+    "description": "between operator",
+    "answers": {
+      "answer_a": "IN",
+      "answer_b": "BETWEEN",
+      "answer_c": "LIKE",
+      "answer_d": "RANGE"
+    },
+    "multiple_correct_answers": "false",
+    "correct_answers": {
+      "answer_a_correct": "false",
+      "answer_b_correct": "true",
+      "answer_c_correct": "false",
+      "answer_d_correct": "false"
+    },
+    "explanation": "BETWEEN allows checking if a value falls within a range inclusive of endpoints.",
+    "tip": "BETWEEN 10 AND 20 includes both 10 and 20.",
+    "tags": ["sql", "beginner", "filter"],
+    "category": "sql",
+    "difficulty": "Beginner"
+  },
+  {
+    "id": 198,
+    "question": "Which SQL clause is used to rename a column in the query output?",
+    "description": "alias usage",
+    "answers": {
+      "answer_a": "AS",
+      "answer_b": "RENAME",
+      "answer_c": "ALIAS",
+      "answer_d": "LABEL"
+    },
+    "multiple_correct_answers": "false",
+    "correct_answers": {
+      "answer_a_correct": "true",
+      "answer_b_correct": "false",
+      "answer_c_correct": "false",
+      "answer_d_correct": "false"
+    },
+    "explanation": "AS is used to assign a temporary name to a column in the output.",
+    "tip": "Column alias does not change the actual table schema.",
+    "tags": ["sql", "beginner", "alias"],
+    "category": "sql",
+    "difficulty": "Beginner"
+  },
+  {
+    "id": 199,
+    "question": "Which SQL statement counts rows grouped by department?",
+    "description": "group by with count",
+    "answers": {
+      "answer_a": "SELECT COUNT(*) FROM employees GROUP BY department_id",
+      "answer_b": "SELECT COUNT(*) FROM employees",
+      "answer_c": "SELECT COUNT(department_id) FROM employees",
+      "answer_d": "SELECT department_id FROM employees"
+    },
+    "multiple_correct_answers": "false",
+    "correct_answers": {
+      "answer_a_correct": "true",
+      "answer_b_correct": "false",
+      "answer_c_correct": "false",
+      "answer_d_correct": "false"
+    },
+    "explanation": "COUNT(*) with GROUP BY returns counts for each department separately.",
+    "tip": "COUNT(column) ignores NULLs; COUNT(*) counts all rows.",
+    "tags": ["sql", "intermediate", "aggregate"],
+    "category": "sql",
+    "difficulty": "Intermediate"
+  },
+  {
+    "id": 200,
+    "question": "What does `SELECT name FROM employees WHERE name LIKE 'A%'` return?",
+    "description": "like pattern matching",
+    "answers": {
+      "answer_a": "All names containing 'A'",
+      "answer_b": "All names starting with 'A'",
+      "answer_c": "All names ending with 'A'",
+      "answer_d": "All names with 'A' in middle"
+    },
+    "multiple_correct_answers": "false",
+    "correct_answers": {
+      "answer_a_correct": "false",
+      "answer_b_correct": "true",
+      "answer_c_correct": "false",
+      "answer_d_correct": "false"
+    },
+    "explanation": "LIKE 'A%' matches strings that start with 'A'.",
+    "tip": "% represents zero or more characters; _ represents a single character.",
+    "tags": ["sql", "beginner", "filter"],
+    "category": "sql",
+    "difficulty": "Beginner"
+  },
+  {
+    "id": 201,
+    "question": "You have a table `employees(emp_id, name, department_id, salary)`. You want to list the highest-paid employee in each department. Which SQL query should you use?",
+    "description": "find max per group using subquery",
+    "answers": {
+      "answer_a": "SELECT name, department_id, MAX(salary) FROM employees GROUP BY department_id",
+      "answer_b": "SELECT name, department_id FROM employees WHERE salary = (SELECT MAX(salary) FROM employees)",
+      "answer_c": "SELECT name, department_id FROM employees WHERE salary = (SELECT MAX(salary) FROM employees e2 WHERE e2.department_id = employees.department_id)",
+      "answer_d": "SELECT * FROM employees ORDER BY salary DESC"
+    },
+    "multiple_correct_answers": "false",
+    "correct_answers": {
+      "answer_a_correct": "false",
+      "answer_b_correct": "false",
+      "answer_c_correct": "true",
+      "answer_d_correct": "false"
+    },
+    "explanation": "You need a correlated subquery to get the max salary per department.",
+    "tip": "GROUP BY alone cannot select non-aggregated columns unless using joins or subqueries.",
+    "tags": ["sql", "scenario", "subquery", "intermediate"],
+    "category": "sql",
+    "difficulty": "Intermediate"
+  },
+  {
+    "id": 202,
+    "question": "You have a table `orders(order_id, customer_id, order_date, amount)`. You want to find customers who placed more than 5 orders. Which query will work?",
+    "description": "aggregate with group by and having",
+    "answers": {
+      "answer_a": "SELECT customer_id FROM orders WHERE COUNT(order_id) > 5",
+      "answer_b": "SELECT customer_id FROM orders GROUP BY customer_id HAVING COUNT(order_id) > 5",
+      "answer_c": "SELECT customer_id FROM orders GROUP BY customer_id WHERE COUNT(order_id) > 5",
+      "answer_d": "SELECT customer_id FROM orders ORDER BY COUNT(order_id) > 5"
+    },
+    "multiple_correct_answers": "false",
+    "correct_answers": {
+      "answer_a_correct": "false",
+      "answer_b_correct": "true",
+      "answer_c_correct": "false",
+      "answer_d_correct": "false"
+    },
+    "explanation": "HAVING filters groups after aggregation; WHERE cannot filter aggregated results.",
+    "tip": "Remember: WHERE → filters rows, HAVING → filters groups.",
+    "tags": ["sql", "scenario", "aggregate", "intermediate"],
+    "category": "sql",
+    "difficulty": "Intermediate"
+  },
+  {
+    "id": 203,
+    "question": "You have a table `sales(sale_id, product_id, quantity, price)`. You need to calculate total revenue per product and sort them highest to lowest. Which query should you use?",
+    "description": "aggregate sum with order by",
+    "answers": {
+      "answer_a": "SELECT product_id, SUM(quantity*price) AS revenue FROM sales GROUP BY product_id ORDER BY revenue DESC",
+      "answer_b": "SELECT product_id, SUM(quantity*price) AS revenue FROM sales ORDER BY revenue DESC",
+      "answer_c": "SELECT product_id, quantity*price AS revenue FROM sales ORDER BY revenue DESC",
+      "answer_d": "SELECT product_id, SUM(quantity+price) AS revenue FROM sales GROUP BY product_id"
+    },
+    "multiple_correct_answers": "false",
+    "correct_answers": {
+      "answer_a_correct": "true",
+      "answer_b_correct": "false",
+      "answer_c_correct": "false",
+      "answer_d_correct": "false"
+    },
+    "explanation": "You need SUM(quantity*price) grouped by product, then ORDER BY the alias revenue.",
+    "tip": "Always alias aggregated expressions if you want to ORDER BY them.",
+    "tags": ["sql", "scenario", "aggregate", "intermediate"],
+    "category": "sql",
+    "difficulty": "Intermediate"
+  },
+  {
+    "id": 204,
+    "question": "You have two tables: `employees(emp_id, name, department_id)` and `departments(department_id, dept_name)`. You want to list all employees with their department names, even if some employees are not assigned to a department. Which JOIN should you use?",
+    "description": "left join scenario",
+    "answers": {
+      "answer_a": "INNER JOIN",
+      "answer_b": "LEFT JOIN",
+      "answer_c": "RIGHT JOIN",
+      "answer_d": "FULL OUTER JOIN"
+    },
+    "multiple_correct_answers": "false",
+    "correct_answers": {
+      "answer_a_correct": "false",
+      "answer_b_correct": "true",
+      "answer_c_correct": "false",
+      "answer_d_correct": "false"
+    },
+    "explanation": "LEFT JOIN includes all rows from the left table (employees) and matched rows from the right table (departments), with NULL for unmatched.",
+    "tip": "Use RIGHT JOIN if you want all departments instead.",
+    "tags": ["sql", "scenario", "join", "intermediate"],
+    "category": "sql",
+    "difficulty": "Intermediate"
+  },
+  {
+    "id": 205,
+    "question": "You have a table `products(product_id, category, price)`. You want to find the second most expensive product in each category. Which approach works?",
+    "description": "row_number ranking per partition",
+    "answers": {
+      "answer_a": "SELECT * FROM products WHERE price = MAX(price)",
+      "answer_b": "Use ROW_NUMBER() OVER(PARTITION BY category ORDER BY price DESC) and filter row_number = 2",
+      "answer_c": "GROUP BY category and use MAX(price)",
+      "answer_d": "Use COUNT()"
+    },
+    "multiple_correct_answers": "false",
+    "correct_answers": {
+      "answer_a_correct": "false",
+      "answer_b_correct": "true",
+      "answer_c_correct": "false",
+      "answer_d_correct": "false"
+    },
+    "explanation": "ROW_NUMBER() with PARTITION BY allows ranking products per category and selecting the second row.",
+    "tip": "DENSE_RANK() can handle ties if multiple products have the same price.",
+    "tags": ["sql", "scenario", "window function", "advanced"],
+    "category": "sql",
+    "difficulty": "Advanced"
+  },
+  {
+    "id": 206,
+    "question": "You have a table `orders(order_id, customer_id, order_date)`. You want to find all customers who did not place any orders. Which query works?",
+    "description": "find missing records using LEFT JOIN",
+    "answers": {
+      "answer_a": "SELECT customer_id FROM customers WHERE customer_id NOT IN (SELECT customer_id FROM orders)",
+      "answer_b": "SELECT c.customer_id FROM customers c LEFT JOIN orders o ON c.customer_id = o.customer_id WHERE o.customer_id IS NULL",
+      "answer_c": "SELECT * FROM orders WHERE customer_id IS NULL",
+      "answer_d": "Both A and B"
+    },
+    "multiple_correct_answers": "false",
+    "correct_answers": {
+      "answer_a_correct": "false",
+      "answer_b_correct": "false",
+      "answer_c_correct": "false",
+      "answer_d_correct": "true"
+    },
+    "explanation": "Both NOT IN subquery and LEFT JOIN with NULL check correctly find customers without orders.",
+    "tip": "Be careful with NULLs in NOT IN queries; LEFT JOIN is safer for large tables.",
+    "tags": ["sql", "scenario", "join", "intermediate"],
+    "category": "sql",
+    "difficulty": "Intermediate"
+  },
+  {
+    "id": 207,
+    "question": "You have a table `attendance(emp_id, date, status)` where status is 'Present' or 'Absent'. You want to calculate the percentage of days each employee was present. Which approach is correct?",
+    "description": "aggregate with conditional sum",
+    "answers": {
+      "answer_a": "SELECT emp_id, SUM(status='Present')/COUNT(*)*100 FROM attendance GROUP BY emp_id",
+      "answer_b": "SELECT emp_id, COUNT(status='Present')/COUNT(*)*100 FROM attendance GROUP BY emp_id",
+      "answer_c": "SELECT emp_id, SUM(CASE WHEN status='Present' THEN 1 ELSE 0 END)/COUNT(*)*100 FROM attendance GROUP BY emp_id",
+      "answer_d": "SELECT emp_id, COUNT(*) FROM attendance"
+    },
+    "multiple_correct_answers": "false",
+    "correct_answers": {
+      "answer_a_correct": "false",
+      "answer_b_correct": "false",
+      "answer_c_correct": "true",
+      "answer_d_correct": "false"
+    },
+    "explanation": "Using CASE WHEN allows counting only Present days per employee and dividing by total days.",
+    "tip": "Conditional aggregation is very common in scenario-based reporting.",
+    "tags": ["sql", "scenario", "aggregate", "intermediate"],
+    "category": "sql",
+    "difficulty": "Intermediate"
+  },
+  {
+    "id": 208,
+    "question": "You have a table `payments(payment_id, customer_id, amount, payment_date)`. You want to find customers whose total payments exceed $10,000. Which query works?",
+    "description": "aggregation with having",
+    "answers": {
+      "answer_a": "SELECT customer_id FROM payments WHERE SUM(amount) > 10000",
+      "answer_b": "SELECT customer_id, SUM(amount) FROM payments GROUP BY customer_id HAVING SUM(amount) > 10000",
+      "answer_c": "SELECT customer_id, SUM(amount) FROM payments HAVING SUM(amount) > 10000",
+      "answer_d": "SELECT customer_id FROM payments GROUP BY customer_id"
+    },
+    "multiple_correct_answers": "false",
+    "correct_answers": {
+      "answer_a_correct": "false",
+      "answer_b_correct": "true",
+      "answer_c_correct": "false",
+      "answer_d_correct": "false"
+    },
+    "explanation": "HAVING filters aggregated sums after GROUP BY; WHERE cannot filter aggregates.",
+    "tip": "Always use HAVING when filtering aggregated values.",
+    "tags": ["sql", "scenario", "aggregate", "intermediate"],
+    "category": "sql",
+    "difficulty": "Intermediate"
+  },
+  {
+    "id": 209,
+    "question": "You have a table `employees(emp_id, name, department_id, salary)`. You want to assign a rank to each employee within their department based on salary, with the highest salary ranked 1. Which query works?",
+    "description": "ranking with window function",
+    "answers": {
+      "answer_a": "SELECT emp_id, name, RANK() OVER(PARTITION BY department_id ORDER BY salary DESC) AS dept_rank FROM employees",
+      "answer_b": "SELECT emp_id, name, ROW_NUMBER() AS dept_rank FROM employees ORDER BY salary DESC",
+      "answer_c": "SELECT emp_id, name, DENSE_RANK(salary) AS dept_rank FROM employees",
+      "answer_d": "SELECT emp_id, name, RANK(salary) FROM employees"
+    },
+    "multiple_correct_answers": "false",
+    "correct_answers": {
+      "answer_a_correct": "true",
+      "answer_b_correct": "false",
+      "answer_c_correct": "false",
+      "answer_d_correct": "false"
+    },
+    "explanation": "RANK() with PARTITION BY creates department-wise ranking based on salary.",
+    "tip": "Use DENSE_RANK() to avoid gaps in ranking if there are ties.",
+    "tags": ["sql", "scenario", "window function", "advanced"],
+    "category": "sql",
+    "difficulty": "Advanced"
+  },
+  {
+    "id": 210,
+    "question": "You have a table `orders(order_id, customer_id, order_date, amount)`. You want to find the latest order per customer. Which query works?",
+    "description": "latest record per group",
+    "answers": {
+      "answer_a": "SELECT customer_id, MAX(order_date) FROM orders GROUP BY customer_id",
+      "answer_b": "SELECT * FROM orders o1 WHERE order_date = (SELECT MAX(order_date) FROM orders o2 WHERE o2.customer_id = o1.customer_id)",
+      "answer_c": "SELECT customer_id, order_date FROM orders ORDER BY order_date DESC",
+      "answer_d": "SELECT DISTINCT customer_id, MAX(order_date) FROM orders"
+    },
+    "multiple_correct_answers": "false",
+    "correct_answers": {
+      "answer_a_correct": "false",
+      "answer_b_correct": "true",
+      "answer_c_correct": "false",
+      "answer_d_correct": "false"
+    },
+    "explanation": "A correlated subquery ensures we fetch the full row of the latest order per customer.",
+    "tip": "GROUP BY with MAX() only gives the date, not the full row details.",
+    "tags": ["sql", "scenario", "subquery", "intermediate"],
+    "category": "sql",
+    "difficulty": "Intermediate"
+  },
+  {
+    "id": 211,
+    "question": "You have tables `students(student_id, name)` and `scores(student_id, subject, score)`. You want to list students who scored above 80 in all subjects. Which query works?",
+    "description": "all condition with aggregation",
+    "answers": {
+      "answer_a": "SELECT student_id FROM scores WHERE score > 80",
+      "answer_b": "SELECT student_id FROM scores GROUP BY student_id HAVING MIN(score) > 80",
+      "answer_c": "SELECT student_id FROM scores GROUP BY student_id HAVING MAX(score) > 80",
+      "answer_d": "SELECT DISTINCT student_id FROM scores WHERE score > 80"
+    },
+    "multiple_correct_answers": "false",
+    "correct_answers": {
+      "answer_a_correct": "false",
+      "answer_b_correct": "true",
+      "answer_c_correct": "false",
+      "answer_d_correct": "false"
+    },
+    "explanation": "MIN(score) > 80 ensures all scores per student are above 80.",
+    "tip": "HAVING works on aggregates; MIN, MAX are useful for 'all' or 'any' conditions.",
+    "tags": ["sql", "scenario", "aggregate", "intermediate"],
+    "category": "sql",
+    "difficulty": "Intermediate"
+  },
+  {
+    "id": 212,
+    "question": "You have a table `transactions(trans_id, account_id, amount, trans_date)`. You want to calculate a running total of amounts per account ordered by date. Which function works?",
+    "description": "running total with window function",
+    "answers": {
+      "answer_a": "SUM(amount) GROUP BY account_id",
+      "answer_b": "SUM(amount) OVER(PARTITION BY account_id ORDER BY trans_date) AS running_total",
+      "answer_c": "COUNT(amount) OVER(PARTITION BY account_id ORDER BY trans_date)",
+      "answer_d": "SUM(amount) WHERE account_id"
+    },
+    "multiple_correct_answers": "false",
+    "correct_answers": {
+      "answer_a_correct": "false",
+      "answer_b_correct": "true",
+      "answer_c_correct": "false",
+      "answer_d_correct": "false"
+    },
+    "explanation": "SUM() OVER(PARTITION BY ... ORDER BY ...) calculates cumulative sum while keeping all rows.",
+    "tip": "Without OVER(), SUM() collapses rows into one aggregate.",
+    "tags": ["sql", "scenario", "window function", "advanced"],
+    "category": "sql",
+    "difficulty": "Advanced"
+  },
+  {
+    "id": 213,
+    "question": "You have a table `products(product_id, category, price)`. Some products do not belong to any category (category is NULL). You want to list all categories and total sales per category, including NULL. Which query works?",
+    "description": "group by with null values",
+    "answers": {
+      "answer_a": "SELECT category, SUM(price) FROM products WHERE category IS NOT NULL GROUP BY category",
+      "answer_b": "SELECT category, SUM(price) FROM products GROUP BY category",
+      "answer_c": "SELECT category, SUM(price) FROM products",
+      "answer_d": "SELECT DISTINCT category, SUM(price) FROM products"
+    },
+    "multiple_correct_answers": "false",
+    "correct_answers": {
+      "answer_a_correct": "false",
+      "answer_b_correct": "true",
+      "answer_c_correct": "false",
+      "answer_d_correct": "false"
+    },
+    "explanation": "GROUP BY includes NULL as a separate group unless filtered out.",
+    "tip": "Be aware that NULL is considered a distinct group in aggregation.",
+    "tags": ["sql", "scenario", "aggregate", "intermediate"],
+    "category": "sql",
+    "difficulty": "Intermediate"
+  },
+  {
+    "id": 214,
+    "question": "You have a table `attendance(emp_id, date, status)` where status is 'Present' or 'Absent'. You want to pivot the data to show number of Present and Absent days per employee. Which approach is correct?",
+    "description": "pivot aggregation",
+    "answers": {
+      "answer_a": "SELECT emp_id, COUNT(CASE WHEN status='Present' THEN 1 END) AS Present, COUNT(CASE WHEN status='Absent' THEN 1 END) AS Absent FROM attendance GROUP BY emp_id",
+      "answer_b": "SELECT emp_id, SUM(status='Present') AS Present, SUM(status='Absent') AS Absent FROM attendance GROUP BY emp_id",
+      "answer_c": "SELECT emp_id, status, COUNT(*) FROM attendance GROUP BY emp_id, status",
+      "answer_d": "SELECT emp_id, MAX(status) FROM attendance"
+    },
+    "multiple_correct_answers": "false",
+    "correct_answers": {
+      "answer_a_correct": "true",
+      "answer_b_correct": "false",
+      "answer_c_correct": "false",
+      "answer_d_correct": "false"
+    },
+    "explanation": "Conditional aggregation allows pivoting values into separate columns.",
+    "tip": "Use CASE WHEN inside COUNT or SUM for pivoting.",
+    "tags": ["sql", "scenario", "pivot", "intermediate"],
+    "category": "sql",
+    "difficulty": "Intermediate"
+  },
+  {
+    "id": 215,
+    "question": "You have a table `orders(order_id, customer_id, amount)`. You want to find the top 3 customers by total order amount. Which query works?",
+    "description": "top N per group",
+    "answers": {
+      "answer_a": "SELECT customer_id, SUM(amount) AS total FROM orders GROUP BY customer_id ORDER BY total DESC LIMIT 3",
+      "answer_b": "SELECT customer_id, SUM(amount) FROM orders ORDER BY SUM(amount) DESC LIMIT 3",
+      "answer_c": "SELECT TOP 3 customer_id, SUM(amount) FROM orders GROUP BY customer_id ORDER BY SUM(amount) DESC",
+      "answer_d": "Both A and C depending on database"
+    },
+    "multiple_correct_answers": "false",
+    "correct_answers": {
+      "answer_a_correct": "false",
+      "answer_b_correct": "false",
+      "answer_c_correct": "false",
+      "answer_d_correct": "true"
+    },
+    "explanation": "Different SQL dialects use LIMIT (MySQL/Postgres) or TOP (SQL Server) for top N rows.",
+    "tip": "Always alias aggregated columns for clarity when ordering.",
+    "tags": ["sql", "scenario", "aggregate", "intermediate"],
+    "category": "sql",
+    "difficulty": "Intermediate"
+  },
+  {
+    "id": 216,
+    "question": "You have a table `employees(emp_id, name, manager_id)`. You want to find employees who manage at least one other employee. Which query works?",
+    "description": "self-join scenario",
+    "answers": {
+      "answer_a": "SELECT DISTINCT manager_id FROM employees WHERE manager_id IS NOT NULL",
+      "answer_b": "SELECT e1.name FROM employees e1 JOIN employees e2 ON e1.emp_id = e2.manager_id",
+      "answer_c": "SELECT name FROM employees WHERE emp_id IN (SELECT manager_id FROM employees)",
+      "answer_d": "All of the above"
+    },
+    "multiple_correct_answers": "false",
+    "correct_answers": {
+      "answer_a_correct": "false",
+      "answer_b_correct": "false",
+      "answer_c_correct": "false",
+      "answer_d_correct": "true"
+    },
+    "explanation": "Multiple approaches (DISTINCT, JOIN, subquery) can correctly identify managers.",
+    "tip": "Self-joins are common for hierarchical or manager-employee queries.",
+    "tags": ["sql", "scenario", "self-join", "intermediate"],
+    "category": "sql",
+    "difficulty": "Intermediate"
+  },
+  {
+    "id": 217,
+    "question": "You have a table `products(product_id, price, stock)`. You want to give a 10% discount to the top 5 most expensive products. Which approach works?",
+    "description": "update with subquery",
+    "answers": {
+      "answer_a": "UPDATE products SET price = price*0.9 WHERE price IN (SELECT price FROM products ORDER BY price DESC LIMIT 5)",
+      "answer_b": "UPDATE products SET price = price*0.9 WHERE product_id IN (SELECT product_id FROM products ORDER BY price DESC LIMIT 5)",
+      "answer_c": "UPDATE products SET price = price*0.9 WHERE ROWNUM <= 5",
+      "answer_d": "All of the above depending on database"
+    },
+    "multiple_correct_answers": "false",
+    "correct_answers": {
+      "answer_a_correct": "false",
+      "answer_b_correct": "false",
+      "answer_c_correct": "false",
+      "answer_d_correct": "true"
+    },
+    "explanation": "Top N updates depend on SQL dialect: LIMIT, TOP, ROWNUM. Correct subquery ensures only top products are updated.",
+    "tip": "Always test subquery selection before running updates.",
+    "tags": ["sql", "scenario", "update", "intermediate"],
+    "category": "sql",
+    "difficulty": "Intermediate"
+  },
+  {
+    "id": 218,
+    "question": "You have a table `orders(order_id, customer_id, order_date, amount)`. You want to calculate the moving average of order amounts over the last 3 orders per customer. Which function works?",
+    "description": "moving average window",
+    "answers": {
+      "answer_a": "AVG(amount) OVER(PARTITION BY customer_id ORDER BY order_date ROWS BETWEEN 2 PRECEDING AND CURRENT ROW)",
+      "answer_b": "SUM(amount)/3 OVER(PARTITION BY customer_id ORDER BY order_date)",
+      "answer_c": "AVG(amount) GROUP BY customer_id ORDER BY order_date",
+      "answer_d": "COUNT(amount) OVER(PARTITION BY customer_id ORDER BY order_date)"
+    },
+    "multiple_correct_answers": "false",
+    "correct_answers": {
+      "answer_a_correct": "true",
+      "answer_b_correct": "false",
+      "answer_c_correct": "false",
+      "answer_d_correct": "false"
+    },
+    "explanation": "ROWS BETWEEN allows a rolling window for moving averages.",
+    "tip": "Window functions maintain row-level detail while computing aggregates.",
+    "tags": ["sql", "scenario", "window function", "advanced"],
+    "category": "sql",
+    "difficulty": "Advanced"
+  },
+  {
+    "id": 219,
+    "question": "You have a table `employees(emp_id, department_id, salary)`. Some departments have no employees. You want to calculate average salary per department, including departments with no employees. Which JOIN should you use?",
+    "description": "include missing groups with outer join",
+    "answers": {
+      "answer_a": "INNER JOIN departments d ON employees.department_id = d.department_id GROUP BY d.department_id",
+      "answer_b": "LEFT JOIN departments d ON employees.department_id = d.department_id GROUP BY d.department_id",
+      "answer_c": "RIGHT JOIN departments d ON employees.department_id = d.department_id GROUP BY d.department_id",
+      "answer_d": "FULL OUTER JOIN departments d ON employees.department_id = d.department_id GROUP BY d.department_id"
+    },
+    "multiple_correct_answers": "false",
+    "correct_answers": {
+      "answer_a_correct": "false",
+      "answer_b_correct": "false",
+      "answer_c_correct": "false",
+      "answer_d_correct": "true"
+    },
+    "explanation": "FULL OUTER JOIN ensures all departments are included, even if they have no employees.",
+    "tip": "LEFT JOIN alone will exclude departments not present on the left table.",
+    "tags": ["sql", "scenario", "join", "advanced"],
+    "category": "sql",
+    "difficulty": "Advanced"
+  },
+  {
+    "id": 220,
+    "question": "You have a table `sales(product_id, region, amount)`. You want to pivot data to show total sales per product per region in columns. Which SQL feature can achieve this?",
+    "description": "pivot scenario",
+    "answers": {
+      "answer_a": "GROUP BY product_id, region",
+      "answer_b": "CASE WHEN with aggregation",
+      "answer_c": "PIVOT function (if supported)",
+      "answer_d": "Both B and C depending on database"
+    },
+    "multiple_correct_answers": "false",
+    "correct_answers": {
+      "answer_a_correct": "false",
+      "answer_b_correct": "false",
+      "answer_c_correct": "false",
+      "answer_d_correct": "true"
+    },
+    "explanation": "Pivoting can be done using CASE WHEN aggregation in MySQL/Postgres or PIVOT function in SQL Server/Oracle.",
+    "tip": "Conditional aggregation is universal; PIVOT is database-specific.",
+    "tags": ["sql", "scenario", "pivot", "advanced"],
+    "category": "sql",
+    "difficulty": "Advanced"
+  },
+  {
+    "id": 301,
+    "question": "What is the primary purpose of data modeling?",
+    "description": "purpose of data modeling",
+    "answers": {
+      "answer_a": "To design user interfaces",
+      "answer_b": "To structure and organize data efficiently",
+      "answer_c": "To write SQL queries",
+      "answer_d": "To create dashboards"
+    },
+    "multiple_correct_answers": "false",
+    "correct_answers": {
+      "answer_a_correct": "false",
+      "answer_b_correct": "true",
+      "answer_c_correct": "false",
+      "answer_d_correct": "false"
+    },
+    "explanation": "Data modeling defines how data is structured, stored, and related within a database.",
+    "tip": "Think structure before implementation.",
+    "tags": ["data modeling", "beginner", "concept"],
+    "category": "data modeling",
+    "difficulty": "Beginner"
+  },
+  {
+    "id": 302,
+    "question": "Which of the following best describes an Entity in data modeling?",
+    "description": "entity definition",
+    "answers": {
+      "answer_a": "A database query",
+      "answer_b": "A real-world object represented in the database",
+      "answer_c": "A primary key",
+      "answer_d": "A relationship"
+    },
+    "multiple_correct_answers": "false",
+    "correct_answers": {
+      "answer_a_correct": "false",
+      "answer_b_correct": "true",
+      "answer_c_correct": "false",
+      "answer_d_correct": "false"
+    },
+    "explanation": "An entity represents a real-world object such as Customer, Product, or Employee.",
+    "tip": "Entities become tables in relational databases.",
+    "tags": ["data modeling", "entity", "beginner"],
+    "category": "data modeling",
+    "difficulty": "Beginner"
+  },
+  {
+    "id": 303,
+    "question": "What is a Primary Key?",
+    "description": "primary key definition",
+    "answers": {
+      "answer_a": "A column that stores duplicate values",
+      "answer_b": "A column that uniquely identifies each row in a table",
+      "answer_c": "A foreign reference",
+      "answer_d": "An index only used for sorting"
+    },
+    "multiple_correct_answers": "false",
+    "correct_answers": {
+      "answer_a_correct": "false",
+      "answer_b_correct": "true",
+      "answer_c_correct": "false",
+      "answer_d_correct": "false"
+    },
+    "explanation": "A primary key uniquely identifies each record in a table.",
+    "tip": "Primary keys cannot contain NULL values.",
+    "tags": ["data modeling", "primary key", "beginner"],
+    "category": "data modeling",
+    "difficulty": "Beginner"
+  },
+  {
+    "id": 304,
+    "question": "What does normalization aim to reduce in a database?",
+    "description": "normalization purpose",
+    "answers": {
+      "answer_a": "Data redundancy",
+      "answer_b": "Indexes",
+      "answer_c": "Foreign keys",
+      "answer_d": "Queries"
+    },
+    "multiple_correct_answers": "false",
+    "correct_answers": {
+      "answer_a_correct": "true",
+      "answer_b_correct": "false",
+      "answer_c_correct": "false",
+      "answer_d_correct": "false"
+    },
+    "explanation": "Normalization reduces redundancy and improves data integrity.",
+    "tip": "1NF, 2NF, 3NF progressively reduce anomalies.",
+    "tags": ["data modeling", "normalization", "beginner"],
+    "category": "data_modeling",
+    "difficulty": "Beginner"
+  },
+  {
+    "id": 305,
+    "question": "In an ER diagram, what does a one-to-many relationship represent?",
+    "description": "cardinality concept",
+    "answers": {
+      "answer_a": "One entity instance relates to multiple instances of another entity",
+      "answer_b": "Multiple entities relate to one entity",
+      "answer_c": "Entities have no relationship",
+      "answer_d": "Many entities relate to many entities"
+    },
+    "multiple_correct_answers": "false",
+    "correct_answers": {
+      "answer_a_correct": "true",
+      "answer_b_correct": "false",
+      "answer_c_correct": "false",
+      "answer_d_correct": "false"
+    },
+    "explanation": "One-to-many means a single record in one table relates to multiple records in another table.",
+    "tip": "Example: One Customer → Many Orders.",
+    "tags": ["data modeling", "er diagram", "intermediate"],
+    "category": "data modeling",
+    "difficulty": "Intermediate"
+  },
+  {
+    "id": 306,
+    "question": "Which normal form eliminates transitive dependency?",
+    "description": "3NF concept",
+    "answers": {
+      "answer_a": "1NF",
+      "answer_b": "2NF",
+      "answer_c": "3NF",
+      "answer_d": "BCNF"
+    },
+    "multiple_correct_answers": "false",
+    "correct_answers": {
+      "answer_a_correct": "false",
+      "answer_b_correct": "false",
+      "answer_c_correct": "true",
+      "answer_d_correct": "false"
+    },
+    "explanation": "Third Normal Form (3NF) removes transitive dependencies.",
+    "tip": "A non-key attribute should depend only on the primary key.",
+    "tags": ["data modeling", "normalization", "intermediate"],
+    "category": "data modeling",
+    "difficulty": "Intermediate"
+  },
+  {
+    "id": 307,
+    "question": "What is a foreign key?",
+    "description": "foreign key definition",
+    "answers": {
+      "answer_a": "A key used for encryption",
+      "answer_b": "A column that references a primary key in another table",
+      "answer_c": "A duplicate primary key",
+      "answer_d": "A computed column"
+    },
+    "multiple_correct_answers": "false",
+    "correct_answers": {
+      "answer_a_correct": "false",
+      "answer_b_correct": "true",
+      "answer_c_correct": "false",
+      "answer_d_correct": "false"
+    },
+    "explanation": "A foreign key establishes a relationship between two tables.",
+    "tip": "It enforces referential integrity.",
+    "tags": ["data modeling", "relationships", "intermediate"],
+    "category": "data modeling",
+    "difficulty": "Intermediate"
+  },
+  {
+    "id": 308,
+    "question": "In dimensional modeling, what is a fact table primarily used for?",
+    "description": "fact table concept",
+    "answers": {
+      "answer_a": "Storing descriptive attributes",
+      "answer_b": "Storing measurable business metrics",
+      "answer_c": "Storing metadata",
+      "answer_d": "Storing primary keys only"
+    },
+    "multiple_correct_answers": "false",
+    "correct_answers": {
+      "answer_a_correct": "false",
+      "answer_b_correct": "true",
+      "answer_c_correct": "false",
+      "answer_d_correct": "false"
+    },
+    "explanation": "Fact tables store quantitative measures such as sales amount, quantity, or revenue.",
+    "tip": "Fact tables link to dimension tables.",
+    "tags": ["data modeling", "dimensional modeling", "advanced"],
+    "category": "data modeling",
+    "difficulty": "Advanced"
+  },
+  {
+    "id": 309,
+    "question": "Which schema design is commonly used in data warehouses?",
+    "description": "warehouse schema",
+    "answers": {
+      "answer_a": "Star schema",
+      "answer_b": "Flat file schema",
+      "answer_c": "Network schema",
+      "answer_d": "Tree schema"
+    },
+    "multiple_correct_answers": "false",
+    "correct_answers": {
+      "answer_a_correct": "true",
+      "answer_b_correct": "false",
+      "answer_c_correct": "false",
+      "answer_d_correct": "false"
+    },
+    "explanation": "Star schema is widely used in data warehouses for simplified reporting.",
+    "tip": "Fact table in center, dimension tables around it.",
+    "tags": ["data modeling", "warehouse", "advanced"],
+    "category": "data modeling",
+    "difficulty": "Advanced"
+  },
+  {
+    "id": 310,
+    "question": "What is Slowly Changing Dimension (SCD) Type 2?",
+    "description": "SCD concept",
+    "answers": {
+      "answer_a": "Overwriting old dimension values",
+      "answer_b": "Adding a new row to preserve history",
+      "answer_c": "Deleting old records",
+      "answer_d": "Aggregating dimension data"
+    },
+    "multiple_correct_answers": "false",
+    "correct_answers": {
+      "answer_a_correct": "false",
+      "answer_b_correct": "true",
+      "answer_c_correct": "false",
+      "answer_d_correct": "false"
+    },
+    "explanation": "SCD Type 2 preserves historical changes by inserting new records with versioning.",
+    "tip": "Common in data warehouses.",
+    "tags": ["data modeling", "scd", "advanced"],
+    "category": "data modeling",
+    "difficulty": "Advanced"
+  },
+  {
+  "id": 311,
+  "question": "Which of the following best defines an Attribute in data modeling?",
+  "description": "attribute definition",
+  "answers": {
+    "answer_a": "A table in the database",
+    "answer_b": "A property or characteristic of an entity",
+    "answer_c": "A relationship between tables",
+    "answer_d": "A query to retrieve data"
+  },
+  "multiple_correct_answers": "false",
+  "correct_answers": {
+    "answer_a_correct": "false",
+    "answer_b_correct": "true",
+    "answer_c_correct": "false",
+    "answer_d_correct": "false"
+  },
+  "explanation": "Attributes describe the properties of entities, like name, age, or email.",
+  "tip": "Think of columns in a table.",
+  "tags": ["data modeling", "beginner", "concept"],
+  "category": "data modeling",
+  "difficulty": "Beginner"
+},
+{
+  "id": 312,
+  "question": "What is denormalization used for in databases?",
+  "description": "denormalization concept",
+  "answers": {
+    "answer_a": "Reduce data duplication",
+    "answer_b": "Improve query performance at the cost of redundancy",
+    "answer_c": "Enforce referential integrity",
+    "answer_d": "Create foreign keys automatically"
+  },
+  "multiple_correct_answers": "false",
+  "correct_answers": {
+    "answer_a_correct": "false",
+    "answer_b_correct": "true",
+    "answer_c_correct": "false",
+    "answer_d_correct": "false"
+  },
+  "explanation": "Denormalization intentionally adds redundancy to improve performance for read-heavy workloads.",
+  "tip": "Often used in reporting tables and data warehouses.",
+  "tags": ["data modeling", "intermediate", "performance"],
+  "category": "data modeling",
+  "difficulty": "Intermediate"
+},
+{
+  "id": 313,
+  "question": "In a relational database, which relationship is represented by a junction table?",
+  "description": "many-to-many relationship",
+  "answers": {
+    "answer_a": "One-to-one",
+    "answer_b": "One-to-many",
+    "answer_c": "Many-to-many",
+    "answer_d": "Self-referencing"
+  },
+  "multiple_correct_answers": "false",
+  "correct_answers": {
+    "answer_a_correct": "false",
+    "answer_b_correct": "false",
+    "answer_c_correct": "true",
+    "answer_d_correct": "false"
+  },
+  "explanation": "Many-to-many relationships are implemented using a junction table with foreign keys referencing both tables.",
+  "tip": "Example: Students ↔ Courses via StudentCourses table.",
+  "tags": ["data modeling", "intermediate", "relationships"],
+  "category": "data modeling",
+  "difficulty": "Intermediate"
+},
+{
+  "id": 314,
+  "question": "Which type of data model is most suitable for a data warehouse?",
+  "description": "dimensional model",
+  "answers": {
+    "answer_a": "Hierarchical model",
+    "answer_b": "Network model",
+    "answer_c": "Dimensional model (star or snowflake schema)",
+    "answer_d": "Flat file model"
+  },
+  "multiple_correct_answers": "false",
+  "correct_answers": {
+    "answer_a_correct": "false",
+    "answer_b_correct": "false",
+    "answer_c_correct": "true",
+    "answer_d_correct": "false"
+  },
+  "explanation": "Dimensional models are optimized for analytics and reporting.",
+  "tip": "Fact tables contain metrics, dimension tables contain descriptive attributes.",
+  "tags": ["data modeling", "advanced", "warehouse"],
+  "category": "data modeling",
+  "difficulty": "Advanced"
+},
+{
+  "id": 315,
+  "question": "Scenario: You have `Orders` and `Customers` tables. Some customers have not placed any orders. You need to report all customers with order counts, including zero. What approach is correct?",
+  "description": "scenario left join",
+  "answers": {
+    "answer_a": "INNER JOIN Orders ON Customers.customer_id = Orders.customer_id",
+    "answer_b": "LEFT JOIN Orders ON Customers.customer_id = Orders.customer_id",
+    "answer_c": "RIGHT JOIN Orders ON Customers.customer_id = Orders.customer_id",
+    "answer_d": "FULL OUTER JOIN Orders ON Customers.customer_id = Orders.customer_id"
+  },
+  "multiple_correct_answers": "false",
+  "correct_answers": {
+    "answer_a_correct": "false",
+    "answer_b_correct": "true",
+    "answer_c_correct": "false",
+    "answer_d_correct": "false"
+  },
+  "explanation": "LEFT JOIN ensures all customers appear even if they have no orders.",
+  "tip": "Use COUNT(Orders.order_id) to count orders per customer, zero included.",
+  "tags": ["data modeling", "scenario", "intermediate"],
+  "category": "data modeling",
+  "difficulty": "Intermediate"
+},
+{
+  "id": 316,
+  "question": "Which of the following is an example of a Slowly Changing Dimension (SCD) Type 1?",
+  "description": "scd type 1",
+  "answers": {
+    "answer_a": "Overwrite old values with new ones",
+    "answer_b": "Add new rows to track history",
+    "answer_c": "Use a separate audit table",
+    "answer_d": "Create surrogate keys for changes"
+  },
+  "multiple_correct_answers": "false",
+  "correct_answers": {
+    "answer_a_correct": "true",
+    "answer_b_correct": "false",
+    "answer_c_correct": "false",
+    "answer_d_correct": "false"
+  },
+  "explanation": "SCD Type 1 overwrites old attribute values; history is not preserved.",
+  "tip": "SCD Type 2 preserves history by adding new rows.",
+  "tags": ["data modeling", "advanced", "warehouse"],
+  "category": "data modeling",
+  "difficulty": "Advanced"
+},
+{
+  "id": 317,
+  "question": "Trick question: In a normalized table, you notice repeated values for an attribute that should be unique. What is the likely issue?",
+  "description": "trick: uniqueness violation",
+  "answers": {
+    "answer_a": "Data redundancy due to missing normalization",
+    "answer_b": "Primary key constraint missing",
+    "answer_c": "Foreign key used incorrectly",
+    "answer_d": "All of the above"
+  },
+  "multiple_correct_answers": "false",
+  "correct_answers": {
+    "answer_a_correct": "false",
+    "answer_b_correct": "false",
+    "answer_c_correct": "false",
+    "answer_d_correct": "true"
+  },
+  "explanation": "All three can contribute to repeated values in a supposedly unique attribute.",
+  "tip": "Check normalization, primary key constraints, and foreign key relationships.",
+  "tags": ["data modeling", "trick", "advanced"],
+  "category": "data modeling",
+  "difficulty": "Advanced"
+},
+{
+  "id": 318,
+  "question": "In ER diagrams, which symbol typically represents a weak entity?",
+  "description": "er weak entity symbol",
+  "answers": {
+    "answer_a": "Rectangle with double border",
+    "answer_b": "Diamond shape",
+    "answer_c": "Oval shape",
+    "answer_d": "Rectangle with dashed border"
+  },
+  "multiple_correct_answers": "false",
+  "correct_answers": {
+    "answer_a_correct": "true",
+    "answer_b_correct": "false",
+    "answer_c_correct": "false",
+    "answer_d_correct": "false"
+  },
+  "explanation": "A weak entity is represented by a rectangle with a double border and depends on a strong entity.",
+  "tip": "It does not have a fully unique key on its own.",
+  "tags": ["data modeling", "er diagram", "intermediate"],
+  "category": "data modeling",
+  "difficulty": "Intermediate"
+},
+{
+  "id": 319,
+  "question": "Which schema uses dimension tables connected to a central fact table?",
+  "description": "star schema identification",
+  "answers": {
+    "answer_a": "Snowflake schema",
+    "answer_b": "Star schema",
+    "answer_c": "Network schema",
+    "answer_d": "Hierarchical schema"
+  },
+  "multiple_correct_answers": "false",
+  "correct_answers": {
+    "answer_a_correct": "false",
+    "answer_b_correct": "true",
+    "answer_c_correct": "false",
+    "answer_d_correct": "false"
+  },
+  "explanation": "Star schema features a central fact table linked to dimension tables for simplicity and speed.",
+  "tip": "Snowflake schema normalizes dimensions further.",
+  "tags": ["data modeling", "warehouse", "advanced"],
+  "category": "data_modeling",
+  "difficulty": "Advanced"
+},
+{
+  "id": 320,
+  "question": "Scenario: You need to track changes in customer address while preserving history. Which approach is best?",
+  "description": "scd type 2 scenario",
+  "answers": {
+    "answer_a": "Overwrite old address (SCD Type 1)",
+    "answer_b": "Add new row with versioning (SCD Type 2)",
+    "answer_c": "Ignore change",
+    "answer_d": "Use NULL for old address"
+  },
+  "multiple_correct_answers": "false",
+  "correct_answers": {
+    "answer_a_correct": "false",
+    "answer_b_correct": "true",
+    "answer_c_correct": "false",
+    "answer_d_correct": "false"
+  },
+  "explanation": "SCD Type 2 preserves historical data by inserting a new row with updated attributes.",
+  "tip": "Add effective date and version columns to manage history.",
+  "tags": ["data modeling", "scenario", "advanced"],
+  "category": "data modeling",
+  "difficulty": "Advanced"
+},
+{
+  "id": 321,
+  "question": "Which type of key uniquely identifies a record but is not meaningful outside the table?",
+  "description": "surrogate key concept",
+  "answers": {
+    "answer_a": "Natural key",
+    "answer_b": "Surrogate key",
+    "answer_c": "Composite key",
+    "answer_d": "Foreign key"
+  },
+  "multiple_correct_answers": "false",
+  "correct_answers": {
+    "answer_a_correct": "false",
+    "answer_b_correct": "true",
+    "answer_c_correct": "false",
+    "answer_d_correct": "false"
+  },
+  "explanation": "Surrogate keys are system-generated, often integers, with no business meaning.",
+  "tip": "Use when natural keys are complex or may change.",
+  "tags": ["data modeling", "advanced", "keys"],
+  "category": "data modeling",
+  "difficulty": "Advanced"
+},
+{
+  "id": 322,
+  "question": "Trick Question: Which is true about a star schema?",
+  "description": "star schema common misconception",
+  "answers": {
+    "answer_a": "Dimension tables are normalized",
+    "answer_b": "Fact table stores descriptive attributes",
+    "answer_c": "Fact table contains quantitative measures",
+    "answer_d": "All tables are normalized"
+  },
+  "multiple_correct_answers": "false",
+  "correct_answers": {
+    "answer_a_correct": "false",
+    "answer_b_correct": "false",
+    "answer_c_correct": "true",
+    "answer_d_correct": "false"
+  },
+  "explanation": "Fact table stores numeric measures; dimension tables may be denormalized for performance.",
+  "tip": "Don't confuse star with snowflake schemas.",
+  "tags": ["data modeling", "trick", "advanced"],
+  "category": "data modeling",
+  "difficulty": "Advanced"
+},
+{
+  "id": 323,
+  "question": "Which normal form deals with removing partial dependency?",
+  "description": "2NF concept",
+  "answers": {
+    "answer_a": "1NF",
+    "answer_b": "2NF",
+    "answer_c": "3NF",
+    "answer_d": "BCNF"
+  },
+  "multiple_correct_answers": "false",
+  "correct_answers": {
+    "answer_a_correct": "false",
+    "answer_b_correct": "true",
+    "answer_c_correct": "false",
+    "answer_d_correct": "false"
+  },
+  "explanation": "2NF removes partial dependency of attributes on part of a composite primary key.",
+  "tip": "2NF requires first that the table is in 1NF.",
+  "tags": ["data modeling", "normalization", "intermediate"],
+  "category": "data modeling",
+  "difficulty": "Intermediate"
+},
+{
+  "id": 324,
+  "question": "Scenario: You need to design a database for a library. Each book can have multiple authors. Which relationship is correct?",
+  "description": "many-to-many scenario",
+  "answers": {
+    "answer_a": "One-to-one",
+    "answer_b": "One-to-many",
+    "answer_c": "Many-to-many via junction table",
+    "answer_d": "Self-join"
+  },
+  "multiple_correct_answers": "false",
+  "correct_answers": {
+    "answer_a_correct": "false",
+    "answer_b_correct": "false",
+    "answer_c_correct": "true",
+    "answer_d_correct": "false"
+  },
+  "explanation": "Books ↔ Authors require a junction table (BookAuthors) for many-to-many relationship.",
+  "tip": "Each junction row references a book and an author.",
+  "tags": ["data modeling", "scenario", "intermediate"],
+  "category": "data modeling",
+  "difficulty": "Intermediate"
+},
+{
+  "id": 325,
+  "question": "Scenario: A product's price history must be preserved for analytics. Which column should be added?",
+  "description": "tracking history scenario",
+  "answers": {
+    "answer_a": "Current price only",
+    "answer_b": "Effective start and end dates for each price",
+    "answer_c": "Category ID",
+    "answer_d": "Product ID only"
+  },
+  "multiple_correct_answers": "false",
+  "correct_answers": {
+    "answer_a_correct": "false",
+    "answer_b_correct": "true",
+    "answer_c_correct": "false",
+    "answer_d_correct": "false"
+  },
+  "explanation": "Effective date columns help track historical prices in SCD Type 2 fashion.",
+  "tip": "Useful for reporting trends and analytics.",
+  "tags": ["data modeling", "scenario", "advanced"],
+  "category": "data modeling",
+  "difficulty": "Advanced"
+},
+{
+  "id": 326,
+  "question": "Which normal form ensures that all attributes contain only atomic values?",
+  "description": "1NF concept",
+  "answers": {
+    "answer_a": "1NF",
+    "answer_b": "2NF",
+    "answer_c": "3NF",
+    "answer_d": "BCNF"
+  },
+  "multiple_correct_answers": "false",
+  "correct_answers": {
+    "answer_a_correct": "true",
+    "answer_b_correct": "false",
+    "answer_c_correct": "false",
+    "answer_d_correct": "false"
+  },
+  "explanation": "First Normal Form (1NF) requires that each column contains atomic (indivisible) values.",
+  "tip": "No repeating groups in 1NF.",
+  "tags": ["data modeling", "normalization", "beginner"],
+  "category": "data modeling",
+  "difficulty": "Beginner"
+},
+{
+  "id": 327,
+  "question": "Which key consists of two or more columns used together to uniquely identify a row?",
+  "description": "composite key",
+  "answers": {
+    "answer_a": "Primary key",
+    "answer_b": "Foreign key",
+    "answer_c": "Composite key",
+    "answer_d": "Surrogate key"
+  },
+  "multiple_correct_answers": "false",
+  "correct_answers": {
+    "answer_a_correct": "false",
+    "answer_b_correct": "false",
+    "answer_c_correct": "true",
+    "answer_d_correct": "false"
+  },
+  "explanation": "A composite key combines multiple columns to create uniqueness.",
+  "tip": "Common in junction tables.",
+  "tags": ["data modeling", "keys", "beginner"],
+  "category": "data modeling",
+  "difficulty": "Beginner"
+},
+{
+  "id": 328,
+  "question": "In a snowflake schema, dimension tables are:",
+  "description": "snowflake schema structure",
+  "answers": {
+    "answer_a": "Denormalized",
+    "answer_b": "Normalized into multiple related tables",
+    "answer_c": "Stored inside fact tables",
+    "answer_d": "Removed completely"
+  },
+  "multiple_correct_answers": "false",
+  "correct_answers": {
+    "answer_a_correct": "false",
+    "answer_b_correct": "true",
+    "answer_c_correct": "false",
+    "answer_d_correct": "false"
+  },
+  "explanation": "Snowflake schema normalizes dimension tables into multiple related tables.",
+  "tip": "More joins but less redundancy.",
+  "tags": ["data modeling", "warehouse", "advanced"],
+  "category": "data modeling",
+  "difficulty": "Advanced"
+},
+{
+  "id": 329,
+  "question": "Scenario: A student can enroll in multiple courses, and each course can have multiple students. What modeling approach is required?",
+  "description": "many-to-many scenario",
+  "answers": {
+    "answer_a": "Add foreign key to student table only",
+    "answer_b": "Create a junction table with composite key",
+    "answer_c": "Duplicate course rows",
+    "answer_d": "Use one-to-one relationship"
+  },
+  "multiple_correct_answers": "false",
+  "correct_answers": {
+    "answer_a_correct": "false",
+    "answer_b_correct": "true",
+    "answer_c_correct": "false",
+    "answer_d_correct": "false"
+  },
+  "explanation": "Many-to-many relationships require a junction table referencing both entities.",
+  "tip": "Primary key often combines both foreign keys.",
+  "tags": ["data modeling", "scenario", "intermediate"],
+  "category": "data modeling",
+  "difficulty": "Intermediate"
+},
+{
+  "id": 330,
+  "question": "Which of the following is NOT a characteristic of a fact table?",
+  "description": "fact table characteristics",
+  "answers": {
+    "answer_a": "Contains numeric measures",
+    "answer_b": "Contains foreign keys to dimensions",
+    "answer_c": "Stores descriptive text attributes",
+    "answer_d": "Supports aggregation"
+  },
+  "multiple_correct_answers": "false",
+  "correct_answers": {
+    "answer_a_correct": "false",
+    "answer_b_correct": "false",
+    "answer_c_correct": "true",
+    "answer_d_correct": "false"
+  },
+  "explanation": "Fact tables mainly store measurable metrics, not descriptive attributes.",
+  "tip": "Descriptive attributes belong in dimension tables.",
+  "tags": ["data modeling", "warehouse", "advanced"],
+  "category": "data modeling",
+  "difficulty": "Advanced"
+},
+{
+  "id": 331,
+  "question": "What is referential integrity?",
+  "description": "referential integrity concept",
+  "answers": {
+    "answer_a": "Ensuring primary keys are indexed",
+    "answer_b": "Ensuring foreign keys correctly reference existing primary keys",
+    "answer_c": "Ensuring no duplicate values",
+    "answer_d": "Ensuring fast queries"
+  },
+  "multiple_correct_answers": "false",
+  "correct_answers": {
+    "answer_a_correct": "false",
+    "answer_b_correct": "true",
+    "answer_c_correct": "false",
+    "answer_d_correct": "false"
+  },
+  "explanation": "Referential integrity ensures relationships between tables remain consistent.",
+  "tip": "Foreign key constraints enforce this.",
+  "tags": ["data modeling", "intermediate", "relationships"],
+  "category": "data modeling",
+  "difficulty": "Intermediate"
+},
+{
+  "id": 332,
+  "question": "Trick Question: Can a fact table exist without dimension tables?",
+  "description": "conceptual trick",
+  "answers": {
+    "answer_a": "Yes, always",
+    "answer_b": "No, fact tables require dimensions for context",
+    "answer_c": "Only in OLTP systems",
+    "answer_d": "Only if it has no measures"
+  },
+  "multiple_correct_answers": "false",
+  "correct_answers": {
+    "answer_a_correct": "false",
+    "answer_b_correct": "true",
+    "answer_c_correct": "false",
+    "answer_d_correct": "false"
+  },
+  "explanation": "Fact tables need dimension tables to provide descriptive context for measures.",
+  "tip": "Facts without dimensions lack analytical meaning.",
+  "tags": ["data modeling", "trick", "advanced"],
+  "category": "data modeling",
+  "difficulty": "Advanced"
+},
+{
+  "id": 333,
+  "question": "Which normal form eliminates repeating groups?",
+  "description": "1NF repeating groups",
+  "answers": {
+    "answer_a": "1NF",
+    "answer_b": "2NF",
+    "answer_c": "3NF",
+    "answer_d": "4NF"
+  },
+  "multiple_correct_answers": "false",
+  "correct_answers": {
+    "answer_a_correct": "true",
+    "answer_b_correct": "false",
+    "answer_c_correct": "false",
+    "answer_d_correct": "false"
+  },
+  "explanation": "1NF removes repeating groups and ensures atomicity.",
+  "tip": "Each field must hold only one value.",
+  "tags": ["data modeling", "normalization", "beginner"],
+  "category": "data modeling",
+  "difficulty": "Beginner"
+},
+{
+  "id": 334,
+  "question": "Scenario: You need to store customer age but age changes yearly. What should you store?",
+  "description": "age modeling scenario",
+  "answers": {
+    "answer_a": "Age",
+    "answer_b": "Date of birth",
+    "answer_c": "Both age and date of birth",
+    "answer_d": "Random ID"
+  },
+  "multiple_correct_answers": "false",
+  "correct_answers": {
+    "answer_a_correct": "false",
+    "answer_b_correct": "true",
+    "answer_c_correct": "false",
+    "answer_d_correct": "false"
+  },
+  "explanation": "Store date of birth and calculate age dynamically to avoid inconsistency.",
+  "tip": "Avoid storing derived values.",
+  "tags": ["data modeling", "scenario", "intermediate"],
+  "category": "data modeling",
+  "difficulty": "Intermediate"
+},
+{
+  "id": 335,
+  "question": "Which schema type is more optimized for performance in BI tools like Power BI?",
+  "description": "star schema performance",
+  "answers": {
+    "answer_a": "Star schema",
+    "answer_b": "Snowflake schema",
+    "answer_c": "Fully normalized OLTP schema",
+    "answer_d": "Flat Excel file"
+  },
+  "multiple_correct_answers": "false",
+  "correct_answers": {
+    "answer_a_correct": "true",
+    "answer_b_correct": "false",
+    "answer_c_correct": "false",
+    "answer_d_correct": "false"
+  },
+  "explanation": "Star schema reduces joins and improves query performance in BI tools.",
+  "tip": "Power BI works best with star schema models.",
+  "tags": ["data modeling", "warehouse", "advanced"],
+  "category": "data modeling",
+  "difficulty": "Advanced"
+},
+{
+    "id": 351,
+    "question": "Which key uniquely identifies each record in a table?",
+    "description": "primary key concept",
+    "answers": {
+      "answer_a": "Foreign Key",
+      "answer_b": "Composite Key",
+      "answer_c": "Primary Key",
+      "answer_d": "Candidate Key"
+    },
+    "multiple_correct_answers": "false",
+    "correct_answers": {
+      "answer_a_correct": "false",
+      "answer_b_correct": "false",
+      "answer_c_correct": "true",
+      "answer_d_correct": "false"
+    },
+    "explanation": "A Primary Key uniquely identifies each record in a table and cannot contain NULL values.",
+    "tip": null,
+    "tags": ["data modeling", "keys"],
+    "category": "data modeling",
+    "difficulty": "Beginner"
+  },
+  {
+    "id": 352,
+    "question": "What type of relationship exists when one record in Table A relates to many records in Table B?",
+    "description": "one-to-many relationship",
+    "answers": {
+      "answer_a": "One-to-One",
+      "answer_b": "Many-to-Many",
+      "answer_c": "One-to-Many",
+      "answer_d": "Self-Join"
+    },
+    "multiple_correct_answers": "false",
+    "correct_answers": {
+      "answer_a_correct": "false",
+      "answer_b_correct": "false",
+      "answer_c_correct": "true",
+      "answer_d_correct": "false"
+    },
+    "explanation": "A One-to-Many relationship means one record in one table is associated with multiple records in another table.",
+    "tip": null,
+    "tags": ["data modeling", "relationships"],
+    "category": "data modeling",
+    "difficulty": "Beginner"
+  },
+  {
+    "id": 353,
+    "question": "Which normalization form removes repeating groups?",
+    "description": "first normal form",
+    "answers": {
+      "answer_a": "1NF",
+      "answer_b": "2NF",
+      "answer_c": "3NF",
+      "answer_d": "BCNF"
+    },
+    "multiple_correct_answers": "false",
+    "correct_answers": {
+      "answer_a_correct": "true",
+      "answer_b_correct": "false",
+      "answer_c_correct": "false",
+      "answer_d_correct": "false"
+    },
+    "explanation": "First Normal Form (1NF) ensures that each column contains atomic values and eliminates repeating groups.",
+    "tip": null,
+    "tags": ["data modeling", "normalization"],
+    "category": "data modeling",
+    "difficulty": "Beginner"
+  },
+  {
+    "id": 354,
+    "question": "A foreign key is primarily used to:",
+    "description": "foreign key purpose",
+    "answers": {
+      "answer_a": "Create indexes",
+      "answer_b": "Enforce referential integrity",
+      "answer_c": "Sort records",
+      "answer_d": "Store calculated values"
+    },
+    "multiple_correct_answers": "false",
+    "correct_answers": {
+      "answer_a_correct": "false",
+      "answer_b_correct": "true",
+      "answer_c_correct": "false",
+      "answer_d_correct": "false"
+    },
+    "explanation": "A foreign key links two tables and ensures referential integrity between them.",
+    "tip": null,
+    "tags": ["data modeling", "keys"],
+    "category": "data modeling",
+    "difficulty": "Beginner"
+  },
+  {
+    "id": 355,
+    "question": "In a many-to-many relationship, what is typically required?",
+    "description": "junction table",
+    "answers": {
+      "answer_a": "Composite Attribute",
+      "answer_b": "Bridge (Junction) Table",
+      "answer_c": "Unique Constraint",
+      "answer_d": "View"
+    },
+    "multiple_correct_answers": "false",
+    "correct_answers": {
+      "answer_a_correct": "false",
+      "answer_b_correct": "true",
+      "answer_c_correct": "false",
+      "answer_d_correct": "false"
+    },
+    "explanation": "A Bridge or Junction table resolves many-to-many relationships by breaking them into two one-to-many relationships.",
+    "tip": null,
+    "tags": ["data modeling", "relationships"],
+    "category": "data modeling",
+    "difficulty": "Intermediate"
+  },
+  {
+    "id": 356,
+    "question": "Which normal form removes partial dependency?",
+    "description": "second normal form",
+    "answers": {
+      "answer_a": "1NF",
+      "answer_b": "2NF",
+      "answer_c": "3NF",
+      "answer_d": "4NF"
+    },
+    "multiple_correct_answers": "false",
+    "correct_answers": {
+      "answer_a_correct": "false",
+      "answer_b_correct": "true",
+      "answer_c_correct": "false",
+      "answer_d_correct": "false"
+    },
+    "explanation": "Second Normal Form (2NF) removes partial dependencies on composite keys.",
+    "tip": null,
+    "tags": ["data modeling", "normalization"],
+    "category": "data modeling",
+    "difficulty": "Intermediate"
+  },
+  {
+    "id": 357,
+    "question": "Which schema design is optimized for analytical queries?",
+    "description": "star schema",
+    "answers": {
+      "answer_a": "Third Normal Form",
+      "answer_b": "Snowflake Schema",
+      "answer_c": "Star Schema",
+      "answer_d": "Flat File"
+    },
+    "multiple_correct_answers": "false",
+    "correct_answers": {
+      "answer_a_correct": "false",
+      "answer_b_correct": "false",
+      "answer_c_correct": "true",
+      "answer_d_correct": "false"
+    },
+    "explanation": "Star Schema is optimized for data warehousing and analytical queries with fact and dimension tables.",
+    "tip": null,
+    "tags": ["data modeling", "data warehouse"],
+    "category": "data modeling",
+    "difficulty": "Intermediate"
+  },
+  {
+    "id": 358,
+    "question": "What type of attribute can be broken down into smaller components?",
+    "description": "composite attribute",
+    "answers": {
+      "answer_a": "Derived Attribute",
+      "answer_b": "Composite Attribute",
+      "answer_c": "Atomic Attribute",
+      "answer_d": "Multivalued Attribute"
+    },
+    "multiple_correct_answers": "false",
+    "correct_answers": {
+      "answer_a_correct": "false",
+      "answer_b_correct": "true",
+      "answer_c_correct": "false",
+      "answer_d_correct": "false"
+    },
+    "explanation": "A composite attribute can be subdivided into smaller attributes (e.g., FullName into FirstName and LastName).",
+    "tip": null,
+    "tags": ["data modeling", "er diagram"],
+    "category": "data modeling",
+    "difficulty": "Beginner"
+  },
+  {
+    "id": 359,
+    "question": "Which normal form removes transitive dependency?",
+    "description": "third normal form",
+    "answers": {
+      "answer_a": "2NF",
+      "answer_b": "3NF",
+      "answer_c": "1NF",
+      "answer_d": "BCNF"
+    },
+    "multiple_correct_answers": "false",
+    "correct_answers": {
+      "answer_a_correct": "false",
+      "answer_b_correct": "true",
+      "answer_c_correct": "false",
+      "answer_d_correct": "false"
+    },
+    "explanation": "Third Normal Form (3NF) eliminates transitive dependencies.",
+    "tip": null,
+    "tags": ["data modeling", "normalization"],
+    "category": "data modeling",
+    "difficulty": "Intermediate"
+  },
+  {
+    "id": 360,
+    "question": "Which table in a star schema contains measurable numeric values?",
+    "description": "fact table",
+    "answers": {
+      "answer_a": "Dimension Table",
+      "answer_b": "Lookup Table",
+      "answer_c": "Fact Table",
+      "answer_d": "Bridge Table"
+    },
+    "multiple_correct_answers": "false",
+    "correct_answers": {
+      "answer_a_correct": "false",
+      "answer_b_correct": "false",
+      "answer_c_correct": "true",
+      "answer_d_correct": "false"
+    },
+    "explanation": "Fact tables store measurable metrics such as sales amount or quantity.",
+    "tip": null,
+    "tags": ["data modeling", "data warehouse"],
+    "category": "data modeling",
+    "difficulty": "Intermediate"
+  },
+  {
+    "id": 361,
+    "question": "Which type of key is made up of two or more columns to uniquely identify a record?",
+    "description": "composite key",
+    "answers": {
+      "answer_a": "Foreign Key",
+      "answer_b": "Composite Key",
+      "answer_c": "Surrogate Key",
+      "answer_d": "Alternate Key"
+    },
+    "multiple_correct_answers": "false",
+    "correct_answers": {
+      "answer_a_correct": "false",
+      "answer_b_correct": "true",
+      "answer_c_correct": "false",
+      "answer_d_correct": "false"
+    },
+    "explanation": "A Composite Key consists of multiple columns combined to uniquely identify a record.",
+    "tip": null,
+    "tags": ["data modeling", "keys"],
+    "category": "data modeling",
+    "difficulty": "Beginner"
+  },
+  {
+    "id": 362,
+    "question": "What is the main purpose of normalization?",
+    "description": "normalization objective",
+    "answers": {
+      "answer_a": "Increase redundancy",
+      "answer_b": "Improve query speed only",
+      "answer_c": "Reduce data redundancy and improve integrity",
+      "answer_d": "Create more tables without reason"
+    },
+    "multiple_correct_answers": "false",
+    "correct_answers": {
+      "answer_a_correct": "false",
+      "answer_b_correct": "false",
+      "answer_c_correct": "true",
+      "answer_d_correct": "false"
+    },
+    "explanation": "Normalization reduces redundancy and improves data integrity by organizing data efficiently.",
+    "tip": null,
+    "tags": ["data modeling", "normalization"],
+    "category": "data modeling",
+    "difficulty": "Beginner"
+  },
+  {
+    "id": 363,
+    "question": "Which schema normalizes dimension tables further in a data warehouse?",
+    "description": "snowflake schema",
+    "answers": {
+      "answer_a": "Star Schema",
+      "answer_b": "Flat Schema",
+      "answer_c": "Snowflake Schema",
+      "answer_d": "Relational Schema"
+    },
+    "multiple_correct_answers": "false",
+    "correct_answers": {
+      "answer_a_correct": "false",
+      "answer_b_correct": "false",
+      "answer_c_correct": "true",
+      "answer_d_correct": "false"
+    },
+    "explanation": "Snowflake Schema further normalizes dimension tables into multiple related tables.",
+    "tip": null,
+    "tags": ["data modeling", "data warehouse"],
+    "category": "data modeling",
+    "difficulty": "Intermediate"
+  },
+  {
+    "id": 364,
+    "question": "A surrogate key is best described as:",
+    "description": "surrogate key definition",
+    "answers": {
+      "answer_a": "A natural business identifier",
+      "answer_b": "A system-generated unique identifier",
+      "answer_c": "A foreign key reference",
+      "answer_d": "A composite primary key"
+    },
+    "multiple_correct_answers": "false",
+    "correct_answers": {
+      "answer_a_correct": "false",
+      "answer_b_correct": "true",
+      "answer_c_correct": "false",
+      "answer_d_correct": "false"
+    },
+    "explanation": "A surrogate key is an artificial, system-generated key used to uniquely identify records.",
+    "tip": null,
+    "tags": ["data modeling", "keys"],
+    "category": "data modeling",
+    "difficulty": "Intermediate"
+  },
+  {
+    "id": 365,
+    "question": "Which ER diagram symbol represents an entity?",
+    "description": "er diagram entity symbol",
+    "answers": {
+      "answer_a": "Diamond",
+      "answer_b": "Rectangle",
+      "answer_c": "Oval",
+      "answer_d": "Triangle"
+    },
+    "multiple_correct_answers": "false",
+    "correct_answers": {
+      "answer_a_correct": "false",
+      "answer_b_correct": "true",
+      "answer_c_correct": "false",
+      "answer_d_correct": "false"
+    },
+    "explanation": "In ER diagrams, entities are represented by rectangles.",
+    "tip": null,
+    "tags": ["data modeling", "er diagram"],
+    "category": "data modeling",
+    "difficulty": "Beginner"
+  },
+  {
+    "id": 366,
+    "question": "Which constraint ensures that a column cannot contain NULL values?",
+    "description": "not null constraint",
+    "answers": {
+      "answer_a": "UNIQUE",
+      "answer_b": "PRIMARY KEY",
+      "answer_c": "CHECK",
+      "answer_d": "NOT NULL"
+    },
+    "multiple_correct_answers": "false",
+    "correct_answers": {
+      "answer_a_correct": "false",
+      "answer_b_correct": "false",
+      "answer_c_correct": "false",
+      "answer_d_correct": "true"
+    },
+    "explanation": "The NOT NULL constraint ensures a column must always contain a value.",
+    "tip": null,
+    "tags": ["data modeling", "constraints"],
+    "category": "data modeling",
+    "difficulty": "Beginner"
+  },
+  {
+    "id": 367,
+    "question": "Which data modeling technique is best suited for transactional systems (OLTP)?",
+    "description": "oltp modeling",
+    "answers": {
+      "answer_a": "Denormalized Star Schema",
+      "answer_b": "Highly Normalized Schema",
+      "answer_c": "Flat File Model",
+      "answer_d": "Data Vault Only"
+    },
+    "multiple_correct_answers": "false",
+    "correct_answers": {
+      "answer_a_correct": "false",
+      "answer_b_correct": "true",
+      "answer_c_correct": "false",
+      "answer_d_correct": "false"
+    },
+    "explanation": "OLTP systems typically use highly normalized schemas to reduce redundancy and maintain integrity.",
+    "tip": null,
+    "tags": ["data modeling", "oltp"],
+    "category": "data modeling",
+    "difficulty": "Intermediate"
+  },
+  {
+    "id": 368,
+    "question": "What type of relationship exists when records in a table relate to other records in the same table?",
+    "description": "recursive relationship",
+    "answers": {
+      "answer_a": "One-to-Many",
+      "answer_b": "Recursive Relationship",
+      "answer_c": "Binary Relationship",
+      "answer_d": "Ternary Relationship"
+    },
+    "multiple_correct_answers": "false",
+    "correct_answers": {
+      "answer_a_correct": "false",
+      "answer_b_correct": "true",
+      "answer_c_correct": "false",
+      "answer_d_correct": "false"
+    },
+    "explanation": "A recursive relationship occurs when a table references itself (e.g., employee-manager hierarchy).",
+    "tip": null,
+    "tags": ["data modeling", "relationships"],
+    "category": "data modeling",
+    "difficulty": "Intermediate"
+  },
+  {
+    "id": 369,
+    "question": "Which normal form deals specifically with multivalued dependencies?",
+    "description": "fourth normal form",
+    "answers": {
+      "answer_a": "3NF",
+      "answer_b": "2NF",
+      "answer_c": "4NF",
+      "answer_d": "1NF"
+    },
+    "multiple_correct_answers": "false",
+    "correct_answers": {
+      "answer_a_correct": "false",
+      "answer_b_correct": "false",
+      "answer_c_correct": "true",
+      "answer_d_correct": "false"
+    },
+    "explanation": "Fourth Normal Form (4NF) removes multivalued dependencies.",
+    "tip": null,
+    "tags": ["data modeling", "normalization"],
+    "category": "data modeling",
+    "difficulty": "Advanced"
+  },
+  {
+    "id": 370,
+    "question": "In dimensional modeling, what is a degenerate dimension?",
+    "description": "degenerate dimension",
+    "answers": {
+      "answer_a": "A dimension without attributes",
+      "answer_b": "A fact without measures",
+      "answer_c": "A dimension stored inside the fact table",
+      "answer_d": "A duplicate dimension"
+    },
+    "multiple_correct_answers": "false",
+    "correct_answers": {
+      "answer_a_correct": "false",
+      "answer_b_correct": "false",
+      "answer_c_correct": "true",
+      "answer_d_correct": "false"
+    },
+    "explanation": "A degenerate dimension is a dimension attribute stored in the fact table without a separate dimension table (e.g., invoice number).",
+    "tip": null,
+    "tags": ["data modeling", "data warehouse"],
+    "category": "data modeling",
+    "difficulty": "Advanced"
+  },
+  {
+    "id": 371,
+    "question": "Which normal form requires that every determinant is a candidate key?",
+    "description": "boyce-codd normal form",
+    "answers": {
+      "answer_a": "3NF",
+      "answer_b": "2NF",
+      "answer_c": "BCNF",
+      "answer_d": "4NF"
+    },
+    "multiple_correct_answers": "false",
+    "correct_answers": {
+      "answer_a_correct": "false",
+      "answer_b_correct": "false",
+      "answer_c_correct": "true",
+      "answer_d_correct": "false"
+    },
+    "explanation": "Boyce-Codd Normal Form (BCNF) is stricter than 3NF and requires every determinant to be a candidate key.",
+    "tip": null,
+    "tags": ["data modeling", "normalization"],
+    "category": "data modeling",
+    "difficulty": "Advanced"
+  },
+  {
+    "id": 372,
+    "question": "What is a slowly changing dimension (SCD) Type 2 designed to do?",
+    "description": "scd type 2 concept",
+    "answers": {
+      "answer_a": "Overwrite old data",
+      "answer_b": "Ignore changes",
+      "answer_c": "Store full historical changes by adding new rows",
+      "answer_d": "Delete outdated records"
+    },
+    "multiple_correct_answers": "false",
+    "correct_answers": {
+      "answer_a_correct": "false",
+      "answer_b_correct": "false",
+      "answer_c_correct": "true",
+      "answer_d_correct": "false"
+    },
+    "explanation": "SCD Type 2 preserves history by creating a new record whenever a change occurs.",
+    "tip": null,
+    "tags": ["data modeling", "data warehouse"],
+    "category": "data modeling",
+    "difficulty": "Advanced"
+  },
+  {
+    "id": 373,
+    "question": "Which modeling approach separates business keys from surrogate keys and tracks changes using hubs and satellites?",
+    "description": "data vault modeling",
+    "answers": {
+      "answer_a": "Star Schema",
+      "answer_b": "Snowflake Schema",
+      "answer_c": "Data Vault",
+      "answer_d": "3NF"
+    },
+    "multiple_correct_answers": "false",
+    "correct_answers": {
+      "answer_a_correct": "false",
+      "answer_b_correct": "false",
+      "answer_c_correct": "true",
+      "answer_d_correct": "false"
+    },
+    "explanation": "Data Vault modeling uses hubs, links, and satellites to track business keys and historical changes.",
+    "tip": null,
+    "tags": ["data modeling", "data warehouse"],
+    "category": "data modeling",
+    "difficulty": "Advanced"
+  },
+  {
+    "id": 374,
+    "question": "In ER modeling, what does a weak entity depend on?",
+    "description": "weak entity concept",
+    "answers": {
+      "answer_a": "Its own primary key only",
+      "answer_b": "A strong entity for identification",
+      "answer_c": "A surrogate key",
+      "answer_d": "A composite attribute"
+    },
+    "multiple_correct_answers": "false",
+    "correct_answers": {
+      "answer_a_correct": "false",
+      "answer_b_correct": "true",
+      "answer_c_correct": "false",
+      "answer_d_correct": "false"
+    },
+    "explanation": "A weak entity depends on a strong entity for identification and cannot exist independently.",
+    "tip": null,
+    "tags": ["data modeling", "er diagram"],
+    "category": "data modeling",
+    "difficulty": "Intermediate"
+  },
+  {
+    "id": 375,
+    "question": "Which table stores descriptive attributes in a star schema?",
+    "description": "dimension table",
+    "answers": {
+      "answer_a": "Fact Table",
+      "answer_b": "Bridge Table",
+      "answer_c": "Dimension Table",
+      "answer_d": "Lookup Fact"
+    },
+    "multiple_correct_answers": "false",
+    "correct_answers": {
+      "answer_a_correct": "false",
+      "answer_b_correct": "false",
+      "answer_c_correct": "true",
+      "answer_d_correct": "false"
+    },
+    "explanation": "Dimension tables store descriptive attributes used to analyze fact data.",
+    "tip": null,
+    "tags": ["data modeling", "data warehouse"],
+    "category": "data modeling",
+    "difficulty": "Beginner"
+  },
+  {
+    "id": 376,
+    "question": "What type of attribute is calculated from other attributes?",
+    "description": "derived attribute",
+    "answers": {
+      "answer_a": "Composite Attribute",
+      "answer_b": "Multivalued Attribute",
+      "answer_c": "Derived Attribute",
+      "answer_d": "Atomic Attribute"
+    },
+    "multiple_correct_answers": "false",
+    "correct_answers": {
+      "answer_a_correct": "false",
+      "answer_b_correct": "false",
+      "answer_c_correct": "true",
+      "answer_d_correct": "false"
+    },
+    "explanation": "A derived attribute is computed from other attributes (e.g., Age from Date of Birth).",
+    "tip": null,
+    "tags": ["data modeling", "er diagram"],
+    "category": "data modeling",
+    "difficulty": "Beginner"
+  },
+  {
+    "id": 377,
+    "question": "Which dependency occurs when a non-key attribute depends on another non-key attribute?",
+    "description": "transitive dependency",
+    "answers": {
+      "answer_a": "Partial Dependency",
+      "answer_b": "Transitive Dependency",
+      "answer_c": "Functional Dependency",
+      "answer_d": "Multivalued Dependency"
+    },
+    "multiple_correct_answers": "false",
+    "correct_answers": {
+      "answer_a_correct": "false",
+      "answer_b_correct": "true",
+      "answer_c_correct": "false",
+      "answer_d_correct": "false"
+    },
+    "explanation": "A transitive dependency occurs when a non-key attribute depends on another non-key attribute instead of directly on the primary key.",
+    "tip": null,
+    "tags": ["data modeling", "normalization"],
+    "category": "data modeling",
+    "difficulty": "Intermediate"
+  },
+  {
+    "id": 378,
+    "question": "In dimensional modeling, what defines the level of detail stored in a fact table?",
+    "description": "grain definition",
+    "answers": {
+      "answer_a": "Cardinality",
+      "answer_b": "Grain",
+      "answer_c": "Hierarchy",
+      "answer_d": "Dimension Key"
+    },
+    "multiple_correct_answers": "false",
+    "correct_answers": {
+      "answer_a_correct": "false",
+      "answer_b_correct": "true",
+      "answer_c_correct": "false",
+      "answer_d_correct": "false"
+    },
+    "explanation": "Grain defines the level of detail or granularity stored in a fact table.",
+    "tip": null,
+    "tags": ["data modeling", "data warehouse"],
+    "category": "data modeling",
+    "difficulty": "Advanced"
+  },
+  {
+    "id": 379,
+    "question": "Which relationship involves three entities?",
+    "description": "ternary relationship",
+    "answers": {
+      "answer_a": "Binary Relationship",
+      "answer_b": "Recursive Relationship",
+      "answer_c": "Ternary Relationship",
+      "answer_d": "One-to-One"
+    },
+    "multiple_correct_answers": "false",
+    "correct_answers": {
+      "answer_a_correct": "false",
+      "answer_b_correct": "false",
+      "answer_c_correct": "true",
+      "answer_d_correct": "false"
+    },
+    "explanation": "A ternary relationship connects three different entities in an ER model.",
+    "tip": null,
+    "tags": ["data modeling", "relationships"],
+    "category": "data modeling",
+    "difficulty": "Advanced"
+  },
+  {
+    "id": 380,
+    "question": "Which modeling technique prioritizes query performance over strict normalization in analytics systems?",
+    "description": "denormalization in warehousing",
+    "answers": {
+      "answer_a": "Full Normalization",
+      "answer_b": "Denormalization",
+      "answer_c": "BCNF Modeling",
+      "answer_d": "Strict OLTP Modeling"
+    },
+    "multiple_correct_answers": "false",
+    "correct_answers": {
+      "answer_a_correct": "false",
+      "answer_b_correct": "true",
+      "answer_c_correct": "false",
+      "answer_d_correct": "false"
+    },
+    "explanation": "Denormalization improves query performance in analytics systems by reducing joins.",
+    "tip": null,
+    "tags": ["data modeling", "data warehouse"],
+    "category": "data modeling",
+    "difficulty": "Intermediate"
+  },
+  {
+    "id": 381,
+    "question": "What is the primary goal of data cleaning?",
+    "description": "data cleaning objective",
+    "answers": {
+      "answer_a": "Increase data size",
+      "answer_b": "Improve data quality and accuracy",
+      "answer_c": "Delete all missing values",
+      "answer_d": "Create more duplicates"
+    },
+    "multiple_correct_answers": "false",
+    "correct_answers": {
+      "answer_a_correct": "false",
+      "answer_b_correct": "true",
+      "answer_c_correct": "false",
+      "answer_d_correct": "false"
+    },
+    "explanation": "Data cleaning aims to improve the quality, accuracy, and consistency of data.",
+    "tip": null,
+    "tags": ["data cleaning", "data quality"],
+    "category": "data cleaning",
+    "difficulty": "Beginner"
+  },
+  {
+    "id": 382,
+    "question": "Which of the following is considered missing data?",
+    "description": "missing values identification",
+    "answers": {
+      "answer_a": "NULL",
+      "answer_b": "0 (zero)",
+      "answer_c": "Valid number",
+      "answer_d": "Text value"
+    },
+    "multiple_correct_answers": "false",
+    "correct_answers": {
+      "answer_a_correct": "true",
+      "answer_b_correct": "false",
+      "answer_c_correct": "false",
+      "answer_d_correct": "false"
+    },
+    "explanation": "NULL represents missing or unknown data in most database systems.",
+    "tip": null,
+    "tags": ["data cleaning", "missing values"],
+    "category": "data cleaning",
+    "difficulty": "Beginner"
+  },
+  {
+    "id": 383,
+    "question": "What technique replaces missing values with the average of a column?",
+    "description": "mean imputation",
+    "answers": {
+      "answer_a": "Normalization",
+      "answer_b": "Mean Imputation",
+      "answer_c": "Deduplication",
+      "answer_d": "Encoding"
+    },
+    "multiple_correct_answers": "false",
+    "correct_answers": {
+      "answer_a_correct": "false",
+      "answer_b_correct": "true",
+      "answer_c_correct": "false",
+      "answer_d_correct": "false"
+    },
+    "explanation": "Mean imputation replaces missing values with the average value of that column.",
+    "tip": null,
+    "tags": ["data cleaning", "imputation"],
+    "category": "data cleaning",
+    "difficulty": "Intermediate"
+  },
+  {
+    "id": 384,
+    "question": "Which issue occurs when the same record appears multiple times?",
+    "description": "duplicate records",
+    "answers": {
+      "answer_a": "Outliers",
+      "answer_b": "Inconsistent formatting",
+      "answer_c": "Duplicates",
+      "answer_d": "Normalization"
+    },
+    "multiple_correct_answers": "false",
+    "correct_answers": {
+      "answer_a_correct": "false",
+      "answer_b_correct": "false",
+      "answer_c_correct": "true",
+      "answer_d_correct": "false"
+    },
+    "explanation": "Duplicate records occur when identical entries appear multiple times in a dataset.",
+    "tip": null,
+    "tags": ["data cleaning", "duplicates"],
+    "category": "data cleaning",
+    "difficulty": "Beginner"
+  },
+  {
+    "id": 385,
+    "question": "What is an outlier in a dataset?",
+    "description": "outlier detection",
+    "answers": {
+      "answer_a": "A repeated value",
+      "answer_b": "A value significantly different from others",
+      "answer_c": "A missing value",
+      "answer_d": "A formatted cell"
+    },
+    "multiple_correct_answers": "false",
+    "correct_answers": {
+      "answer_a_correct": "false",
+      "answer_b_correct": "true",
+      "answer_c_correct": "false",
+      "answer_d_correct": "false"
+    },
+    "explanation": "An outlier is a data point that significantly differs from other observations.",
+    "tip": null,
+    "tags": ["data cleaning", "outliers"],
+    "category": "data cleaning",
+    "difficulty": "Beginner"
+  },
+  {
+    "id": 386,
+    "question": "Which method scales data between 0 and 1?",
+    "description": "min-max normalization",
+    "answers": {
+      "answer_a": "Standardization",
+      "answer_b": "Min-Max Scaling",
+      "answer_c": "Encoding",
+      "answer_d": "Aggregation"
+    },
+    "multiple_correct_answers": "false",
+    "correct_answers": {
+      "answer_a_correct": "false",
+      "answer_b_correct": "true",
+      "answer_c_correct": "false",
+      "answer_d_correct": "false"
+    },
+    "explanation": "Min-Max scaling transforms values to a fixed range, typically between 0 and 1.",
+    "tip": null,
+    "tags": ["data cleaning", "scaling"],
+    "category": "data cleaning",
+    "difficulty": "Intermediate"
+  },
+  {
+    "id": 387,
+    "question": "Which cleaning task ensures consistent date formats?",
+    "description": "standardization",
+    "answers": {
+      "answer_a": "Encoding",
+      "answer_b": "Standardization",
+      "answer_c": "Clustering",
+      "answer_d": "Indexing"
+    },
+    "multiple_correct_answers": "false",
+    "correct_answers": {
+      "answer_a_correct": "false",
+      "answer_b_correct": "true",
+      "answer_c_correct": "false",
+      "answer_d_correct": "false"
+    },
+    "explanation": "Standardization ensures consistent formats, such as converting all dates to YYYY-MM-DD.",
+    "tip": null,
+    "tags": ["data cleaning", "formatting"],
+    "category": "data cleaning",
+    "difficulty": "Beginner"
+  },
+  {
+    "id": 388,
+    "question": "What does deduplication involve?",
+    "description": "deduplication process",
+    "answers": {
+      "answer_a": "Adding new records",
+      "answer_b": "Removing duplicate records",
+      "answer_c": "Scaling numeric values",
+      "answer_d": "Encrypting data"
+    },
+    "multiple_correct_answers": "false",
+    "correct_answers": {
+      "answer_a_correct": "false",
+      "answer_b_correct": "true",
+      "answer_c_correct": "false",
+      "answer_d_correct": "false"
+    },
+    "explanation": "Deduplication removes duplicate entries from a dataset.",
+    "tip": null,
+    "tags": ["data cleaning", "duplicates"],
+    "category": "data cleaning",
+    "difficulty": "Beginner"
+  },
+  {
+    "id": 389,
+    "question": "Which technique converts categorical values into numeric format?",
+    "description": "encoding categories",
+    "answers": {
+      "answer_a": "Normalization",
+      "answer_b": "One-Hot Encoding",
+      "answer_c": "Aggregation",
+      "answer_d": "Filtering"
+    },
+    "multiple_correct_answers": "false",
+    "correct_answers": {
+      "answer_a_correct": "false",
+      "answer_b_correct": "true",
+      "answer_c_correct": "false",
+      "answer_d_correct": "false"
+    },
+    "explanation": "One-Hot Encoding converts categorical variables into binary numeric columns.",
+    "tip": null,
+    "tags": ["data cleaning", "encoding"],
+    "category": "data cleaning",
+    "difficulty": "Intermediate"
+  },
+  {
+    "id": 390,
+    "question": "Which metric measures the proportion of missing values in a dataset?",
+    "description": "data completeness",
+    "answers": {
+      "answer_a": "Data Accuracy",
+      "answer_b": "Data Completeness",
+      "answer_c": "Data Redundancy",
+      "answer_d": "Data Volume"
+    },
+    "multiple_correct_answers": "false",
+    "correct_answers": {
+      "answer_a_correct": "false",
+      "answer_b_correct": "true",
+      "answer_c_correct": "false",
+      "answer_d_correct": "false"
+    },
+    "explanation": "Data completeness measures how much required data is present versus missing.",
+    "tip": null,
+    "tags": ["data cleaning", "data quality"],
+    "category": "data cleaning",
+    "difficulty": "Advanced"
+  },
+  {
+    "id": 381,
+    "question": "What is the primary goal of data cleaning?",
+    "description": "data cleaning objective",
+    "answers": {
+      "answer_a": "Increase data size",
+      "answer_b": "Improve data quality and accuracy",
+      "answer_c": "Delete all missing values",
+      "answer_d": "Create more duplicates"
+    },
+    "multiple_correct_answers": "false",
+    "correct_answers": {
+      "answer_a_correct": "false",
+      "answer_b_correct": "true",
+      "answer_c_correct": "false",
+      "answer_d_correct": "false"
+    },
+    "explanation": "Data cleaning aims to improve the quality, accuracy, and consistency of data.",
+    "tip": null,
+    "tags": ["data cleaning", "data quality"],
+    "category": "data cleaning",
+    "difficulty": "Beginner"
+  },
+  {
+    "id": 382,
+    "question": "Which of the following is considered missing data?",
+    "description": "missing values identification",
+    "answers": {
+      "answer_a": "NULL",
+      "answer_b": "0 (zero)",
+      "answer_c": "Valid number",
+      "answer_d": "Text value"
+    },
+    "multiple_correct_answers": "false",
+    "correct_answers": {
+      "answer_a_correct": "true",
+      "answer_b_correct": "false",
+      "answer_c_correct": "false",
+      "answer_d_correct": "false"
+    },
+    "explanation": "NULL represents missing or unknown data in most database systems.",
+    "tip": null,
+    "tags": ["data cleaning", "missing values"],
+    "category": "data cleaning",
+    "difficulty": "Beginner"
+  },
+  {
+    "id": 383,
+    "question": "What technique replaces missing values with the average of a column?",
+    "description": "mean imputation",
+    "answers": {
+      "answer_a": "Normalization",
+      "answer_b": "Mean Imputation",
+      "answer_c": "Deduplication",
+      "answer_d": "Encoding"
+    },
+    "multiple_correct_answers": "false",
+    "correct_answers": {
+      "answer_a_correct": "false",
+      "answer_b_correct": "true",
+      "answer_c_correct": "false",
+      "answer_d_correct": "false"
+    },
+    "explanation": "Mean imputation replaces missing values with the average value of that column.",
+    "tip": null,
+    "tags": ["data cleaning", "imputation"],
+    "category": "data cleaning",
+    "difficulty": "Intermediate"
+  },
+  {
+    "id": 384,
+    "question": "Which issue occurs when the same record appears multiple times?",
+    "description": "duplicate records",
+    "answers": {
+      "answer_a": "Outliers",
+      "answer_b": "Inconsistent formatting",
+      "answer_c": "Duplicates",
+      "answer_d": "Normalization"
+    },
+    "multiple_correct_answers": "false",
+    "correct_answers": {
+      "answer_a_correct": "false",
+      "answer_b_correct": "false",
+      "answer_c_correct": "true",
+      "answer_d_correct": "false"
+    },
+    "explanation": "Duplicate records occur when identical entries appear multiple times in a dataset.",
+    "tip": null,
+    "tags": ["data cleaning", "duplicates"],
+    "category": "data cleaning",
+    "difficulty": "Beginner"
+  },
+  {
+    "id": 385,
+    "question": "What is an outlier in a dataset?",
+    "description": "outlier detection",
+    "answers": {
+      "answer_a": "A repeated value",
+      "answer_b": "A value significantly different from others",
+      "answer_c": "A missing value",
+      "answer_d": "A formatted cell"
+    },
+    "multiple_correct_answers": "false",
+    "correct_answers": {
+      "answer_a_correct": "false",
+      "answer_b_correct": "true",
+      "answer_c_correct": "false",
+      "answer_d_correct": "false"
+    },
+    "explanation": "An outlier is a data point that significantly differs from other observations.",
+    "tip": null,
+    "tags": ["data cleaning", "outliers"],
+    "category": "data cleaning",
+    "difficulty": "Beginner"
+  },
+  {
+    "id": 386,
+    "question": "Which method scales data between 0 and 1?",
+    "description": "min-max normalization",
+    "answers": {
+      "answer_a": "Standardization",
+      "answer_b": "Min-Max Scaling",
+      "answer_c": "Encoding",
+      "answer_d": "Aggregation"
+    },
+    "multiple_correct_answers": "false",
+    "correct_answers": {
+      "answer_a_correct": "false",
+      "answer_b_correct": "true",
+      "answer_c_correct": "false",
+      "answer_d_correct": "false"
+    },
+    "explanation": "Min-Max scaling transforms values to a fixed range, typically between 0 and 1.",
+    "tip": null,
+    "tags": ["data cleaning", "scaling"],
+    "category": "data cleaning",
+    "difficulty": "Intermediate"
+  },
+  {
+    "id": 387,
+    "question": "Which cleaning task ensures consistent date formats?",
+    "description": "standardization",
+    "answers": {
+      "answer_a": "Encoding",
+      "answer_b": "Standardization",
+      "answer_c": "Clustering",
+      "answer_d": "Indexing"
+    },
+    "multiple_correct_answers": "false",
+    "correct_answers": {
+      "answer_a_correct": "false",
+      "answer_b_correct": "true",
+      "answer_c_correct": "false",
+      "answer_d_correct": "false"
+    },
+    "explanation": "Standardization ensures consistent formats, such as converting all dates to YYYY-MM-DD.",
+    "tip": null,
+    "tags": ["data cleaning", "formatting"],
+    "category": "data cleaning",
+    "difficulty": "Beginner"
+  },
+  {
+    "id": 388,
+    "question": "What does deduplication involve?",
+    "description": "deduplication process",
+    "answers": {
+      "answer_a": "Adding new records",
+      "answer_b": "Removing duplicate records",
+      "answer_c": "Scaling numeric values",
+      "answer_d": "Encrypting data"
+    },
+    "multiple_correct_answers": "false",
+    "correct_answers": {
+      "answer_a_correct": "false",
+      "answer_b_correct": "true",
+      "answer_c_correct": "false",
+      "answer_d_correct": "false"
+    },
+    "explanation": "Deduplication removes duplicate entries from a dataset.",
+    "tip": null,
+    "tags": ["data cleaning", "duplicates"],
+    "category": "data cleaning",
+    "difficulty": "Beginner"
+  },
+  {
+    "id": 389,
+    "question": "Which technique converts categorical values into numeric format?",
+    "description": "encoding categories",
+    "answers": {
+      "answer_a": "Normalization",
+      "answer_b": "One-Hot Encoding",
+      "answer_c": "Aggregation",
+      "answer_d": "Filtering"
+    },
+    "multiple_correct_answers": "false",
+    "correct_answers": {
+      "answer_a_correct": "false",
+      "answer_b_correct": "true",
+      "answer_c_correct": "false",
+      "answer_d_correct": "false"
+    },
+    "explanation": "One-Hot Encoding converts categorical variables into binary numeric columns.",
+    "tip": null,
+    "tags": ["data cleaning", "encoding"],
+    "category": "data cleaning",
+    "difficulty": "Intermediate"
+  },
+  {
+    "id": 390,
+    "question": "Which metric measures the proportion of missing values in a dataset?",
+    "description": "data completeness",
+    "answers": {
+      "answer_a": "Data Accuracy",
+      "answer_b": "Data Completeness",
+      "answer_c": "Data Redundancy",
+      "answer_d": "Data Volume"
+    },
+    "multiple_correct_answers": "false",
+    "correct_answers": {
+      "answer_a_correct": "false",
+      "answer_b_correct": "true",
+      "answer_c_correct": "false",
+      "answer_d_correct": "false"
+    },
+    "explanation": "Data completeness measures how much required data is present versus missing.",
+    "tip": null,
+    "tags": ["data cleaning", "data quality"],
+    "category": "data cleaning",
+    "difficulty": "Advanced"
   }
 ]
