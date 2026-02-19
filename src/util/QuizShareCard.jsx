@@ -49,7 +49,7 @@ const QuizShareCard = ({
     percentage,
     title: "My Dataxo Quiz Result!",
     message: `I scored ${percentage}% on the Dataxo ${categories} Quiz! Can you beat me? 😎`,
-    url: "https://dataxo.cfd/home"
+    url: "https://dataxo.cfd"
   };
 
   // 🎉 Confetti

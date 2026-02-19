@@ -16,6 +16,7 @@ import Dashboard from './pages/Dashboard';
 import QuizShareCard from './util/QuizShareCard';
 import PDFConverter from './pages/PDFConverter';
 import ComingSoon from './util/ComingSoon';
+import Leaderboard from './util/LeaderBoard';
 
 import { QuizContext } from "./Helpers/Contexts";
 import { TimerProvider } from './util/TimerProvider';
@@ -136,6 +137,7 @@ function App() {
             />
             <Route path="/converter" element={<PDFConverter />} />
             <Route path="/tune" element={<ComingSoon />} />
+            <Route path="/board" element={<Leaderboard />} />
           </Routes>
         </QuizContext.Provider>
         </TimerProvider>

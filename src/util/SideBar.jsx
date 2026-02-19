@@ -22,13 +22,13 @@ const SideBar = () => {
           <a href="/dashboard"><FaHouse /></a>
         </div>
         <div>
-          <a href="/search"><FaRetweet /></a>
+          <a href="/tune"><FaRetweet /></a>
         </div>
         <div>
-          <a href="/settings"><FaBookOpenReader /></a>
+          <a href="/tune"><FaBookOpenReader /></a>
         </div>
         <div>
-          <a href="/settings"><FaRegFileLines /></a>
+          <a href="/tune"><FaRegFileLines /></a>
         </div>
       </div>
     </Box>
