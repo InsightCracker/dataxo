@@ -101,7 +101,7 @@ const ResultPage = () => {
             <p>Retry Quiz</p>
           </Box>
 
-          <Box className="quiz-btn">
+          <Box className="quiz-btn" onClick={() => navigate('/tune')}>
             <div>
               <p><FaTrophy /></p>
             </div>

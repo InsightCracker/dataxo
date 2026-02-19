@@ -6829,5 +6829,3337 @@
     "tags": ["data cleaning", "data quality"],
     "category": "data cleaning",
     "difficulty": "Advanced"
-  }
+  },
+  {
+    "id": 1,
+    "question": "Which Excel feature is best used to remove duplicate rows from a dataset?",
+    "description": "Removing duplicate records",
+    "answers": {
+      "answer_a": "Conditional Formatting",
+      "answer_b": "Remove Duplicates",
+      "answer_c": "Text to Columns",
+      "answer_d": "Flash Fill"
+    },
+    "multiple_correct_answers": "false",
+    "correct_answers": {
+      "answer_a_correct": "false",
+      "answer_b_correct": "true",
+      "answer_c_correct": "false",
+      "answer_d_correct": "false"
+    },
+    "explanation": "The Remove Duplicates tool eliminates duplicate records based on selected columns.",
+    "tip": "Always back up your data before removing duplicates.",
+    "tags": ["data cleaning", "excel"],
+    "category": "data cleaning",
+    "difficulty": "Beginner"
+  },
+  {
+    "id": 2,
+    "question": "Which function removes extra spaces from text except single spaces between words?",
+    "description": "Cleaning text spacing",
+    "answers": {
+      "answer_a": "CLEAN()",
+      "answer_b": "TRIM()",
+      "answer_c": "LEFT()",
+      "answer_d": "SUBSTITUTE()"
+    },
+    "multiple_correct_answers": "false",
+    "correct_answers": {
+      "answer_a_correct": "false",
+      "answer_b_correct": "true",
+      "answer_c_correct": "false",
+      "answer_d_correct": "false"
+    },
+    "explanation": "TRIM() removes leading, trailing, and extra spaces between words.",
+    "tip": "Use TRIM() with CLEAN() for messy imported data.",
+    "tags": ["data cleaning", "text functions"],
+    "category": "data cleaning",
+    "difficulty": "Beginner"
+  },
+  {
+    "id": 3,
+    "question": "What does the CLEAN() function remove from text?",
+    "description": "Handling non-printable characters",
+    "answers": {
+      "answer_a": "Extra spaces",
+      "answer_b": "Duplicate values",
+      "answer_c": "Non-printable characters",
+      "answer_d": "Numbers"
+    },
+    "multiple_correct_answers": "false",
+    "correct_answers": {
+      "answer_a_correct": "false",
+      "answer_b_correct": "false",
+      "answer_c_correct": "true",
+      "answer_d_correct": "false"
+    },
+    "explanation": "CLEAN() removes non-printable characters from text.",
+    "tip": "Useful when importing data from external systems.",
+    "tags": ["data cleaning"],
+    "category": "data cleaning",
+    "difficulty": "Beginner"
+  },
+  {
+    "id": 4,
+    "question": "Which tool splits full names into first and last names in Excel?",
+    "description": "Separating combined text",
+    "answers": {
+      "answer_a": "Text to Columns",
+      "answer_b": "Remove Duplicates",
+      "answer_c": "Sort",
+      "answer_d": "Filter"
+    },
+    "multiple_correct_answers": "false",
+    "correct_answers": {
+      "answer_a_correct": "true",
+      "answer_b_correct": "false",
+      "answer_c_correct": "false",
+      "answer_d_correct": "false"
+    },
+    "explanation": "Text to Columns separates text based on delimiters like space or comma.",
+    "tip": "Preview before applying the split.",
+    "tags": ["data cleaning"],
+    "category": "data cleaning",
+    "difficulty": "Beginner"
+  },
+  {
+    "id": 5,
+    "question": "Which function can replace specific characters in a text string?",
+    "description": "Replacing unwanted characters",
+    "answers": {
+      "answer_a": "REPLACE()",
+      "answer_b": "SUBSTITUTE()",
+      "answer_c": "FIND()",
+      "answer_d": "COUNT()"
+    },
+    "multiple_correct_answers": "false",
+    "correct_answers": {
+      "answer_a_correct": "false",
+      "answer_b_correct": "true",
+      "answer_c_correct": "false",
+      "answer_d_correct": "false"
+    },
+    "explanation": "SUBSTITUTE() replaces specific text occurrences in a string.",
+    "tip": "Useful for removing unwanted symbols like hyphens.",
+    "tags": ["data cleaning", "text functions"],
+    "category": "data cleaning",
+    "difficulty": "Intermediate"
+  },
+  {
+    "id": 6,
+    "question": "You imported dates as text. Which function can convert them into real dates?",
+    "description": "Fixing incorrect data types",
+    "answers": {
+      "answer_a": "DATEVALUE()",
+      "answer_b": "TEXT()",
+      "answer_c": "TRIM()",
+      "answer_d": "CLEAN()"
+    },
+    "multiple_correct_answers": "false",
+    "correct_answers": {
+      "answer_a_correct": "true",
+      "answer_b_correct": "false",
+      "answer_c_correct": "false",
+      "answer_d_correct": "false"
+    },
+    "explanation": "DATEVALUE() converts text representations of dates into actual date values.",
+    "tip": "Ensure regional date format matches system settings.",
+    "tags": ["data cleaning", "dates"],
+    "category": "data cleaning",
+    "difficulty": "Intermediate"
+  },
+  {
+    "id": 7,
+    "question": "Which Excel feature highlights missing values visually?",
+    "description": "Identifying blanks",
+    "answers": {
+      "answer_a": "Conditional Formatting",
+      "answer_b": "Pivot Table",
+      "answer_c": "Sort",
+      "answer_d": "Freeze Panes"
+    },
+    "multiple_correct_answers": "false",
+    "correct_answers": {
+      "answer_a_correct": "true",
+      "answer_b_correct": "false",
+      "answer_c_correct": "false",
+      "answer_d_correct": "false"
+    },
+    "explanation": "Conditional Formatting can highlight blank cells for quick identification.",
+    "tip": "Use 'Highlight Cells Rules → Blanks'.",
+    "tags": ["data cleaning"],
+    "category": "data cleaning",
+    "difficulty": "Beginner"
+  },
+  {
+    "id": 8,
+    "question": "Which function checks if a cell is empty?",
+    "description": "Handling missing data",
+    "answers": {
+      "answer_a": "ISBLANK()",
+      "answer_b": "ISEVEN()",
+      "answer_c": "ISNUMBER()",
+      "answer_d": "COUNT()"
+    },
+    "multiple_correct_answers": "false",
+    "correct_answers": {
+      "answer_a_correct": "true",
+      "answer_b_correct": "false",
+      "answer_c_correct": "false",
+      "answer_d_correct": "false"
+    },
+    "explanation": "ISBLANK() returns TRUE if a cell is empty.",
+    "tip": "Combine with IF() for data validation checks.",
+    "tags": ["data cleaning"],
+    "category": "data cleaning",
+    "difficulty": "Beginner"
+  },
+  {
+    "id": 9,
+    "question": "Which tool standardizes inconsistent capitalization (e.g., john → John)?",
+    "description": "Formatting text properly",
+    "answers": {
+      "answer_a": "UPPER()",
+      "answer_b": "LOWER()",
+      "answer_c": "PROPER()",
+      "answer_d": "TRIM()"
+    },
+    "multiple_correct_answers": "false",
+    "correct_answers": {
+      "answer_a_correct": "false",
+      "answer_b_correct": "false",
+      "answer_c_correct": "true",
+      "answer_d_correct": "false"
+    },
+    "explanation": "PROPER() capitalizes the first letter of each word.",
+    "tip": "Use after cleaning extra spaces.",
+    "tags": ["data cleaning"],
+    "category": "data cleaning",
+    "difficulty": "Beginner"
+  },
+  {
+    "id": 10,
+    "question": "In Power Query, which transformation removes blank rows?",
+    "description": "Cleaning in Power Query",
+    "answers": {
+      "answer_a": "Remove Rows → Remove Blank Rows",
+      "answer_b": "Group By",
+      "answer_c": "Merge Queries",
+      "answer_d": "Pivot Column"
+    },
+    "multiple_correct_answers": "false",
+    "correct_answers": {
+      "answer_a_correct": "true",
+      "answer_b_correct": "false",
+      "answer_c_correct": "false",
+      "answer_d_correct": "false"
+    },
+    "explanation": "Power Query provides a built-in option to remove blank rows.",
+    "tip": "Power Query is ideal for repeatable cleaning processes.",
+    "tags": ["data cleaning", "power query"],
+    "category": "data cleaning",
+    "difficulty": "Intermediate"
+  },
+  {
+    "id": 11,
+    "question": "Which function converts text to uppercase?",
+    "description": "Standardizing text case",
+    "answers": {
+      "answer_a": "UPPER()",
+      "answer_b": "LOWER()",
+      "answer_c": "PROPER()",
+      "answer_d": "TRIM()"
+    },
+    "multiple_correct_answers": "false",
+    "correct_answers": {
+      "answer_a_correct": "true",
+      "answer_b_correct": "false",
+      "answer_c_correct": "false",
+      "answer_d_correct": "false"
+    },
+    "explanation": "UPPER() converts all text characters to uppercase.",
+    "tip": "Useful when standardizing categories like YES/NO.",
+    "tags": ["data cleaning", "text"],
+    "category": "data cleaning",
+    "difficulty": "Beginner"
+  },
+  {
+    "id": 12,
+    "question": "Which function converts numeric text into a number?",
+    "description": "Fixing wrong data type",
+    "answers": {
+      "answer_a": "TEXT()",
+      "answer_b": "VALUE()",
+      "answer_c": "TRIM()",
+      "answer_d": "FORMAT()"
+    },
+    "multiple_correct_answers": "false",
+    "correct_answers": {
+      "answer_a_correct": "false",
+      "answer_b_correct": "true",
+      "answer_c_correct": "false",
+      "answer_d_correct": "false"
+    },
+    "explanation": "VALUE() converts text that appears numeric into a real number.",
+    "tip": "Check alignment — numbers align right by default.",
+    "tags": ["data cleaning"],
+    "category": "data cleaning",
+    "difficulty": "Beginner"
+  },
+  {
+    "id": 13,
+    "question": "You want to find blank cells in a column quickly. Which feature helps?",
+    "description": "Filtering missing values",
+    "answers": {
+      "answer_a": "Sort",
+      "answer_b": "Filter → Blanks",
+      "answer_c": "Pivot Table",
+      "answer_d": "Freeze Panes"
+    },
+    "multiple_correct_answers": "false",
+    "correct_answers": {
+      "answer_a_correct": "false",
+      "answer_b_correct": "true",
+      "answer_c_correct": "false",
+      "answer_d_correct": "false"
+    },
+    "explanation": "Filter allows selecting only blank cells.",
+    "tip": "Combine with Go To Special for faster cleaning.",
+    "tags": ["data cleaning"],
+    "category": "data cleaning",
+    "difficulty": "Beginner"
+  },
+  {
+    "id": 14,
+    "question": "Which function removes the first 4 characters from a string?",
+    "description": "Trimming unwanted prefixes",
+    "answers": {
+      "answer_a": "RIGHT()",
+      "answer_b": "MID()",
+      "answer_c": "REPLACE()",
+      "answer_d": "LEFT()"
+    },
+    "multiple_correct_answers": "false",
+    "correct_answers": {
+      "answer_a_correct": "false",
+      "answer_b_correct": "false",
+      "answer_c_correct": "true",
+      "answer_d_correct": "false"
+    },
+    "explanation": "REPLACE(text,1,4,\"\") removes the first 4 characters.",
+    "tip": "MID() can also extract clean portions of text.",
+    "tags": ["data cleaning"],
+    "category": "data cleaning",
+    "difficulty": "Intermediate"
+  },
+  {
+    "id": 15,
+    "question": "Which Power BI feature cleans and transforms raw data before loading?",
+    "description": "Data transformation stage",
+    "answers": {
+      "answer_a": "Report View",
+      "answer_b": "Power Query Editor",
+      "answer_c": "DAX Studio",
+      "answer_d": "Dashboard View"
+    },
+    "multiple_correct_answers": "false",
+    "correct_answers": {
+      "answer_a_correct": "false",
+      "answer_b_correct": "true",
+      "answer_c_correct": "false",
+      "answer_d_correct": "false"
+    },
+    "explanation": "Power Query Editor is used to clean and transform data before loading.",
+    "tip": "Always clean data before building visuals.",
+    "tags": ["data cleaning", "power bi"],
+    "category": "data cleaning",
+    "difficulty": "Intermediate"
+  },
+  {
+    "id": 16,
+    "question": "Which SQL clause removes duplicate rows?",
+    "description": "Handling duplicates in SQL",
+    "answers": {
+      "answer_a": "GROUP BY",
+      "answer_b": "DISTINCT",
+      "answer_c": "ORDER BY",
+      "answer_d": "UNIQUE"
+    },
+    "multiple_correct_answers": "false",
+    "correct_answers": {
+      "answer_a_correct": "false",
+      "answer_b_correct": "true",
+      "answer_c_correct": "false",
+      "answer_d_correct": "false"
+    },
+    "explanation": "SELECT DISTINCT removes duplicate rows from query results.",
+    "tip": "DISTINCT applies to selected columns only.",
+    "tags": ["data cleaning", "sql"],
+    "category": "data cleaning",
+    "difficulty": "Intermediate"
+  },
+  {
+    "id": 17,
+    "question": "Which SQL function replaces NULL values?",
+    "description": "Handling missing values in SQL",
+    "answers": {
+      "answer_a": "REPLACE()",
+      "answer_b": "ISNULL()",
+      "answer_c": "COUNT()",
+      "answer_d": "CAST()"
+    },
+    "multiple_correct_answers": "false",
+    "correct_answers": {
+      "answer_a_correct": "false",
+      "answer_b_correct": "true",
+      "answer_c_correct": "false",
+      "answer_d_correct": "false"
+    },
+    "explanation": "ISNULL() replaces NULL values with a specified value (varies by SQL dialect).",
+    "tip": "COALESCE() is another commonly used function.",
+    "tags": ["data cleaning", "sql"],
+    "category": "data cleaning",
+    "difficulty": "Intermediate"
+  },
+  {
+    "id": 18,
+    "question": "Scenario: A salary column contains negative values due to entry errors. What is the best cleaning step?",
+    "description": "Fixing invalid entries",
+    "answers": {
+      "answer_a": "Delete entire column",
+      "answer_b": "Apply ABS() function",
+      "answer_c": "Sort ascending",
+      "answer_d": "Freeze column"
+    },
+    "multiple_correct_answers": "false",
+    "correct_answers": {
+      "answer_a_correct": "false",
+      "answer_b_correct": "true",
+      "answer_c_correct": "false",
+      "answer_d_correct": "false"
+    },
+    "explanation": "ABS() converts negative values to positive.",
+    "tip": "Always validate business logic before applying fixes.",
+    "tags": ["data cleaning", "scenario"],
+    "category": "data cleaning",
+    "difficulty": "Advanced"
+  },
+  {
+    "id": 19,
+    "question": "Which function checks if a value is a number?",
+    "description": "Validating data types",
+    "answers": {
+      "answer_a": "ISNUMBER()",
+      "answer_b": "ISBLANK()",
+      "answer_c": "VALUE()",
+      "answer_d": "COUNTIF()"
+    },
+    "multiple_correct_answers": "false",
+    "correct_answers": {
+      "answer_a_correct": "true",
+      "answer_b_correct": "false",
+      "answer_c_correct": "false",
+      "answer_d_correct": "false"
+    },
+    "explanation": "ISNUMBER() returns TRUE if a cell contains a numeric value.",
+    "tip": "Useful for data validation rules.",
+    "tags": ["data cleaning"],
+    "category": "data cleaning",
+    "difficulty": "Beginner"
+  },
+  {
+    "id": 20,
+    "question": "Trick Question: Does TRIM() remove all types of spaces?",
+    "description": "Understanding function limitations",
+    "answers": {
+      "answer_a": "Yes",
+      "answer_b": "No",
+      "answer_c": "Only leading spaces",
+      "answer_d": "Only trailing spaces"
+    },
+    "multiple_correct_answers": "false",
+    "correct_answers": {
+      "answer_a_correct": "false",
+      "answer_b_correct": "true",
+      "answer_c_correct": "false",
+      "answer_d_correct": "false"
+    },
+    "explanation": "TRIM() does not remove non-breaking spaces; CLEAN() may be required.",
+    "tip": "Use SUBSTITUTE(CHAR(160),\"\") for non-breaking spaces.",
+    "tags": ["data cleaning", "trick"],
+    "category": "data cleaning",
+    "difficulty": "Advanced"
+  },
+  {
+    "id": 21,
+    "question": "Which Excel feature quickly fills missing values based on patterns?",
+    "description": "Automating pattern-based cleaning",
+    "answers": {
+      "answer_a": "Flash Fill",
+      "answer_b": "Conditional Formatting",
+      "answer_c": "Remove Duplicates",
+      "answer_d": "Data Validation"
+    },
+    "multiple_correct_answers": "false",
+    "correct_answers": {
+      "answer_a_correct": "true",
+      "answer_b_correct": "false",
+      "answer_c_correct": "false",
+      "answer_d_correct": "false"
+    },
+    "explanation": "Flash Fill detects patterns and fills data automatically.",
+    "tip": "Shortcut: Ctrl + E.",
+    "tags": ["data cleaning", "excel"],
+    "category": "data cleaning",
+    "difficulty": "Beginner"
+  },
+  {
+    "id": 22,
+    "question": "Which SQL function returns the first non-null value in a list?",
+    "description": "Handling NULL values efficiently",
+    "answers": {
+      "answer_a": "ISNULL()",
+      "answer_b": "COALESCE()",
+      "answer_c": "NULLIF()",
+      "answer_d": "REPLACE()"
+    },
+    "multiple_correct_answers": "false",
+    "correct_answers": {
+      "answer_a_correct": "false",
+      "answer_b_correct": "true",
+      "answer_c_correct": "false",
+      "answer_d_correct": "false"
+    },
+    "explanation": "COALESCE() returns the first non-null expression.",
+    "tip": "Very useful for data cleaning in SELECT statements.",
+    "tags": ["data cleaning", "sql"],
+    "category": "data cleaning",
+    "difficulty": "Intermediate"
+  },
+  {
+    "id": 23,
+    "question": "Scenario: A column contains mixed numbers and text. What is the best first step?",
+    "description": "Cleaning inconsistent data types",
+    "answers": {
+      "answer_a": "Delete the column",
+      "answer_b": "Sort the column",
+      "answer_c": "Use ISNUMBER() to identify numeric values",
+      "answer_d": "Freeze the column"
+    },
+    "multiple_correct_answers": "false",
+    "correct_answers": {
+      "answer_a_correct": "false",
+      "answer_b_correct": "false",
+      "answer_c_correct": "true",
+      "answer_d_correct": "false"
+    },
+    "explanation": "ISNUMBER() helps identify numeric vs text values for proper cleaning.",
+    "tip": "Filtering after identification makes correction easier.",
+    "tags": ["data cleaning", "scenario"],
+    "category": "data cleaning",
+    "difficulty": "Intermediate"
+  },
+  {
+    "id": 24,
+    "question": "Which Power Query transformation splits a column by delimiter?",
+    "description": "Separating combined fields",
+    "answers": {
+      "answer_a": "Split Column",
+      "answer_b": "Group By",
+      "answer_c": "Remove Rows",
+      "answer_d": "Append Query"
+    },
+    "multiple_correct_answers": "false",
+    "correct_answers": {
+      "answer_a_correct": "true",
+      "answer_b_correct": "false",
+      "answer_c_correct": "false",
+      "answer_d_correct": "false"
+    },
+    "explanation": "Split Column divides data based on a chosen delimiter.",
+    "tip": "Available under Transform tab in Power Query.",
+    "tags": ["data cleaning", "power query"],
+    "category": "data cleaning",
+    "difficulty": "Beginner"
+  },
+  {
+    "id": 25,
+    "question": "Trick Question: Does removing duplicates always preserve the first occurrence?",
+    "description": "Understanding duplicate removal behavior",
+    "answers": {
+      "answer_a": "Yes",
+      "answer_b": "No",
+      "answer_c": "Only in SQL",
+      "answer_d": "Only in Power BI"
+    },
+    "multiple_correct_answers": "false",
+    "correct_answers": {
+      "answer_a_correct": "true",
+      "answer_b_correct": "false",
+      "answer_c_correct": "false",
+      "answer_d_correct": "false"
+    },
+    "explanation": "Excel's Remove Duplicates keeps the first occurrence by default.",
+    "tip": "Sorting before removing duplicates changes which record is kept.",
+    "tags": ["data cleaning", "trick"],
+    "category": "data cleaning",
+    "difficulty": "Advanced"
+  },
+  {
+    "id": 26,
+    "question": "Which function extracts the last 4 characters of a string?",
+    "description": "Extracting specific text portions",
+    "answers": {
+      "answer_a": "LEFT()",
+      "answer_b": "RIGHT()",
+      "answer_c": "MID()",
+      "answer_d": "TRIM()"
+    },
+    "multiple_correct_answers": "false",
+    "correct_answers": {
+      "answer_a_correct": "false",
+      "answer_b_correct": "true",
+      "answer_c_correct": "false",
+      "answer_d_correct": "false"
+    },
+    "explanation": "RIGHT(text,4) extracts the last four characters.",
+    "tip": "Commonly used for extracting years or ID suffixes.",
+    "tags": ["data cleaning"],
+    "category": "data cleaning",
+    "difficulty": "Beginner"
+  },
+  {
+    "id": 27,
+    "question": "Which SQL clause helps identify duplicate records?",
+    "description": "Detecting duplicates in SQL",
+    "answers": {
+      "answer_a": "GROUP BY with HAVING COUNT(*) > 1",
+      "answer_b": "ORDER BY",
+      "answer_c": "DISTINCT",
+      "answer_d": "LIMIT"
+    },
+    "multiple_correct_answers": "false",
+    "correct_answers": {
+      "answer_a_correct": "true",
+      "answer_b_correct": "false",
+      "answer_c_correct": "false",
+      "answer_d_correct": "false"
+    },
+    "explanation": "GROUP BY with HAVING COUNT(*) > 1 identifies duplicate records.",
+    "tip": "Useful before deleting duplicates.",
+    "tags": ["data cleaning", "sql"],
+    "category": "data cleaning",
+    "difficulty": "Advanced"
+  },
+  {
+    "id": 28,
+    "question": "Scenario: A dataset contains inconsistent country names (USA, U.S.A, United States). What is the best solution?",
+    "description": "Standardizing categorical values",
+    "answers": {
+      "answer_a": "Delete duplicates",
+      "answer_b": "Use SUBSTITUTE() or mapping table",
+      "answer_c": "Sort alphabetically",
+      "answer_d": "Freeze header"
+    },
+    "multiple_correct_answers": "false",
+    "correct_answers": {
+      "answer_a_correct": "false",
+      "answer_b_correct": "true",
+      "answer_c_correct": "false",
+      "answer_d_correct": "false"
+    },
+    "explanation": "Mapping or SUBSTITUTE() standardizes inconsistent text values.",
+    "tip": "Power Query's Replace Values works well here.",
+    "tags": ["data cleaning", "scenario"],
+    "category": "data cleaning",
+    "difficulty": "Intermediate"
+  },
+  {
+    "id": 29,
+    "question": "Which function converts text to lowercase?",
+    "description": "Standardizing text formatting",
+    "answers": {
+      "answer_a": "LOWER()",
+      "answer_b": "UPPER()",
+      "answer_c": "PROPER()",
+      "answer_d": "CLEAN()"
+    },
+    "multiple_correct_answers": "false",
+    "correct_answers": {
+      "answer_a_correct": "true",
+      "answer_b_correct": "false",
+      "answer_c_correct": "false",
+      "answer_d_correct": "false"
+    },
+    "explanation": "LOWER() converts all characters to lowercase.",
+    "tip": "Ensures consistent matching in lookups.",
+    "tags": ["data cleaning"],
+    "category": "data cleaning",
+    "difficulty": "Beginner"
+  },
+  {
+    "id": 30,
+    "question": "Advanced Scenario: A dataset refresh must automatically remove errors and blanks each time it loads. What is the best approach?",
+    "description": "Automating repeatable cleaning processes",
+    "answers": {
+      "answer_a": "Manual deletion each time",
+      "answer_b": "Use Power Query transformation steps",
+      "answer_c": "Copy and paste cleaned data",
+      "answer_d": "Sort the dataset"
+    },
+    "multiple_correct_answers": "false",
+    "correct_answers": {
+      "answer_a_correct": "false",
+      "answer_b_correct": "true",
+      "answer_c_correct": "false",
+      "answer_d_correct": "false"
+    },
+    "explanation": "Power Query records transformation steps and applies them automatically on refresh.",
+    "tip": "Best practice for scalable data cleaning.",
+    "tags": ["data cleaning", "advanced", "power query"],
+    "category": "data cleaning",
+    "difficulty": "Advanced"
+  },
+  {
+    "id": 31,
+    "question": "Trick: TRIM() is applied but extra spaces still remain. What is the likely cause?",
+    "description": "Understanding hidden characters",
+    "answers": {
+      "answer_a": "The cell is formatted as Text",
+      "answer_b": "There are non-breaking spaces (CHAR(160))",
+      "answer_c": "The formula is incorrect",
+      "answer_d": "The column is filtered"
+    },
+    "multiple_correct_answers": "false",
+    "correct_answers": {
+      "answer_a_correct": "false",
+      "answer_b_correct": "true",
+      "answer_c_correct": "false",
+      "answer_d_correct": "false"
+    },
+    "explanation": "TRIM() does not remove non-breaking spaces. SUBSTITUTE(CHAR(160),\"\") is required.",
+    "tip": "Combine CLEAN() and SUBSTITUTE() for stubborn spaces.",
+    "tags": ["data cleaning", "trick"],
+    "category": "data cleaning",
+    "difficulty": "Advanced"
+  },
+  {
+    "id": 32,
+    "question": "In SQL, does SELECT DISTINCT remove duplicates before or after WHERE filtering?",
+    "description": "Understanding SQL execution order",
+    "answers": {
+      "answer_a": "Before WHERE",
+      "answer_b": "After WHERE",
+      "answer_c": "At the same time",
+      "answer_d": "It depends on the database"
+    },
+    "multiple_correct_answers": "false",
+    "correct_answers": {
+      "answer_a_correct": "false",
+      "answer_b_correct": "true",
+      "answer_c_correct": "false",
+      "answer_d_correct": "false"
+    },
+    "explanation": "WHERE filters rows first, then DISTINCT removes duplicates from the result set.",
+    "tip": "Understand logical query processing order.",
+    "tags": ["data cleaning", "sql", "trick"],
+    "category": "data cleaning",
+    "difficulty": "Advanced"
+  },
+  {
+    "id": 33,
+    "question": "Trick: Removing duplicates in Excel changes your totals unexpectedly. Why?",
+    "description": "Data integrity impact",
+    "answers": {
+      "answer_a": "Formulas were deleted",
+      "answer_b": "Duplicate records were contributing to totals",
+      "answer_c": "Excel recalculated incorrectly",
+      "answer_d": "Filters were applied"
+    },
+    "multiple_correct_answers": "false",
+    "correct_answers": {
+      "answer_a_correct": "false",
+      "answer_b_correct": "true",
+      "answer_c_correct": "false",
+      "answer_d_correct": "false"
+    },
+    "explanation": "Removing duplicates removes data rows that were part of aggregated totals.",
+    "tip": "Always validate business logic before deleting duplicates.",
+    "tags": ["data cleaning", "trick"],
+    "category": "data cleaning",
+    "difficulty": "Intermediate"
+  },
+  {
+    "id": 34,
+    "question": "A numeric column is left-aligned. What is the likely issue?",
+    "description": "Detecting wrong data types",
+    "answers": {
+      "answer_a": "It is formatted as Currency",
+      "answer_b": "It is stored as Text",
+      "answer_c": "It contains formulas",
+      "answer_d": "It is protected"
+    },
+    "multiple_correct_answers": "false",
+    "correct_answers": {
+      "answer_a_correct": "false",
+      "answer_b_correct": "true",
+      "answer_c_correct": "false",
+      "answer_d_correct": "false"
+    },
+    "explanation": "Numbers stored as text align left and may break calculations.",
+    "tip": "Use VALUE() or Text to Columns to fix.",
+    "tags": ["data cleaning", "trick"],
+    "category": "data cleaning",
+    "difficulty": "Intermediate"
+  },
+  {
+    "id": 35,
+    "question": "Trick: ISBLANK() returns FALSE but the cell appears empty. Why?",
+    "description": "Hidden values",
+    "answers": {
+      "answer_a": "The cell contains a formula returning \"\"",
+      "answer_b": "The cell is formatted white",
+      "answer_c": "The row is hidden",
+      "answer_d": "The sheet is protected"
+    },
+    "multiple_correct_answers": "false",
+    "correct_answers": {
+      "answer_a_correct": "true",
+      "answer_b_correct": "false",
+      "answer_c_correct": "false",
+      "answer_d_correct": "false"
+    },
+    "explanation": "A formula returning an empty string is not truly blank.",
+    "tip": "Use LEN() to check actual content.",
+    "tags": ["data cleaning", "trick"],
+    "category": "data cleaning",
+    "difficulty": "Advanced"
+  },
+  {
+    "id": 36,
+    "question": "Which SQL function prevents division-by-zero errors?",
+    "description": "Data validation in calculations",
+    "answers": {
+      "answer_a": "NULLIF()",
+      "answer_b": "DISTINCT",
+      "answer_c": "COUNT()",
+      "answer_d": "CAST()"
+    },
+    "multiple_correct_answers": "false",
+    "correct_answers": {
+      "answer_a_correct": "true",
+      "answer_b_correct": "false",
+      "answer_c_correct": "false",
+      "answer_d_correct": "false"
+    },
+    "explanation": "NULLIF(column,0) prevents divide-by-zero by returning NULL.",
+    "tip": "Combine with COALESCE() if needed.",
+    "tags": ["data cleaning", "sql", "trick"],
+    "category": "data cleaning",
+    "difficulty": "Advanced"
+  },
+  {
+    "id": 37,
+    "question": "Trick: Power Query steps are deleted accidentally. What happens on refresh?",
+    "description": "Transformation persistence",
+    "answers": {
+      "answer_a": "Data stays cleaned",
+      "answer_b": "Cleaning steps no longer apply",
+      "answer_c": "Power BI restores them automatically",
+      "answer_d": "Data is locked"
+    },
+    "multiple_correct_answers": "false",
+    "correct_answers": {
+      "answer_a_correct": "false",
+      "answer_b_correct": "true",
+      "answer_c_correct": "false",
+      "answer_d_correct": "false"
+    },
+    "explanation": "Power Query transformations must exist to reapply on refresh.",
+    "tip": "Avoid manual edits outside Power Query.",
+    "tags": ["data cleaning", "power query"],
+    "category": "data cleaning",
+    "difficulty": "Intermediate"
+  },
+  {
+    "id": 38,
+    "question": "Trick: COUNT() returns 0 but numbers are visible. Why?",
+    "description": "Understanding COUNT behavior",
+    "answers": {
+      "answer_a": "Numbers are stored as text",
+      "answer_b": "Cells are protected",
+      "answer_c": "Filter is applied",
+      "answer_d": "Sheet is hidden"
+    },
+    "multiple_correct_answers": "false",
+    "correct_answers": {
+      "answer_a_correct": "true",
+      "answer_b_correct": "false",
+      "answer_c_correct": "false",
+      "answer_d_correct": "false"
+    },
+    "explanation": "COUNT() only counts numeric values, not text-formatted numbers.",
+    "tip": "Use VALUE() to convert.",
+    "tags": ["data cleaning", "trick"],
+    "category": "data cleaning",
+    "difficulty": "Intermediate"
+  },
+  {
+    "id": 39,
+    "question": "Which cleaning mistake can permanently lose original data?",
+    "description": "Risk management in cleaning",
+    "answers": {
+      "answer_a": "Using formulas",
+      "answer_b": "Overwriting raw data instead of creating a copy",
+      "answer_c": "Applying filters",
+      "answer_d": "Sorting data"
+    },
+    "multiple_correct_answers": "false",
+    "correct_answers": {
+      "answer_a_correct": "false",
+      "answer_b_correct": "true",
+      "answer_c_correct": "false",
+      "answer_d_correct": "false"
+    },
+    "explanation": "Always preserve raw data before transformations.",
+    "tip": "Use separate sheets for raw and cleaned data.",
+    "tags": ["data cleaning"],
+    "category": "data cleaning",
+    "difficulty": "Advanced"
+  },
+  {
+    "id": 40,
+    "question": "Trick: Replacing NULL with 0 may distort which type of analysis?",
+    "description": "Statistical bias",
+    "answers": {
+      "answer_a": "Text formatting",
+      "answer_b": "Average calculations",
+      "answer_c": "Sorting order",
+      "answer_d": "Column width"
+    },
+    "multiple_correct_answers": "false",
+    "correct_answers": {
+      "answer_a_correct": "false",
+      "answer_b_correct": "true",
+      "answer_c_correct": "false",
+      "answer_d_correct": "false"
+    },
+    "explanation": "Replacing NULL with 0 affects averages and statistical results.",
+    "tip": "Understand business meaning before imputing values.",
+    "tags": ["data cleaning", "trick"],
+    "category": "data cleaning",
+    "difficulty": "Advanced"
+  },
+  {
+    "id": 41,
+    "question": "Ultra-Trick: In SQL, which clause is logically executed first?",
+    "description": "Understanding SQL logical processing order",
+    "answers": {
+      "answer_a": "SELECT",
+      "answer_b": "FROM",
+      "answer_c": "ORDER BY",
+      "answer_d": "DISTINCT"
+    },
+    "multiple_correct_answers": "false",
+    "correct_answers": {
+      "answer_a_correct": "false",
+      "answer_b_correct": "true",
+      "answer_c_correct": "false",
+      "answer_d_correct": "false"
+    },
+    "explanation": "SQL logically processes FROM first, then WHERE, GROUP BY, HAVING, SELECT, DISTINCT, ORDER BY.",
+    "tip": "Memorize logical query order for advanced debugging.",
+    "tags": ["data cleaning", "sql", "trick"],
+    "category": "data cleaning",
+    "difficulty": "Advanced"
+  },
+  {
+    "id": 42,
+    "question": "Trick: Sorting one column without expanding selection may cause what issue?",
+    "description": "Data misalignment risk",
+    "answers": {
+      "answer_a": "Formula errors",
+      "answer_b": "Row data misalignment",
+      "answer_c": "Duplicate rows",
+      "answer_d": "File corruption"
+    },
+    "multiple_correct_answers": "false",
+    "correct_answers": {
+      "answer_b_correct": "true",
+      "answer_a_correct": "false",
+      "answer_c_correct": "false",
+      "answer_d_correct": "false"
+    },
+    "explanation": "Sorting a single column breaks row relationships and corrupts dataset structure.",
+    "tip": "Always expand selection when sorting.",
+    "tags": ["data cleaning", "trick"],
+    "category": "data cleaning",
+    "difficulty": "Advanced"
+  },
+  {
+    "id": 43,
+    "question": "Ultra-Trick: COUNT(column) ignores which values?",
+    "description": "Understanding aggregate behavior",
+    "answers": {
+      "answer_a": "Zeros",
+      "answer_b": "Negative numbers",
+      "answer_c": "NULL values",
+      "answer_d": "Duplicates"
+    },
+    "multiple_correct_answers": "false",
+    "correct_answers": {
+      "answer_c_correct": "true",
+      "answer_a_correct": "false",
+      "answer_b_correct": "false",
+      "answer_d_correct": "false"
+    },
+    "explanation": "COUNT(column) excludes NULL values but counts zeros and negatives.",
+    "tip": "COUNT(*) counts all rows.",
+    "tags": ["data cleaning", "sql"],
+    "category": "data cleaning",
+    "difficulty": "Advanced"
+  },
+  {
+    "id": 44,
+    "question": "Trick: Replacing blanks with 0 in revenue data can cause what issue?",
+    "description": "Impact on financial metrics",
+    "answers": {
+      "answer_a": "Inflated averages",
+      "answer_b": "Deflated averages",
+      "answer_c": "Duplicate entries",
+      "answer_d": "Sorting errors"
+    },
+    "multiple_correct_answers": "false",
+    "correct_answers": {
+      "answer_b_correct": "true",
+      "answer_a_correct": "false",
+      "answer_c_correct": "false",
+      "answer_d_correct": "false"
+    },
+    "explanation": "Adding zeros lowers the overall average.",
+    "tip": "Understand difference between missing and zero.",
+    "tags": ["data cleaning", "trick"],
+    "category": "data cleaning",
+    "difficulty": "Advanced"
+  },
+  {
+    "id": 45,
+    "question": "Ultra-Trick: In Power Query, which step executes first during refresh?",
+    "description": "Understanding transformation order",
+    "answers": {
+      "answer_a": "Last applied step",
+      "answer_b": "First applied step",
+      "answer_c": "Random order",
+      "answer_d": "Based on column type"
+    },
+    "multiple_correct_answers": "false",
+    "correct_answers": {
+      "answer_b_correct": "true",
+      "answer_a_correct": "false",
+      "answer_c_correct": "false",
+      "answer_d_correct": "false"
+    },
+    "explanation": "Power Query applies transformations sequentially from top to bottom.",
+    "tip": "Order of steps affects output significantly.",
+    "tags": ["data cleaning", "power query"],
+    "category": "data cleaning",
+    "difficulty": "Advanced"
+  },
+  {
+    "id": 46,
+    "question": "Trick: A column appears numeric but SUM() returns 0. Why?",
+    "description": "Hidden data type problem",
+    "answers": {
+      "answer_a": "Cells contain spaces",
+      "answer_b": "Values are stored as text",
+      "answer_c": "Sheet is filtered",
+      "answer_d": "Workbook is protected"
+    },
+    "multiple_correct_answers": "false",
+    "correct_answers": {
+      "answer_b_correct": "true",
+      "answer_a_correct": "false",
+      "answer_c_correct": "false",
+      "answer_d_correct": "false"
+    },
+    "explanation": "SUM() ignores text-formatted numbers.",
+    "tip": "Use VALUE() or multiply by 1 to convert.",
+    "tags": ["data cleaning", "trick"],
+    "category": "data cleaning",
+    "difficulty": "Advanced"
+  },
+  {
+    "id": 47,
+    "question": "Ultra-Trick: Using DISTINCT with multiple columns removes duplicates based on what?",
+    "description": "Understanding DISTINCT behavior",
+    "answers": {
+      "answer_a": "Each column independently",
+      "answer_b": "Entire row combination",
+      "answer_c": "First column only",
+      "answer_d": "Last column only"
+    },
+    "multiple_correct_answers": "false",
+    "correct_answers": {
+      "answer_b_correct": "true",
+      "answer_a_correct": "false",
+      "answer_c_correct": "false",
+      "answer_d_correct": "false"
+    },
+    "explanation": "DISTINCT applies to the combination of all selected columns.",
+    "tip": "Be careful when selecting multiple columns.",
+    "tags": ["data cleaning", "sql"],
+    "category": "data cleaning",
+    "difficulty": "Advanced"
+  },
+  {
+    "id": 48,
+    "question": "Trick: Removing rows with errors in Power Query may hide what deeper issue?",
+    "description": "Data quality investigation",
+    "answers": {
+      "answer_a": "Formatting issue",
+      "answer_b": "Source system data corruption",
+      "answer_c": "Sorting problem",
+      "answer_d": "Column width issue"
+    },
+    "multiple_correct_answers": "false",
+    "correct_answers": {
+      "answer_b_correct": "true",
+      "answer_a_correct": "false",
+      "answer_c_correct": "false",
+      "answer_d_correct": "false"
+    },
+    "explanation": "Errors often signal upstream data quality problems.",
+    "tip": "Investigate root cause before deleting.",
+    "tags": ["data cleaning", "trick"],
+    "category": "data cleaning",
+    "difficulty": "Advanced"
+  },
+  {
+    "id": 49,
+    "question": "Ultra-Trick: Converting text to number using VALUE() will fail if text contains what?",
+    "description": "Conversion limitations",
+    "answers": {
+      "answer_a": "Currency symbols",
+      "answer_b": "Commas in thousands",
+      "answer_c": "Alphabetic characters",
+      "answer_d": "Negative sign"
+    },
+    "multiple_correct_answers": "false",
+    "correct_answers": {
+      "answer_c_correct": "true",
+      "answer_a_correct": "false",
+      "answer_b_correct": "false",
+      "answer_d_correct": "false"
+    },
+    "explanation": "Alphabetic characters prevent numeric conversion.",
+    "tip": "Use SUBSTITUTE() before VALUE().",
+    "tags": ["data cleaning"],
+    "category": "data cleaning",
+    "difficulty": "Advanced"
+  },
+  {
+    "id": 50,
+    "question": "Trick: GROUP BY without aggregation may cause what effect?",
+    "description": "SQL behavior edge case",
+    "answers": {
+      "answer_a": "Duplicate results",
+      "answer_b": "Acts similar to DISTINCT",
+      "answer_c": "Deletes rows",
+      "answer_d": "Sorts automatically"
+    },
+    "multiple_correct_answers": "false",
+    "correct_answers": {
+      "answer_b_correct": "true",
+      "answer_a_correct": "false",
+      "answer_c_correct": "false",
+      "answer_d_correct": "false"
+    },
+    "explanation": "GROUP BY without aggregates behaves like DISTINCT.",
+    "tip": "Use intentionally, not accidentally.",
+    "tags": ["data cleaning", "sql", "trick"],
+    "category": "data cleaning",
+    "difficulty": "Advanced"
+  },
+  {
+    "id": 51,
+    "question": "Ultra-Trick: Using INNER JOIN to clean unmatched records may accidentally remove what?",
+    "description": "Join logic impact",
+    "answers": {
+      "answer_a": "Duplicate rows",
+      "answer_b": "Valid records without matches",
+      "answer_c": "Null values only",
+      "answer_d": "Primary keys"
+    },
+    "multiple_correct_answers": "false",
+    "correct_answers": {
+      "answer_a_correct": "false",
+      "answer_b_correct": "true",
+      "answer_c_correct": "false",
+      "answer_d_correct": "false"
+    },
+    "explanation": "INNER JOIN removes rows without matches, even if they are valid records.",
+    "tip": "Use LEFT JOIN when auditing missing relationships.",
+    "tags": ["data cleaning", "sql", "trick"],
+    "category": "data cleaning",
+    "difficulty": "Advanced"
+  },
+  {
+    "id": 52,
+    "question": "Trick: Removing duplicates in Power Query differs from Excel because it operates on what?",
+    "description": "Row evaluation context",
+    "answers": {
+      "answer_a": "Visible rows only",
+      "answer_b": "Entire dataset during refresh",
+      "answer_c": "Filtered data only",
+      "answer_d": "Sorted data only"
+    },
+    "multiple_correct_answers": "false",
+    "correct_answers": {
+      "answer_a_correct": "false",
+      "answer_b_correct": "true",
+      "answer_c_correct": "false",
+      "answer_d_correct": "false"
+    },
+    "explanation": "Power Query transformations apply to the full dataset during refresh.",
+    "tip": "Filtering before removing duplicates changes results.",
+    "tags": ["data cleaning", "power query"],
+    "category": "data cleaning",
+    "difficulty": "Advanced"
+  },
+  {
+    "id": 53,
+    "question": "Ultra-Trick: Which operation may silently change data precision?",
+    "description": "Numeric rounding risk",
+    "answers": {
+      "answer_a": "Formatting as Currency",
+      "answer_b": "Changing data type to Whole Number",
+      "answer_c": "Sorting values",
+      "answer_d": "Filtering blanks"
+    },
+    "multiple_correct_answers": "false",
+    "correct_answers": {
+      "answer_b_correct": "true",
+      "answer_a_correct": "false",
+      "answer_c_correct": "false",
+      "answer_d_correct": "false"
+    },
+    "explanation": "Changing to Whole Number truncates decimals permanently in Power Query.",
+    "tip": "Check data type conversions carefully.",
+    "tags": ["data cleaning", "trick"],
+    "category": "data cleaning",
+    "difficulty": "Advanced"
+  },
+  {
+    "id": 54,
+    "question": "Trick: Replacing errors with NULL instead of investigating them may hide what?",
+    "description": "Root cause masking",
+    "answers": {
+      "answer_a": "Formatting issues",
+      "answer_b": "Upstream data pipeline problems",
+      "answer_c": "Sorting mistakes",
+      "answer_d": "Duplicate keys"
+    },
+    "multiple_correct_answers": "false",
+    "correct_answers": {
+      "answer_a_correct": "false",
+      "answer_b_correct": "true",
+      "answer_c_correct": "false",
+      "answer_d_correct": "false"
+    },
+    "explanation": "Errors often signal systemic upstream data problems.",
+    "tip": "Always trace errors to the source system.",
+    "tags": ["data cleaning", "trick"],
+    "category": "data cleaning",
+    "difficulty": "Advanced"
+  },
+  {
+    "id": 55,
+    "question": "Ultra-Trick: In SQL, HAVING filters data at which stage?",
+    "description": "Aggregation filtering logic",
+    "answers": {
+      "answer_a": "Before GROUP BY",
+      "answer_b": "After GROUP BY",
+      "answer_c": "Before WHERE",
+      "answer_d": "Before FROM"
+    },
+    "multiple_correct_answers": "false",
+    "correct_answers": {
+      "answer_a_correct": "false",
+      "answer_b_correct": "true",
+      "answer_c_correct": "false",
+      "answer_d_correct": "false"
+    },
+    "explanation": "HAVING filters aggregated results after GROUP BY.",
+    "tip": "WHERE filters rows; HAVING filters groups.",
+    "tags": ["data cleaning", "sql"],
+    "category": "data cleaning",
+    "difficulty": "Advanced"
+  },
+  {
+    "id": 56,
+    "question": "Trick: Sorting before removing duplicates changes what?",
+    "description": "Duplicate retention behavior",
+    "answers": {
+      "answer_a": "Column data type",
+      "answer_b": "Which duplicate record is kept",
+      "answer_c": "Row count automatically",
+      "answer_d": "Formula logic"
+    },
+    "multiple_correct_answers": "false",
+    "correct_answers": {
+      "answer_b_correct": "true",
+      "answer_a_correct": "false",
+      "answer_c_correct": "false",
+      "answer_d_correct": "false"
+    },
+    "explanation": "Excel keeps the first occurrence — sorting changes which one is first.",
+    "tip": "Sort strategically before deduplication.",
+    "tags": ["data cleaning", "trick"],
+    "category": "data cleaning",
+    "difficulty": "Advanced"
+  },
+  {
+    "id": 57,
+    "question": "Ultra-Trick: COUNT(*) differs from COUNT(column) because it counts what?",
+    "description": "Aggregate comparison",
+    "answers": {
+      "answer_a": "Only numeric values",
+      "answer_b": "All rows including NULLs",
+      "answer_c": "Distinct values only",
+      "answer_d": "Non-zero values only"
+    },
+    "multiple_correct_answers": "false",
+    "correct_answers": {
+      "answer_b_correct": "true",
+      "answer_a_correct": "false",
+      "answer_c_correct": "false",
+      "answer_d_correct": "false"
+    },
+    "explanation": "COUNT(*) counts all rows regardless of NULL values.",
+    "tip": "Important when auditing missing data.",
+    "tags": ["data cleaning", "sql"],
+    "category": "data cleaning",
+    "difficulty": "Advanced"
+  },
+  {
+    "id": 58,
+    "question": "Trick: Converting blanks to zero before calculating percentage growth can cause what distortion?",
+    "description": "Analytical bias",
+    "answers": {
+      "answer_a": "Overstated growth",
+      "answer_b": "Division-by-zero errors",
+      "answer_c": "Correct calculations",
+      "answer_d": "Improved averages"
+    },
+    "multiple_correct_answers": "false",
+    "correct_answers": {
+      "answer_b_correct": "true",
+      "answer_a_correct": "false",
+      "answer_c_correct": "false",
+      "answer_d_correct": "false"
+    },
+    "explanation": "Zero as denominator can cause division errors or misleading growth rates.",
+    "tip": "Treat missing and zero differently.",
+    "tags": ["data cleaning", "trick"],
+    "category": "data cleaning",
+    "difficulty": "Advanced"
+  },
+  {
+    "id": 59,
+    "question": "Ultra-Trick: In Power BI, deleting rows in Data View instead of Power Query affects what?",
+    "description": "Model refresh behavior",
+    "answers": {
+      "answer_a": "Nothing",
+      "answer_b": "Changes are lost on refresh",
+      "answer_c": "Permanent database deletion",
+      "answer_d": "Relationships automatically update"
+    },
+    "multiple_correct_answers": "false",
+    "correct_answers": {
+      "answer_b_correct": "true",
+      "answer_a_correct": "false",
+      "answer_c_correct": "false",
+      "answer_d_correct": "false"
+    },
+    "explanation": "Manual edits outside Power Query do not persist after refresh.",
+    "tip": "Always clean data in Power Query.",
+    "tags": ["data cleaning", "power bi"],
+    "category": "data cleaning",
+    "difficulty": "Advanced"
+  },
+  {
+    "id": 60,
+    "question": "Final Ultra-Trick: What is the most dangerous cleaning mistake in analytics?",
+    "description": "Strategic data governance",
+    "answers": {
+      "answer_a": "Using TRIM()",
+      "answer_b": "Not documenting transformations",
+      "answer_c": "Sorting alphabetically",
+      "answer_d": "Freezing headers"
+    },
+    "multiple_correct_answers": "false",
+    "correct_answers": {
+      "answer_a_correct": "false",
+      "answer_b_correct": "true",
+      "answer_c_correct": "false",
+      "answer_d_correct": "false"
+    },
+    "explanation": "Undocumented transformations reduce transparency, reproducibility, and trust in analytics.",
+    "tip": "Always maintain transformation documentation.",
+    "tags": ["data cleaning", "governance"],
+    "category": "data cleaning",
+    "difficulty": "Advanced"
+  },
+  {
+    "id": 1,
+    "question": "Which DAX function is used to calculate the total of a column?",
+    "description": "Basic aggregation in DAX",
+    "answers": {
+      "answer_a": "TOTAL()",
+      "answer_b": "SUM()",
+      "answer_c": "ADD()",
+      "answer_d": "COUNTROWS()"
+    },
+    "multiple_correct_answers": "false",
+    "correct_answers": {
+      "answer_a_correct": "false",
+      "answer_b_correct": "true",
+      "answer_c_correct": "false",
+      "answer_d_correct": "false"
+    },
+    "explanation": "SUM() returns the total of a numeric column in DAX.",
+    "tip": null,
+    "tags": ["dax", "aggregation"],
+    "category": "dax",
+    "difficulty": "Beginner"
+  },
+  {
+    "id": 2,
+    "question": "Which function counts the number of rows in a table?",
+    "description": "Row counting function",
+    "answers": {
+      "answer_a": "COUNT()",
+      "answer_b": "COUNTROWS()",
+      "answer_c": "ROWCOUNT()",
+      "answer_d": "COUNTA()"
+    },
+    "multiple_correct_answers": "false",
+    "correct_answers": {
+      "answer_a_correct": "false",
+      "answer_b_correct": "true",
+      "answer_c_correct": "false",
+      "answer_d_correct": "false"
+    },
+    "explanation": "COUNTROWS() counts the total number of rows in a table.",
+    "tip": null,
+    "tags": ["dax", "count"],
+    "category": "dax",
+    "difficulty": "Beginner"
+  },
+  {
+    "id": 3,
+    "question": "Which DAX function modifies filter context?",
+    "description": "Core context transition function",
+    "answers": {
+      "answer_a": "CALCULATE()",
+      "answer_b": "FILTER()",
+      "answer_c": "ALL()",
+      "answer_d": "VALUES()"
+    },
+    "multiple_correct_answers": "false",
+    "correct_answers": {
+      "answer_a_correct": "true",
+      "answer_b_correct": "false",
+      "answer_c_correct": "false",
+      "answer_d_correct": "false"
+    },
+    "explanation": "CALCULATE() evaluates an expression in a modified filter context.",
+    "tip": "Most important DAX function.",
+    "tags": ["dax", "context"],
+    "category": "dax",
+    "difficulty": "Intermediate"
+  },
+  {
+    "id": 4,
+    "question": "Which function removes filters from a column or table?",
+    "description": "Filter removal function",
+    "answers": {
+      "answer_a": "REMOVEFILTERS()",
+      "answer_b": "FILTER()",
+      "answer_c": "KEEPFILTERS()",
+      "answer_d": "CALCULATETABLE()"
+    },
+    "multiple_correct_answers": "false",
+    "correct_answers": {
+      "answer_a_correct": "true",
+      "answer_b_correct": "false",
+      "answer_c_correct": "false",
+      "answer_d_correct": "false"
+    },
+    "explanation": "REMOVEFILTERS() clears filters from specified columns or tables.",
+    "tip": null,
+    "tags": ["dax", "filter"],
+    "category": "dax",
+    "difficulty": "Intermediate"
+  },
+  {
+    "id": 5,
+    "question": "Which function returns a table filtered by a condition?",
+    "description": "Table filtering function",
+    "answers": {
+      "answer_a": "CALCULATE()",
+      "answer_b": "FILTER()",
+      "answer_c": "VALUES()",
+      "answer_d": "DISTINCT()"
+    },
+    "multiple_correct_answers": "false",
+    "correct_answers": {
+      "answer_a_correct": "false",
+      "answer_b_correct": "true",
+      "answer_c_correct": "false",
+      "answer_d_correct": "false"
+    },
+    "explanation": "FILTER() returns a table that meets a specified condition.",
+    "tip": null,
+    "tags": ["dax", "table"],
+    "category": "dax",
+    "difficulty": "Intermediate"
+  },
+  {
+    "id": 6,
+    "question": "Which function returns distinct values from a column?",
+    "description": "Unique value extraction",
+    "answers": {
+      "answer_a": "VALUES()",
+      "answer_b": "UNIQUE()",
+      "answer_c": "DISTINCTCOUNT()",
+      "answer_d": "FILTER()"
+    },
+    "multiple_correct_answers": "false",
+    "correct_answers": {
+      "answer_a_correct": "true",
+      "answer_b_correct": "false",
+      "answer_c_correct": "false",
+      "answer_d_correct": "false"
+    },
+    "explanation": "VALUES() returns a one-column table of unique values.",
+    "tip": null,
+    "tags": ["dax", "distinct"],
+    "category": "dax",
+    "difficulty": "Intermediate"
+  },
+  {
+    "id": 7,
+    "question": "Which function performs context transition from row context to filter context?",
+    "description": "Context transition behavior",
+    "answers": {
+      "answer_a": "CALCULATE()",
+      "answer_b": "FILTER()",
+      "answer_c": "SUMX()",
+      "answer_d": "RELATED()"
+    },
+    "multiple_correct_answers": "false",
+    "correct_answers": {
+      "answer_a_correct": "true",
+      "answer_b_correct": "false",
+      "answer_c_correct": "false",
+      "answer_d_correct": "false"
+    },
+    "explanation": "CALCULATE() automatically performs context transition when used in row context.",
+    "tip": "Important for calculated columns.",
+    "tags": ["dax", "context"],
+    "category": "dax",
+    "difficulty": "Advanced"
+  },
+  {
+    "id": 8,
+    "question": "Which iterator function sums an expression over a table?",
+    "description": "Iterator aggregation",
+    "answers": {
+      "answer_a": "SUM()",
+      "answer_b": "SUMX()",
+      "answer_c": "CALCULATE()",
+      "answer_d": "COUNTX()"
+    },
+    "multiple_correct_answers": "false",
+    "correct_answers": {
+      "answer_a_correct": "false",
+      "answer_b_correct": "true",
+      "answer_c_correct": "false",
+      "answer_d_correct": "false"
+    },
+    "explanation": "SUMX() iterates over a table and evaluates an expression for each row.",
+    "tip": null,
+    "tags": ["dax", "iterator"],
+    "category": "dax",
+    "difficulty": "Advanced"
+  },
+  {
+    "id": 9,
+    "question": "Which function returns the related value from another table?",
+    "description": "Relationship-based lookup",
+    "answers": {
+      "answer_a": "LOOKUPVALUE()",
+      "answer_b": "RELATED()",
+      "answer_c": "VALUES()",
+      "answer_d": "FILTER()"
+    },
+    "multiple_correct_answers": "false",
+    "correct_answers": {
+      "answer_a_correct": "false",
+      "answer_b_correct": "true",
+      "answer_c_correct": "false",
+      "answer_d_correct": "false"
+    },
+    "explanation": "RELATED() fetches a value from a related table using an existing relationship.",
+    "tip": null,
+    "tags": ["dax", "relationship"],
+    "category": "dax",
+    "difficulty": "Advanced"
+  },
+  {
+    "id": 10,
+    "question": "Which function calculates year-to-date totals?",
+    "description": "Time intelligence function",
+    "answers": {
+      "answer_a": "TOTALYTD()",
+      "answer_b": "YTD()",
+      "answer_c": "DATESYTD()",
+      "answer_d": "SUMYTD()"
+    },
+    "multiple_correct_answers": "false",
+    "correct_answers": {
+      "answer_a_correct": "true",
+      "answer_b_correct": "false",
+      "answer_c_correct": "false",
+      "answer_d_correct": "false"
+    },
+    "explanation": "TOTALYTD() calculates cumulative totals from the start of the year.",
+    "tip": "Requires a proper Date table.",
+    "tags": ["dax", "time-intelligence"],
+    "category": "dax",
+    "difficulty": "Advanced"
+  },
+  {
+"id": 1,
+"question": "You need to calculate Total Sales only for the year 2024 regardless of slicer selection. Which DAX function should you use?",
+"description": "Override external filter context",
+"answers": {
+"answer_a": "CALCULATE() with YEAR filter",
+"answer_b": "SUM()",
+"answer_c": "FILTER() only",
+"answer_d": "COUNTROWS()"
+},
+"multiple_correct_answers": "false",
+"correct_answers": {
+"answer_a_correct": "true",
+"answer_b_correct": "false",
+"answer_c_correct": "false",
+"answer_d_correct": "false"
+},
+"explanation": "CALCULATE() modifies filter context to force Year = 2024.",
+"tip": "Think filter override.",
+"tags": ["dax","scenario","context"],
+"category": "dax",
+"difficulty": "Intermediate"
+},
+
+{
+"id": 2,
+"question": "You need cumulative sales from start of year to selected date. Which function is best?",
+"description": "Running total scenario",
+"answers": {
+"answer_a": "SUM()",
+"answer_b": "TOTALYTD()",
+"answer_c": "COUNTROWS()",
+"answer_d": "VALUES()"
+},
+"multiple_correct_answers": "false",
+"correct_answers": {
+"answer_a_correct": "false",
+"answer_b_correct": "true",
+"answer_c_correct": "false",
+"answer_d_correct": "false"
+},
+"explanation": "TOTALYTD() calculates year-to-date totals.",
+"tip": "Requires Date table.",
+"tags": ["dax","time-intelligence"],
+"category": "dax",
+"difficulty": "Intermediate"
+},
+
+{
+"id": 3,
+"question": "You must calculate Profit = Sales - Cost row by row before aggregating. Which function should be used?",
+"description": "Row-by-row evaluation",
+"answers": {
+"answer_a": "SUM()",
+"answer_b": "SUMX()",
+"answer_c": "CALCULATE()",
+"answer_d": "DISTINCT()"
+},
+"multiple_correct_answers": "false",
+"correct_answers": {
+"answer_a_correct": "false",
+"answer_b_correct": "true",
+"answer_c_correct": "false",
+"answer_d_correct": "false"
+},
+"explanation": "SUMX() iterates row-by-row and evaluates expressions.",
+"tip": "Iterator needed.",
+"tags": ["dax","iterator"],
+"category": "dax",
+"difficulty": "Advanced"
+},
+
+{
+"id": 4,
+"question": "You need to ignore product slicer but respect date slicer. Which function helps?",
+"description": "Selective filter removal",
+"answers": {
+"answer_a": "ALL(Product)",
+"answer_b": "REMOVEFILTERS(Date)",
+"answer_c": "COUNTROWS()",
+"answer_d": "VALUES(Product)"
+},
+"multiple_correct_answers": "false",
+"correct_answers": {
+"answer_a_correct": "true",
+"answer_b_correct": "false",
+"answer_c_correct": "false",
+"answer_d_correct": "false"
+},
+"explanation": "ALL(Product) removes filters only from Product table.",
+"tip": "Remove specific filter.",
+"tags": ["dax","filter"],
+"category": "dax",
+"difficulty": "Advanced"
+},
+
+{
+"id": 5,
+"question": "You need to count unique customers who made purchases. Which function is best?",
+"description": "Distinct counting scenario",
+"answers": {
+"answer_a": "COUNT()",
+"answer_b": "COUNTROWS()",
+"answer_c": "DISTINCTCOUNT()",
+"answer_d": "VALUES()"
+},
+"multiple_correct_answers": "false",
+"correct_answers": {
+"answer_c_correct": "true",
+"answer_a_correct": "false",
+"answer_b_correct": "false",
+"answer_d_correct": "false"
+},
+"explanation": "DISTINCTCOUNT() counts unique values.",
+"tip": null,
+"tags": ["dax","aggregation"],
+"category": "dax",
+"difficulty": "Intermediate"
+},
+
+{
+"id": 6,
+"question": "You must retrieve a product category from a related table in a calculated column. Which function is required?",
+"description": "Relationship lookup",
+"answers": {
+"answer_a": "LOOKUPVALUE()",
+"answer_b": "RELATED()",
+"answer_c": "FILTER()",
+"answer_d": "SUMX()"
+},
+"multiple_correct_answers": "false",
+"correct_answers": {
+"answer_b_correct": "true",
+"answer_a_correct": "false",
+"answer_c_correct": "false",
+"answer_d_correct": "false"
+},
+"explanation": "RELATED() fetches values from a related table.",
+"tip": null,
+"tags": ["dax","relationship"],
+"category": "dax",
+"difficulty": "Intermediate"
+},
+
+{
+"id": 7,
+"question": "You need previous year sales for comparison. Which function should be used?",
+"description": "Time intelligence comparison",
+"answers": {
+"answer_a": "SAMEPERIODLASTYEAR()",
+"answer_b": "TOTALYTD()",
+"answer_c": "VALUES()",
+"answer_d": "COUNTROWS()"
+},
+"multiple_correct_answers": "false",
+"correct_answers": {
+"answer_a_correct": "true",
+"answer_b_correct": "false",
+"answer_c_correct": "false",
+"answer_d_correct": "false"
+},
+"explanation": "SAMEPERIODLASTYEAR() shifts context back one year.",
+"tip": null,
+"tags": ["dax","time-intelligence"],
+"category": "dax",
+"difficulty": "Advanced"
+},
+
+{
+"id": 8,
+"question": "You want to preserve existing filters while adding a new filter condition. Which function helps?",
+"description": "Filter preservation",
+"answers": {
+"answer_a": "KEEPFILTERS()",
+"answer_b": "ALL()",
+"answer_c": "REMOVEFILTERS()",
+"answer_d": "VALUES()"
+},
+"multiple_correct_answers": "false",
+"correct_answers": {
+"answer_a_correct": "true",
+"answer_b_correct": "false",
+"answer_c_correct": "false",
+"answer_d_correct": "false"
+},
+"explanation": "KEEPFILTERS() preserves existing filters in CALCULATE.",
+"tip": null,
+"tags": ["dax","filter"],
+"category": "dax",
+"difficulty": "Advanced"
+},
+{
+"id": 9,
+"question": "You need to calculate the percentage of total sales for each product category regardless of slicer selection. Which approach is correct?",
+"description": "Percentage of grand total scenario",
+"answers": {
+"answer_a": "DIVIDE([Sales], CALCULATE([Sales], ALL(Product)))",
+"answer_b": "SUM([Sales]) / COUNTROWS(Product)",
+"answer_c": "VALUES(Product)",
+"answer_d": "FILTER(Product, [Sales])"
+},
+"multiple_correct_answers": "false",
+"correct_answers": {
+"answer_a_correct": "true",
+"answer_b_correct": "false",
+"answer_c_correct": "false",
+"answer_d_correct": "false"
+},
+"explanation": "ALL(Product) removes product filters to compute grand total.",
+"tip": "Classic % of total pattern.",
+"tags": ["dax","scenario","percentage"],
+"category": "dax",
+"difficulty": "Advanced"
+},
+
+{
+"id": 10,
+"question": "You want a measure that returns blank instead of error when dividing by zero. Which function should you use?",
+"description": "Safe division scenario",
+"answers": {
+"answer_a": "DIVIDE()",
+"answer_b": "/ operator",
+"answer_c": "CALCULATE()",
+"answer_d": "IFERROR()"
+},
+"multiple_correct_answers": "false",
+"correct_answers": {
+"answer_a_correct": "true",
+"answer_b_correct": "false",
+"answer_c_correct": "false",
+"answer_d_correct": "false"
+},
+"explanation": "DIVIDE() safely handles division and avoids errors.",
+"tip": null,
+"tags": ["dax","error-handling"],
+"category": "dax",
+"difficulty": "Intermediate"
+},
+
+{
+"id": 11,
+"question": "You need to rank products by sales dynamically based on slicer context. Which function should be used?",
+"description": "Dynamic ranking scenario",
+"answers": {
+"answer_a": "RANKX()",
+"answer_b": "SUMX()",
+"answer_c": "COUNTROWS()",
+"answer_d": "TOPN()"
+},
+"multiple_correct_answers": "false",
+"correct_answers": {
+"answer_a_correct": "true",
+"answer_b_correct": "false",
+"answer_c_correct": "false",
+"answer_d_correct": "false"
+},
+"explanation": "RANKX() ranks values based on an expression.",
+"tip": "Ranking within context.",
+"tags": ["dax","ranking"],
+"category": "dax",
+"difficulty": "Advanced"
+},
+
+{
+"id": 12,
+"question": "You must calculate sales only for customers who purchased more than 5 times. Which function pattern is required?",
+"description": "Conditional aggregation scenario",
+"answers": {
+"answer_a": "CALCULATE() with FILTER()",
+"answer_b": "SUM()",
+"answer_c": "COUNT()",
+"answer_d": "VALUES()"
+},
+"multiple_correct_answers": "false",
+"correct_answers": {
+"answer_a_correct": "true",
+"answer_b_correct": "false",
+"answer_c_correct": "false",
+"answer_d_correct": "false"
+},
+"explanation": "FILTER() inside CALCULATE applies conditional logic before aggregation.",
+"tip": null,
+"tags": ["dax","filter","scenario"],
+"category": "dax",
+"difficulty": "Advanced"
+},
+
+{
+"id": 13,
+"question": "You need a calculated column that multiplies Quantity by Unit Price row-by-row. Which function is most appropriate?",
+"description": "Row-level computation",
+"answers": {
+"answer_a": "SUMX()",
+"answer_b": "Quantity * Unit Price",
+"answer_c": "CALCULATE()",
+"answer_d": "VALUES()"
+},
+"multiple_correct_answers": "false",
+"correct_answers": {
+"answer_b_correct": "true",
+"answer_a_correct": "false",
+"answer_c_correct": "false",
+"answer_d_correct": "false"
+},
+"explanation": "Calculated columns inherently evaluate row-by-row, so direct multiplication works.",
+"tip": "No iterator needed in calculated column.",
+"tags": ["dax","calculated-column"],
+"category": "dax",
+"difficulty": "Intermediate"
+},
+
+{
+"id": 14,
+"question": "You want to calculate moving average over last 3 months. Which function combination is required?",
+"description": "Rolling window calculation",
+"answers": {
+"answer_a": "CALCULATE() with DATESINPERIOD()",
+"answer_b": "SUM() only",
+"answer_c": "COUNTROWS()",
+"answer_d": "VALUES()"
+},
+"multiple_correct_answers": "false",
+"correct_answers": {
+"answer_a_correct": "true",
+"answer_b_correct": "false",
+"answer_c_correct": "false",
+"answer_d_correct": "false"
+},
+"explanation": "DATESINPERIOD() defines rolling date range inside CALCULATE.",
+"tip": "Rolling calculations require date functions.",
+"tags": ["dax","time-intelligence"],
+"category": "dax",
+"difficulty": "Advanced"
+},
+
+{
+"id": 15,
+"question": "You need to calculate sales for the top 5 products only. Which function helps define the subset?",
+"description": "Top N scenario",
+"answers": {
+"answer_a": "TOPN()",
+"answer_b": "RANKX()",
+"answer_c": "COUNTROWS()",
+"answer_d": "VALUES()"
+},
+"multiple_correct_answers": "false",
+"correct_answers": {
+"answer_a_correct": "true",
+"answer_b_correct": "false",
+"answer_c_correct": "false",
+"answer_d_correct": "false"
+},
+"explanation": "TOPN() returns a table with top N rows based on expression.",
+"tip": null,
+"tags": ["dax","ranking"],
+"category": "dax",
+"difficulty": "Advanced"
+},
+
+{
+"id": 16,
+"question": "You need to ignore all filters in a report. Which function achieves this?",
+"description": "Complete filter removal",
+"answers": {
+"answer_a": "ALL()",
+"answer_b": "KEEPFILTERS()",
+"answer_c": "VALUES()",
+"answer_d": "FILTER()"
+},
+"multiple_correct_answers": "false",
+"correct_answers": {
+"answer_a_correct": "true",
+"answer_b_correct": "false",
+"answer_c_correct": "false",
+"answer_d_correct": "false"
+},
+"explanation": "ALL() removes filters from specified table or column.",
+"tip": null,
+"tags": ["dax","filter"],
+"category": "dax",
+"difficulty": "Intermediate"
+},
+
+{
+"id": 17,
+"question": "You want a measure that returns the last non-blank sales value. Which function is appropriate?",
+"description": "Last available value scenario",
+"answers": {
+"answer_a": "LASTNONBLANK()",
+"answer_b": "FIRSTNONBLANK()",
+"answer_c": "VALUES()",
+"answer_d": "SUM()"
+},
+"multiple_correct_answers": "false",
+"correct_answers": {
+"answer_a_correct": "true",
+"answer_b_correct": "false",
+"answer_c_correct": "false",
+"answer_d_correct": "false"
+},
+"explanation": "LASTNONBLANK() finds the last value where expression is not blank.",
+"tip": null,
+"tags": ["dax","time-intelligence"],
+"category": "dax",
+"difficulty": "Advanced"
+},
+
+{
+"id": 18,
+"question": "You must create a dynamic measure that switches between Sales and Profit based on slicer selection. Which function is key?",
+"description": "Dynamic measure selection",
+"answers": {
+"answer_a": "SWITCH()",
+"answer_b": "SUMX()",
+"answer_c": "VALUES()",
+"answer_d": "DISTINCTCOUNT()"
+},
+"multiple_correct_answers": "false",
+"correct_answers": {
+"answer_a_correct": "true",
+"answer_b_correct": "false",
+"answer_c_correct": "false",
+"answer_d_correct": "false"
+},
+"explanation": "SWITCH() enables dynamic logic selection.",
+"tip": "Often paired with SELECTEDVALUE().",
+"tags": ["dax","dynamic"],
+"category": "dax",
+"difficulty": "Advanced"
+},
+
+{
+"id": 19,
+"question": "You need to activate an inactive relationship in a calculation. Which function is used?",
+"description": "Inactive relationship scenario",
+"answers": {
+"answer_a": "USERELATIONSHIP()",
+"answer_b": "RELATED()",
+"answer_c": "LOOKUPVALUE()",
+"answer_d": "FILTER()"
+},
+"multiple_correct_answers": "false",
+"correct_answers": {
+"answer_a_correct": "true",
+"answer_b_correct": "false",
+"answer_c_correct": "false",
+"answer_d_correct": "false"
+},
+"explanation": "USERELATIONSHIP() activates inactive relationship inside CALCULATE.",
+"tip": null,
+"tags": ["dax","relationship"],
+"category": "dax",
+"difficulty": "Advanced"
+},
+
+{
+"id": 20,
+"question": "You need to retrieve selected slicer value safely when only one value is chosen. Which function works best?",
+"description": "Single selection retrieval",
+"answers": {
+"answer_a": "SELECTEDVALUE()",
+"answer_b": "VALUES()",
+"answer_c": "COUNTROWS()",
+"answer_d": "DISTINCT()"
+},
+"multiple_correct_answers": "false",
+"correct_answers": {
+"answer_a_correct": "true",
+"answer_b_correct": "false",
+"answer_c_correct": "false",
+"answer_d_correct": "false"
+},
+"explanation": "SELECTEDVALUE() returns single selected value or alternate result.",
+"tip": null,
+"tags": ["dax","filter-context"],
+"category": "dax",
+"difficulty": "Intermediate"
+},
+{
+"id": 9,
+"question": "You need to calculate the percentage of total sales for each product category regardless of slicer selection. Which approach is correct?",
+"description": "Percentage of grand total scenario",
+"answers": {
+"answer_a": "DIVIDE([Sales], CALCULATE([Sales], ALL(Product)))",
+"answer_b": "SUM([Sales]) / COUNTROWS(Product)",
+"answer_c": "VALUES(Product)",
+"answer_d": "FILTER(Product, [Sales])"
+},
+"multiple_correct_answers": "false",
+"correct_answers": {
+"answer_a_correct": "true",
+"answer_b_correct": "false",
+"answer_c_correct": "false",
+"answer_d_correct": "false"
+},
+"explanation": "ALL(Product) removes product filters to compute grand total.",
+"tip": "Classic % of total pattern.",
+"tags": ["dax","scenario","percentage"],
+"category": "dax",
+"difficulty": "Advanced"
+},
+
+{
+"id": 10,
+"question": "You want a measure that returns blank instead of error when dividing by zero. Which function should you use?",
+"description": "Safe division scenario",
+"answers": {
+"answer_a": "DIVIDE()",
+"answer_b": "/ operator",
+"answer_c": "CALCULATE()",
+"answer_d": "IFERROR()"
+},
+"multiple_correct_answers": "false",
+"correct_answers": {
+"answer_a_correct": "true",
+"answer_b_correct": "false",
+"answer_c_correct": "false",
+"answer_d_correct": "false"
+},
+"explanation": "DIVIDE() safely handles division and avoids errors.",
+"tip": null,
+"tags": ["dax","error-handling"],
+"category": "dax",
+"difficulty": "Intermediate"
+},
+
+{
+"id": 11,
+"question": "You need to rank products by sales dynamically based on slicer context. Which function should be used?",
+"description": "Dynamic ranking scenario",
+"answers": {
+"answer_a": "RANKX()",
+"answer_b": "SUMX()",
+"answer_c": "COUNTROWS()",
+"answer_d": "TOPN()"
+},
+"multiple_correct_answers": "false",
+"correct_answers": {
+"answer_a_correct": "true",
+"answer_b_correct": "false",
+"answer_c_correct": "false",
+"answer_d_correct": "false"
+},
+"explanation": "RANKX() ranks values based on an expression.",
+"tip": "Ranking within context.",
+"tags": ["dax","ranking"],
+"category": "dax",
+"difficulty": "Advanced"
+},
+
+{
+"id": 12,
+"question": "You must calculate sales only for customers who purchased more than 5 times. Which function pattern is required?",
+"description": "Conditional aggregation scenario",
+"answers": {
+"answer_a": "CALCULATE() with FILTER()",
+"answer_b": "SUM()",
+"answer_c": "COUNT()",
+"answer_d": "VALUES()"
+},
+"multiple_correct_answers": "false",
+"correct_answers": {
+"answer_a_correct": "true",
+"answer_b_correct": "false",
+"answer_c_correct": "false",
+"answer_d_correct": "false"
+},
+"explanation": "FILTER() inside CALCULATE applies conditional logic before aggregation.",
+"tip": null,
+"tags": ["dax","filter","scenario"],
+"category": "dax",
+"difficulty": "Advanced"
+},
+
+{
+"id": 13,
+"question": "You need a calculated column that multiplies Quantity by Unit Price row-by-row. Which function is most appropriate?",
+"description": "Row-level computation",
+"answers": {
+"answer_a": "SUMX()",
+"answer_b": "Quantity * Unit Price",
+"answer_c": "CALCULATE()",
+"answer_d": "VALUES()"
+},
+"multiple_correct_answers": "false",
+"correct_answers": {
+"answer_b_correct": "true",
+"answer_a_correct": "false",
+"answer_c_correct": "false",
+"answer_d_correct": "false"
+},
+"explanation": "Calculated columns inherently evaluate row-by-row, so direct multiplication works.",
+"tip": "No iterator needed in calculated column.",
+"tags": ["dax","calculated-column"],
+"category": "dax",
+"difficulty": "Intermediate"
+},
+
+{
+"id": 14,
+"question": "You want to calculate moving average over last 3 months. Which function combination is required?",
+"description": "Rolling window calculation",
+"answers": {
+"answer_a": "CALCULATE() with DATESINPERIOD()",
+"answer_b": "SUM() only",
+"answer_c": "COUNTROWS()",
+"answer_d": "VALUES()"
+},
+"multiple_correct_answers": "false",
+"correct_answers": {
+"answer_a_correct": "true",
+"answer_b_correct": "false",
+"answer_c_correct": "false",
+"answer_d_correct": "false"
+},
+"explanation": "DATESINPERIOD() defines rolling date range inside CALCULATE.",
+"tip": "Rolling calculations require date functions.",
+"tags": ["dax","time-intelligence"],
+"category": "dax",
+"difficulty": "Advanced"
+},
+
+{
+"id": 15,
+"question": "You need to calculate sales for the top 5 products only. Which function helps define the subset?",
+"description": "Top N scenario",
+"answers": {
+"answer_a": "TOPN()",
+"answer_b": "RANKX()",
+"answer_c": "COUNTROWS()",
+"answer_d": "VALUES()"
+},
+"multiple_correct_answers": "false",
+"correct_answers": {
+"answer_a_correct": "true",
+"answer_b_correct": "false",
+"answer_c_correct": "false",
+"answer_d_correct": "false"
+},
+"explanation": "TOPN() returns a table with top N rows based on expression.",
+"tip": null,
+"tags": ["dax","ranking"],
+"category": "dax",
+"difficulty": "Advanced"
+},
+
+{
+"id": 16,
+"question": "You need to ignore all filters in a report. Which function achieves this?",
+"description": "Complete filter removal",
+"answers": {
+"answer_a": "ALL()",
+"answer_b": "KEEPFILTERS()",
+"answer_c": "VALUES()",
+"answer_d": "FILTER()"
+},
+"multiple_correct_answers": "false",
+"correct_answers": {
+"answer_a_correct": "true",
+"answer_b_correct": "false",
+"answer_c_correct": "false",
+"answer_d_correct": "false"
+},
+"explanation": "ALL() removes filters from specified table or column.",
+"tip": null,
+"tags": ["dax","filter"],
+"category": "dax",
+"difficulty": "Intermediate"
+},
+
+{
+"id": 17,
+"question": "You want a measure that returns the last non-blank sales value. Which function is appropriate?",
+"description": "Last available value scenario",
+"answers": {
+"answer_a": "LASTNONBLANK()",
+"answer_b": "FIRSTNONBLANK()",
+"answer_c": "VALUES()",
+"answer_d": "SUM()"
+},
+"multiple_correct_answers": "false",
+"correct_answers": {
+"answer_a_correct": "true",
+"answer_b_correct": "false",
+"answer_c_correct": "false",
+"answer_d_correct": "false"
+},
+"explanation": "LASTNONBLANK() finds the last value where expression is not blank.",
+"tip": null,
+"tags": ["dax","time-intelligence"],
+"category": "dax",
+"difficulty": "Advanced"
+},
+
+{
+"id": 18,
+"question": "You must create a dynamic measure that switches between Sales and Profit based on slicer selection. Which function is key?",
+"description": "Dynamic measure selection",
+"answers": {
+"answer_a": "SWITCH()",
+"answer_b": "SUMX()",
+"answer_c": "VALUES()",
+"answer_d": "DISTINCTCOUNT()"
+},
+"multiple_correct_answers": "false",
+"correct_answers": {
+"answer_a_correct": "true",
+"answer_b_correct": "false",
+"answer_c_correct": "false",
+"answer_d_correct": "false"
+},
+"explanation": "SWITCH() enables dynamic logic selection.",
+"tip": "Often paired with SELECTEDVALUE().",
+"tags": ["dax","dynamic"],
+"category": "dax",
+"difficulty": "Advanced"
+},
+
+{
+"id": 19,
+"question": "You need to activate an inactive relationship in a calculation. Which function is used?",
+"description": "Inactive relationship scenario",
+"answers": {
+"answer_a": "USERELATIONSHIP()",
+"answer_b": "RELATED()",
+"answer_c": "LOOKUPVALUE()",
+"answer_d": "FILTER()"
+},
+"multiple_correct_answers": "false",
+"correct_answers": {
+"answer_a_correct": "true",
+"answer_b_correct": "false",
+"answer_c_correct": "false",
+"answer_d_correct": "false"
+},
+"explanation": "USERELATIONSHIP() activates inactive relationship inside CALCULATE.",
+"tip": null,
+"tags": ["dax","relationship"],
+"category": "dax",
+"difficulty": "Advanced"
+},
+
+{
+"id": 20,
+"question": "You need to retrieve selected slicer value safely when only one value is chosen. Which function works best?",
+"description": "Single selection retrieval",
+"answers": {
+"answer_a": "SELECTEDVALUE()",
+"answer_b": "VALUES()",
+"answer_c": "COUNTROWS()",
+"answer_d": "DISTINCT()"
+},
+"multiple_correct_answers": "false",
+"correct_answers": {
+"answer_a_correct": "true",
+"answer_b_correct": "false",
+"answer_c_correct": "false",
+"answer_d_correct": "false"
+},
+"explanation": "SELECTEDVALUE() returns single selected value or alternate result.",
+"tip": null,
+"tags": ["dax","filter-context"],
+"category": "dax",
+"difficulty": "Intermediate"
+},
+{
+"id": 21,
+"question": "You need a measure that calculates total sales for last 3 months dynamically based on current date selection. Which DAX pattern is correct?",
+"description": "Rolling period calculation",
+"answers": {
+"answer_a": "CALCULATE([Sales], DATESINPERIOD(Date[Date], MAX(Date[Date]), -3, MONTH))",
+"answer_b": "TOTALYTD([Sales])",
+"answer_c": "SUM([Sales])",
+"answer_d": "SUMX(Product, [Sales])"
+},
+"multiple_correct_answers": "false",
+"correct_answers": {
+"answer_a_correct": "true",
+"answer_b_correct": "false",
+"answer_c_correct": "false",
+"answer_d_correct": "false"
+},
+"explanation": "DATESINPERIOD creates dynamic last 3 months date range for CALCULATE.",
+"tip": "Use negative offset for past periods.",
+"tags": ["dax","time-intelligence","scenario"],
+"category": "dax",
+"difficulty": "Advanced"
+},
+
+{
+"id": 22,
+"question": "You must calculate running total but ignore filters on region while respecting product filters. Which function combination is correct?",
+"description": "Selective filter override in cumulative total",
+"answers": {
+"answer_a": "CALCULATE([Sales], REMOVEFILTERS(Region), FILTER(ALLSELECTED(Date), Date[Date]<=MAX(Date[Date])))",
+"answer_b": "TOTALYTD([Sales])",
+"answer_c": "SUM([Sales])",
+"answer_d": "CALCULATE([Sales], ALL(Date))"
+},
+"multiple_correct_answers": "false",
+"correct_answers": {
+"answer_a_correct": "true",
+"answer_b_correct": "false",
+"answer_c_correct": "false",
+"answer_d_correct": "false"
+},
+"explanation": "REMOVEFILTERS(Region) removes only region context, FILTER controls running total by date.",
+"tip": "ALLSELECTED preserves user slicers except the removed filter.",
+"tags": ["dax","filter","scenario"],
+"category": "dax",
+"difficulty": "Advanced"
+},
+
+{
+"id": 23,
+"question": "You need to rank customers by sales within each region. Which function pattern is needed?",
+"description": "Contextual ranking scenario",
+"answers": {
+"answer_a": "RANKX(ALL(Customer), [Sales])",
+"answer_b": "RANKX(FILTER(Customer, Customer[Region]=MAX(Customer[Region])), [Sales])",
+"answer_c": "RANKX(Customer, [Sales])",
+"answer_d": "SUMX(Customer, [Sales])"
+},
+"multiple_correct_answers": "false",
+"correct_answers": {
+"answer_b_correct": "true",
+"answer_a_correct": "false",
+"answer_c_correct": "false",
+"answer_d_correct": "false"
+},
+"explanation": "Filtering Customer table by current region gives ranking within region.",
+"tip": "Combine RANKX with FILTER for nested context.",
+"tags": ["dax","ranking","scenario"],
+"category": "dax",
+"difficulty": "Advanced"
+},
+
+{
+"id": 24,
+"question": "You want to calculate average sales per customer, but only for active customers with sales > 0. Which approach is correct?",
+"description": "Conditional average measure",
+"answers": {
+"answer_a": "CALCULATE(AVERAGE([Sales]), FILTER(Customer, [Sales]>0))",
+"answer_b": "AVERAGE([Sales])",
+"answer_c": "SUMX(Customer,[Sales])/COUNTROWS(Customer)",
+"answer_d": "SUM([Sales])"
+},
+"multiple_correct_answers": "false",
+"correct_answers": {
+"answer_a_correct": "true",
+"answer_b_correct": "false",
+"answer_c_correct": "false",
+"answer_d_correct": "false"
+},
+"explanation": "FILTER inside CALCULATE ensures only customers with sales >0 are included.",
+"tip": "Always filter before aggregation for conditional averages.",
+"tags": ["dax","filter","scenario"],
+"category": "dax",
+"difficulty": "Advanced"
+},
+
+{
+"id": 25,
+"question": "You need to calculate % growth compared to previous year, but some years have no sales. Which function combination prevents errors?",
+"description": "Time-intelligence growth with blanks",
+"answers": {
+"answer_a": "DIVIDE([Sales]-CALCULATE([Sales],SAMEPERIODLASTYEAR(Date[Date])),CALCULATE([Sales],SAMEPERIODLASTYEAR(Date[Date])))",
+"answer_b": "[Sales]/[Sales]",
+"answer_c": "TOTALYTD([Sales])",
+"answer_d": "SUM([Sales])"
+},
+"multiple_correct_answers": "false",
+"correct_answers": {
+"answer_a_correct": "true",
+"answer_b_correct": "false",
+"answer_c_correct": "false",
+"answer_d_correct": "false"
+},
+"explanation": "DIVIDE safely handles division by zero when previous year sales are blank.",
+"tip": "Always wrap growth calculations in DIVIDE().",
+"tags": ["dax","time-intelligence","scenario"],
+"category": "dax",
+"difficulty": "Advanced"
+},
+
+{
+"id": 26,
+"question": "You need to calculate sales only for products currently selected in a slicer, ignoring all other filters. Which function combination is correct?",
+"description": "Slicer-respecting measure",
+"answers": {
+"answer_a": "CALCULATE([Sales], KEEPFILTERS(VALUES(Product[ProductName])))",
+"answer_b": "SUM([Sales])",
+"answer_c": "CALCULATE([Sales], ALL(Product))",
+"answer_d": "FILTER(Product, [Sales]>0)"
+},
+"multiple_correct_answers": "false",
+"correct_answers": {
+"answer_a_correct": "true",
+"answer_b_correct": "false",
+"answer_c_correct": "false",
+"answer_d_correct": "false"
+},
+"explanation": "KEEPFILTERS preserves slicer selections while calculating measure.",
+"tip": "Useful for dynamic user-driven filtering.",
+"tags": ["dax","filter","scenario"],
+"category": "dax",
+"difficulty": "Advanced"
+},
+
+{
+"id": 27,
+"question": "You must create a measure that returns last non-blank profit for each customer, even if some customers have missing data. Which function is correct?",
+"description": "Last available value per entity",
+"answers": {
+"answer_a": "LASTNONBLANK(Customer[Date],[Profit])",
+"answer_b": "FIRSTNONBLANK(Customer[Date],[Profit])",
+"answer_c": "MAX([Profit])",
+"answer_d": "SUMX(Customer,[Profit])"
+},
+"multiple_correct_answers": "false",
+"correct_answers": {
+"answer_a_correct": "true",
+"answer_b_correct": "false",
+"answer_c_correct": "false",
+"answer_d_correct": "false"
+},
+"explanation": "LASTNONBLANK returns last non-blank value respecting current filter context.",
+"tip": null,
+"tags": ["dax","time-intelligence","scenario"],
+"category": "dax",
+"difficulty": "Advanced"
+},
+
+{
+"id": 28,
+"question": "You want to calculate total sales ignoring only the Region filter but respecting all others. Which function should you use?",
+"description": "Selective ALL removal",
+"answers": {
+"answer_a": "CALCULATE([Sales], ALL(Sales[Region]))",
+"answer_b": "CALCULATE([Sales], ALL())",
+"answer_c": "CALCULATE([Sales], REMOVEFILTERS())",
+"answer_d": "CALCULATE([Sales], VALUES(Region))"
+},
+"multiple_correct_answers": "false",
+"correct_answers": {
+"answer_a_correct": "true",
+"answer_b_correct": "false",
+"answer_c_correct": "false",
+"answer_d_correct": "false"
+},
+"explanation": "ALL(Column) removes only that column's filters.",
+"tip": null,
+"tags": ["dax","filter","scenario"],
+"category": "dax",
+"difficulty": "Advanced"
+},
+
+{
+"id": 29,
+"question": "You need a measure that calculates cumulative sales but only for top 10 products by sales. Which function pattern is correct?",
+"description": "Cumulative total with subset",
+"answers": {
+"answer_a": "CALCULATE([Sales], FILTER(TOPN(10, Product, [Sales], DESC), Date[Date]<=MAX(Date[Date])))",
+"answer_b": "TOTALYTD([Sales])",
+"answer_c": "SUMX(Product, [Sales])",
+"answer_d": "CALCULATE([Sales], ALL())"
+},
+"multiple_correct_answers": "false",
+"correct_answers": {
+"answer_a_correct": "true",
+"answer_b_correct": "false",
+"answer_c_correct": "false",
+"answer_d_correct": "false"
+},
+"explanation": "TOPN creates subset and FILTER applies cumulative logic.",
+"tip": "Combine TOPN with date filter for cumulative subset measures.",
+"tags": ["dax","topn","scenario"],
+"category": "dax",
+"difficulty": "Advanced"
+},
+
+{
+"id": 30,
+"question": "You must calculate dynamic measure showing either Sales or Profit based on a disconnected slicer selection. Which function combination is required?",
+"description": "Disconnected slicer scenario",
+"answers": {
+"answer_a": "SWITCH(TRUE(), SELECTEDVALUE(Slicer[Measure])=\"Sales\", [Sales], [Profit])",
+"answer_b": "[Sales]/[Profit]",
+"answer_c": "CALCULATE([Sales])",
+"answer_d": "SUM([Sales])"
+},
+"multiple_correct_answers": "false",
+"correct_answers": {
+"answer_a_correct": "true",
+"answer_b_correct": "false",
+"answer_c_correct": "false",
+"answer_d_correct": "false"
+},
+"explanation": "SELECTEDVALUE with SWITCH allows dynamic measure selection.",
+"tip": "Useful for dashboards with multiple metrics.",
+"tags": ["dax","dynamic","scenario"],
+"category": "dax",
+"difficulty": "Advanced"
+},
+{
+"id": 31,
+"question": "You want to calculate total sales only for a specific product category. Which DAX function is most suitable?",
+"description": "Category-specific calculation",
+"answers": {
+"answer_a": "CALCULATE([Sales], Product[Category]=\"Bikes\")",
+"answer_b": "SUM([Sales])",
+"answer_c": "SUMX(Product, [Sales])",
+"answer_d": "FILTER([Sales])"
+},
+"multiple_correct_answers": "false",
+"correct_answers": {
+"answer_a_correct": "true",
+"answer_b_correct": "false",
+"answer_c_correct": "false",
+"answer_d_correct": "false"
+},
+"explanation": "CALCULATE allows filtering the data for a specific category before aggregation.",
+"tip": "Always use CALCULATE for conditional measures.",
+"tags": ["dax","filter","scenario"],
+"category": "dax",
+"difficulty": "Beginner"
+},
+
+{
+"id": 32,
+"question": "You need a measure to count the number of orders in the table. Which DAX function should you use?",
+"description": "Counting rows scenario",
+"answers": {
+"answer_a": "COUNT([OrderID])",
+"answer_b": "COUNTROWS(Orders)",
+"answer_c": "SUM([OrderID])",
+"answer_d": "DISTINCTCOUNT([OrderID])"
+},
+"multiple_correct_answers": "false",
+"correct_answers": {
+"answer_b_correct": "true",
+"answer_a_correct": "false",
+"answer_c_correct": "false",
+"answer_d_correct": "false"
+},
+"explanation": "COUNTROWS counts the total number of rows in a table.",
+"tip": "Use COUNTROWS for table-level counts, not column sums.",
+"tags": ["dax","count","scenario"],
+"category": "dax",
+"difficulty": "Beginner"
+},
+
+{
+"id": 33,
+"question": "You want to calculate the average sales per order. Which DAX function combination is required?",
+"description": "Average per entity calculation",
+"answers": {
+"answer_a": "AVERAGE([Sales])",
+"answer_b": "SUM([Sales])/COUNTROWS(Orders)",
+"answer_c": "CALCULATE([Sales])",
+"answer_d": "SUMX([Sales])"
+},
+"multiple_correct_answers": "false",
+"correct_answers": {
+"answer_b_correct": "true",
+"answer_a_correct": "false",
+"answer_c_correct": "false",
+"answer_d_correct": "false"
+},
+"explanation": "Average per order = total sales divided by number of orders.",
+"tip": "Divide SUM by COUNTROWS for custom averages.",
+"tags": ["dax","average","scenario"],
+"category": "dax",
+"difficulty": "Intermediate"
+},
+
+{
+"id": 34,
+"question": "You want to calculate total sales ignoring only the selected year filter. Which function is appropriate?",
+"description": "Partial filter removal",
+"answers": {
+"answer_a": "CALCULATE([Sales], ALL(Date[Year]))",
+"answer_b": "SUM([Sales])",
+"answer_c": "CALCULATE([Sales], REMOVEFILTERS())",
+"answer_d": "VALUES(Date[Year])"
+},
+"multiple_correct_answers": "false",
+"correct_answers": {
+"answer_a_correct": "true",
+"answer_b_correct": "false",
+"answer_c_correct": "false",
+"answer_d_correct": "false"
+},
+"explanation": "ALL(Date[Year]) removes only the Year filter, keeping others intact.",
+"tip": "Partial ALL is used to ignore specific slicers.",
+"tags": ["dax","filter","scenario"],
+"category": "dax",
+"difficulty": "Intermediate"
+},
+
+{
+"id": 35,
+"question": "You want a measure that calculates total sales for the last month based on current selection. Which function should you use?",
+"description": "Last month calculation",
+"answers": {
+"answer_a": "CALCULATE([Sales], PREVIOUSMONTH(Date[Date]))",
+"answer_b": "TOTALYTD([Sales])",
+"answer_c": "SUM([Sales])",
+"answer_d": "FILTER([Sales])"
+},
+"multiple_correct_answers": "false",
+"correct_answers": {
+"answer_a_correct": "true",
+"answer_b_correct": "false",
+"answer_c_correct": "false",
+"answer_d_correct": "false"
+},
+"explanation": "PREVIOUSMONTH generates date context for last month.",
+"tip": "Always use time-intelligence functions with a proper date table.",
+"tags": ["dax","time-intelligence","scenario"],
+"category": "dax",
+"difficulty": "Intermediate"
+},
+
+{
+"id": 36,
+"question": "You need a measure that counts unique customers who made purchases. Which function is appropriate?",
+"description": "Distinct count scenario",
+"answers": {
+"answer_a": "COUNT([CustomerID])",
+"answer_b": "DISTINCTCOUNT(Customer[CustomerID])",
+"answer_c": "COUNTROWS(Customer)",
+"answer_d": "VALUES(Customer[CustomerID])"
+},
+"multiple_correct_answers": "false",
+"correct_answers": {
+"answer_b_correct": "true",
+"answer_a_correct": "false",
+"answer_c_correct": "false",
+"answer_d_correct": "false"
+},
+"explanation": "DISTINCTCOUNT counts unique values in a column.",
+"tip": null,
+"tags": ["dax","count","scenario"],
+"category": "dax",
+"difficulty": "Beginner"
+},
+
+{
+"id": 37,
+"question": "You want to calculate cumulative sales from the start of the year. Which function should you use?",
+"description": "Year-to-date calculation",
+"answers": {
+"answer_a": "TOTALYTD([Sales])",
+"answer_b": "SUM([Sales])",
+"answer_c": "SUMX(Orders,[Sales])",
+"answer_d": "CALCULATE([Sales], ALL(Date))"
+},
+"multiple_correct_answers": "false",
+"correct_answers": {
+"answer_a_correct": "true",
+"answer_b_correct": "false",
+"answer_c_correct": "false",
+"answer_d_correct": "false"
+},
+"explanation": "TOTALYTD automatically calculates cumulative totals from year start.",
+"tip": "Requires a continuous date table.",
+"tags": ["dax","time-intelligence","scenario"],
+"category": "dax",
+"difficulty": "Intermediate"
+},
+
+{
+"id": 38,
+"question": "You need to create a calculated column that multiplies Quantity by Unit Price for each row. Which DAX formula is correct?",
+"description": "Row-level calculation",
+"answers": {
+"answer_a": "[Quantity]*[UnitPrice]",
+"answer_b": "SUMX(Orders,[Quantity]*[UnitPrice])",
+"answer_c": "CALCULATE([Quantity]*[UnitPrice])",
+"answer_d": "DIVIDE([Quantity],[UnitPrice])"
+},
+"multiple_correct_answers": "false",
+"correct_answers": {
+"answer_a_correct": "true",
+"answer_b_correct": "false",
+"answer_c_correct": "false",
+"answer_d_correct": "false"
+},
+"explanation": "Calculated columns evaluate row-by-row; direct multiplication works.",
+"tip": "No iterator needed in calculated column.",
+"tags": ["dax","calculated-column","scenario"],
+"category": "dax",
+"difficulty": "Beginner"
+},
+
+{
+"id": 39,
+"question": "You need to calculate total sales only for selected products in a slicer. Which function should be used?",
+"description": "Slicer-based filtering",
+"answers": {
+"answer_a": "CALCULATE([Sales], KEEPFILTERS(VALUES(Product[ProductName])))",
+"answer_b": "SUM([Sales])",
+"answer_c": "ALL(Product)",
+"answer_d": "FILTER(Product,[Sales]>0)"
+},
+"multiple_correct_answers": "false",
+"correct_answers": {
+"answer_a_correct": "true",
+"answer_b_correct": "false",
+"answer_c_correct": "false",
+"answer_d_correct": "false"
+},
+"explanation": "KEEPFILTERS preserves slicer selections in calculation.",
+"tip": null,
+"tags": ["dax","filter","scenario"],
+"category": "dax",
+"difficulty": "Intermediate"
+},
+
+{
+"id": 40,
+"question": "You want to retrieve the single selected value from a slicer or return a default if none selected. Which function is used?",
+"description": "Single selection with default",
+"answers": {
+"answer_a": "SELECTEDVALUE(Product[ProductName],\"All Products\")",
+"answer_b": "VALUES(Product[ProductName])",
+"answer_c": "FIRSTNONBLANK(Product[ProductName],[Sales])",
+"answer_d": "CALCULATE([Sales])"
+},
+"multiple_correct_answers": "false",
+"correct_answers": {
+"answer_a_correct": "true",
+"answer_b_correct": "false",
+"answer_c_correct": "false",
+"answer_d_correct": "false"
+},
+"explanation": "SELECTEDVALUE returns single selected value or default if multiple/none.",
+"tip": null,
+"tags": ["dax","filter","scenario"],
+"category": "dax",
+"difficulty": "Intermediate"
+},
+{
+"id": 41,
+"question": "You need to calculate total sales only for orders with quantity greater than 10. Which DAX pattern is correct?",
+"description": "Conditional total measure",
+"answers": {
+"answer_a": "CALCULATE([Sales], Orders[Quantity]>10)",
+"answer_b": "SUM([Sales])",
+"answer_c": "FILTER([Sales],[Quantity]>10)",
+"answer_d": "COUNTROWS(Orders)"
+},
+"multiple_correct_answers": "false",
+"correct_answers": {
+"answer_a_correct": "true",
+"answer_b_correct": "false",
+"answer_c_correct": "false",
+"answer_d_correct": "false"
+},
+"explanation": "CALCULATE applies filter before aggregation to include only rows with Quantity>10.",
+"tip": null,
+"tags": ["dax","filter","scenario"],
+"category": "dax",
+"difficulty": "Intermediate"
+},
+
+{
+"id": 42,
+"question": "You want to calculate cumulative sales over months but reset the total for each year. Which function should you use?",
+"description": "Cumulative by year",
+"answers": {
+"answer_a": "TOTALYTD([Sales])",
+"answer_b": "SUMX(Orders,[Sales])",
+"answer_c": "SUM([Sales])",
+"answer_d": "CALCULATE([Sales], ALL(Date))"
+},
+"multiple_correct_answers": "false",
+"correct_answers": {
+"answer_a_correct": "true",
+"answer_b_correct": "false",
+"answer_c_correct": "false",
+"answer_d_correct": "false"
+},
+"explanation": "TOTALYTD calculates cumulative totals and resets at the start of each year.",
+"tip": "Use with proper date table.",
+"tags": ["dax","time-intelligence","scenario"],
+"category": "dax",
+"difficulty": "Intermediate"
+},
+
+{
+"id": 43,
+"question": "You need to calculate sales only for the current month, ignoring all other date filters. Which DAX pattern is correct?",
+"description": "Current month measure",
+"answers": {
+"answer_a": "CALCULATE([Sales], MONTH(Date[Date])=MONTH(TODAY()))",
+"answer_b": "SUM([Sales])",
+"answer_c": "TOTALYTD([Sales])",
+"answer_d": "CALCULATE([Sales], ALL(Date))"
+},
+"multiple_correct_answers": "false",
+"correct_answers": {
+"answer_a_correct": "true",
+"answer_b_correct": "false",
+"answer_c_correct": "false",
+"answer_d_correct": "false"
+},
+"explanation": "CALCULATE with a date filter for current month calculates only this month's sales.",
+"tip": null,
+"tags": ["dax","time-intelligence","scenario"],
+"category": "dax",
+"difficulty": "Intermediate"
+},
+
+{
+"id": 44,
+"question": "You want to count the number of products that have sold more than 50 units. Which DAX pattern is correct?",
+"description": "Conditional count scenario",
+"answers": {
+"answer_a": "CALCULATE(COUNTROWS(Product), Product[QuantitySold]>50)",
+"answer_b": "COUNT(Product[ProductID])",
+"answer_c": "SUMX(Product,[QuantitySold])",
+"answer_d": "DISTINCTCOUNT(Product[ProductID])"
+},
+"multiple_correct_answers": "false",
+"correct_answers": {
+"answer_a_correct": "true",
+"answer_b_correct": "false",
+"answer_c_correct": "false",
+"answer_d_correct": "false"
+},
+"explanation": "CALCULATE with a condition counts only the filtered rows.",
+"tip": "COUNTROWS inside CALCULATE with filter applies conditional counting.",
+"tags": ["dax","count","scenario"],
+"category": "dax",
+"difficulty": "Intermediate"
+},
+
+{
+"id": 45,
+"question": "You need a measure that sums sales only for the top 3 customers by total purchase. Which DAX pattern is required?",
+"description": "Top N filtering scenario",
+"answers": {
+"answer_a": "CALCULATE([Sales], TOPN(3, Customer, [Sales], DESC))",
+"answer_b": "SUM([Sales])",
+"answer_c": "RANKX(Customer,[Sales])",
+"answer_d": "SUMX(Customer,[Sales])"
+},
+"multiple_correct_answers": "false",
+"correct_answers": {
+"answer_a_correct": "true",
+"answer_b_correct": "false",
+"answer_c_correct": "false",
+"answer_d_correct": "false"
+},
+"explanation": "TOPN returns the top 3 customers, and CALCULATE sums sales only for them.",
+"tip": "Combine TOPN with CALCULATE for Top N measures.",
+"tags": ["dax","topn","scenario"],
+"category": "dax",
+"difficulty": "Intermediate"
+},
+
+{
+"id": 46,
+"question": "You want a measure that returns 0 instead of blank when no sales are found for a product. Which DAX function should be used?",
+"description": "Handling blank scenario",
+"answers": {
+"answer_a": "IF(ISBLANK([Sales]),0,[Sales])",
+"answer_b": "DIVIDE([Sales],1)",
+"answer_c": "SUM([Sales])",
+"answer_d": "CALCULATE([Sales])"
+},
+"multiple_correct_answers": "false",
+"correct_answers": {
+"answer_a_correct": "true",
+"answer_b_correct": "false",
+"answer_c_correct": "false",
+"answer_d_correct": "false"
+},
+"explanation": "IF + ISBLANK allows replacing blank with 0.",
+"tip": "Useful for displaying charts without blanks.",
+"tags": ["dax","blank-handling","scenario"],
+"category": "dax",
+"difficulty": "Intermediate"
+},
+
+{
+"id": 47,
+"question": "You need a calculated column showing the total price per order line. Which DAX formula is correct?",
+"description": "Row-level multiplication",
+"answers": {
+"answer_a": "[Quantity]*[UnitPrice]",
+"answer_b": "SUMX(Orders,[Quantity]*[UnitPrice])",
+"answer_c": "CALCULATE([Quantity]*[UnitPrice])",
+"answer_d": "DIVIDE([Quantity],[UnitPrice])"
+},
+"multiple_correct_answers": "false",
+"correct_answers": {
+"answer_a_correct": "true",
+"answer_b_correct": "false",
+"answer_c_correct": "false",
+"answer_d_correct": "false"
+},
+"explanation": "Calculated columns evaluate row-by-row, so direct multiplication works.",
+"tip": null,
+"tags": ["dax","calculated-column","scenario"],
+"category": "dax",
+"difficulty": "Beginner"
+},
+
+{
+"id": 48,
+"question": "You need to calculate total sales for all regions except 'North'. Which DAX pattern is correct?",
+"description": "Exclusion filter scenario",
+"answers": {
+"answer_a": "CALCULATE([Sales], FILTER(ALL(Region), Region[RegionName]<>\"North\"))",
+"answer_b": "SUM([Sales])",
+"answer_c": "CALCULATE([Sales], REMOVEFILTERS())",
+"answer_d": "VALUES(Region[RegionName])"
+},
+"multiple_correct_answers": "false",
+"correct_answers": {
+"answer_a_correct": "true",
+"answer_b_correct": "false",
+"answer_c_correct": "false",
+"answer_d_correct": "false"
+},
+"explanation": "FILTER + ALL allows excluding specific rows while keeping other filters intact.",
+"tip": null,
+"tags": ["dax","filter","scenario"],
+"category": "dax",
+"difficulty": "Intermediate"
+},
+
+{
+"id": 49,
+"question": "You want to calculate the number of distinct products sold per region. Which function is appropriate?",
+"description": "Distinct count per context",
+"answers": {
+"answer_a": "DISTINCTCOUNT(Sales[ProductID])",
+"answer_b": "COUNTROWS(Product)",
+"answer_c": "COUNT(Sales[ProductID])",
+"answer_d": "SUMX(Sales,[ProductID])"
+},
+"multiple_correct_answers": "false",
+"correct_answers": {
+"answer_a_correct": "true",
+"answer_b_correct": "false",
+"answer_c_correct": "false",
+"answer_d_correct": "false"
+},
+"explanation": "DISTINCTCOUNT counts unique values in a column respecting filter context.",
+"tip": "Use for per-region uniqueness counts.",
+"tags": ["dax","count","scenario"],
+"category": "dax",
+"difficulty": "Intermediate"
+},
+
+{
+"id": 50,
+"question": "You want to calculate total sales for the previous month dynamically. Which DAX function should you use?",
+"description": "Previous month calculation",
+"answers": {
+"answer_a": "CALCULATE([Sales], PREVIOUSMONTH(Date[Date]))",
+"answer_b": "TOTALYTD([Sales])",
+"answer_c": "SUM([Sales])",
+"answer_d": "CALCULATE([Sales], ALL(Date))"
+},
+"multiple_correct_answers": "false",
+"correct_answers": {
+"answer_a_correct": "true",
+"answer_b_correct": "false",
+"answer_c_correct": "false",
+"answer_d_correct": "false"
+},
+"explanation": "PREVIOUSMONTH generates the date context for the prior month to calculate sales.",
+"tip": "Requires continuous date table.",
+"tags": ["dax","time-intelligence","scenario"],
+"category": "dax",
+"difficulty": "Intermediate"
+},
+
+{
+"id": 51,
+"question": "You need to sum sales only for the selected product in a slicer, ignoring other filters. Which DAX function combination is correct?",
+"description": "Slicer-based calculation",
+"answers": {
+"answer_a": "CALCULATE([Sales], KEEPFILTERS(VALUES(Product[ProductName])))",
+"answer_b": "SUM([Sales])",
+"answer_c": "ALL(Product)",
+"answer_d": "FILTER(Product,[Sales]>0)"
+},
+"multiple_correct_answers": "false",
+"correct_answers": {
+"answer_a_correct": "true",
+"answer_b_correct": "false",
+"answer_c_correct": "false",
+"answer_d_correct": "false"
+},
+"explanation": "KEEPFILTERS preserves slicer selection while calculating the measure.",
+"tip": null,
+"tags": ["dax","filter","scenario"],
+"category": "dax",
+"difficulty": "Intermediate"
+},
+
+{
+"id": 52,
+"question": "You need to create a measure that shows total profit but returns 0 if no data exists. Which DAX formula is correct?",
+"description": "Handling blanks in measure",
+"answers": {
+"answer_a": "IF(ISBLANK([Profit]),0,[Profit])",
+"answer_b": "SUM([Profit])",
+"answer_c": "CALCULATE([Profit])",
+"answer_d": "DIVIDE([Profit],1)"
+},
+"multiple_correct_answers": "false",
+"correct_answers": {
+"answer_a_correct": "true",
+"answer_b_correct": "false",
+"answer_c_correct": "false",
+"answer_d_correct": "false"
+},
+"explanation": "IF + ISBLANK allows replacing blank with 0 in measures.",
+"tip": null,
+"tags": ["dax","blank-handling","scenario"],
+"category": "dax",
+"difficulty": "Intermediate"
+},
+
+{
+"id": 53,
+"question": "You want to calculate the total sales per region only for products with sales above 1000 units. Which DAX pattern is correct?",
+"description": "Conditional total per region",
+"answers": {
+"answer_a": "CALCULATE([Sales], FILTER(Product, [QuantitySold]>1000))",
+"answer_b": "SUM([Sales])",
+"answer_c": "TOTALYTD([Sales])",
+"answer_d": "COUNTROWS(Product)"
+},
+"multiple_correct_answers": "false",
+"correct_answers": {
+"answer_a_correct": "true",
+"answer_b_correct": "false",
+"answer_c_correct": "false",
+"answer_d_correct": "false"
+},
+"explanation": "FILTER inside CALCULATE allows conditional row selection per region.",
+"tip": null,
+"tags": ["dax","filter","scenario"],
+"category": "dax",
+"difficulty": "Intermediate"
+},
+
+{
+"id": 54,
+"question": "You want to calculate the cumulative total of sales by product category. Which DAX function is most suitable?",
+"description": "Cumulative total per category",
+"answers": {
+"answer_a": "CALCULATE([Sales], FILTER(ALL(Date), Date[Date]<=MAX(Date[Date])))",
+"answer_b": "SUM([Sales])",
+"answer_c": "SUMX(Product,[Sales])",
+"answer_d": "TOTALYTD([Sales])"
+},
+"multiple_correct_answers": "false",
+"correct_answers": {
+"answer_a_correct": "true",
+"answer_b_correct": "false",
+"answer_c_correct": "false",
+"answer_d_correct": "false"
+},
+"explanation": "FILTER + ALL creates a cumulative total by date, respecting product category context.",
+"tip": null,
+"tags": ["dax","cumulative","scenario"],
+"category": "dax",
+"difficulty": "Intermediate"
+},
+
+{
+"id": 55,
+"question": "You need to calculate total sales for a product ignoring the region filter. Which function should you use?",
+"description": "Ignoring one filter scenario",
+"answers": {
+"answer_a": "CALCULATE([Sales], ALL(Region))",
+"answer_b": "CALCULATE([Sales], REMOVEFILTERS())",
+"answer_c": "SUM([Sales])",
+"answer_d": "FILTER([Sales], Region)"
+},
+"multiple_correct_answers": "false",
+"correct_answers": {
+"answer_a_correct": "true",
+"answer_b_correct": "false",
+"answer_c_correct": "false",
+"answer_d_correct": "false"
+},
+"explanation": "ALL(Region) removes only the region filter, leaving others intact.",
+"tip": null,
+"tags": ["dax","filter","scenario"],
+"category": "dax",
+"difficulty": "Intermediate"
+},
+
+{
+"id": 56,
+"question": "You want to calculate total sales per customer but only for customers with more than 3 orders. Which function combination is required?",
+"description": "Conditional aggregation by count",
+"answers": {
+"answer_a": "CALCULATE([Sales], FILTER(Customer, [OrderCount]>3))",
+"answer_b": "SUM([Sales])",
+"answer_c": "COUNTROWS(Customer)",
+"answer_d": "DISTINCTCOUNT([CustomerID])"
+},
+"multiple_correct_answers": "false",
+"correct_answers": {
+"answer_a_correct": "true",
+"answer_b_correct": "false",
+"answer_c_correct": "false",
+"answer_d_correct": "false"
+},
+"explanation": "FILTER inside CALCULATE ensures only customers with more than 3 orders are included.",
+"tip": null,
+"tags": ["dax","filter","scenario"],
+"category": "dax",
+"difficulty": "Intermediate"
+},
+
+{
+"id": 57,
+"question": "You need to calculate sales growth compared to last month. Which DAX function is suitable?",
+"description": "Month-over-month growth",
+"answers": {
+"answer_a": "CALCULATE([Sales], DATEADD(Date[Date],-1,MONTH))",
+"answer_b": "TOTALYTD([Sales])",
+"answer_c": "SUM([Sales])",
+"answer_d": "PREVIOUSMONTH([Sales])"
+},
+"multiple_correct_answers": "false",
+"correct_answers": {
+"answer_a_correct": "true",
+"answer_b_correct": "false",
+"answer_c_correct": "false",
+"answer_d_correct": "false"
+},
+"explanation": "DATEADD shifts date context to previous month to calculate growth.",
+"tip": "Use with continuous date table.",
+"tags": ["dax","time-intelligence","scenario"],
+"category": "dax",
+"difficulty": "Intermediate"
+},
+
+{
+"id": 58,
+"question": "You want to calculate the total number of orders per region. Which DAX function is appropriate?",
+"description": "Count per region",
+"answers": {
+"answer_a": "COUNTROWS(Orders)",
+"answer_b": "DISTINCTCOUNT(Orders[OrderID])",
+"answer_c": "SUM([OrderID])",
+"answer_d": "COUNT(Orders[OrderID])"
+},
+"multiple_correct_answers": "false",
+"correct_answers": {
+"answer_a_correct": "true",
+"answer_b_correct": "false",
+"answer_c_correct": "false",
+"answer_d_correct": "false"
+},
+"explanation": "COUNTROWS counts total rows, respecting region filter context.",
+"tip": null,
+"tags": ["dax","count","scenario"],
+"category": "dax",
+"difficulty": "Beginner"
+},
+
+{
+"id": 59,
+"question": "You need to calculate the percentage of total sales for each product. Which DAX pattern is required?",
+"description": "Percentage of total calculation",
+"answers": {
+"answer_a": "DIVIDE([Sales], CALCULATE([Sales], ALL(Product)))",
+"answer_b": "[Sales]/SUM([Sales])",
+"answer_c": "SUM([Sales])",
+"answer_d": "CALCULATE([Sales], VALUES(Product))"
+},
+"multiple_correct_answers": "false",
+"correct_answers": {
+"answer_a_correct": "true",
+"answer_b_correct": "false",
+"answer_c_correct": "false",
+"answer_d_correct": "false"
+},
+"explanation": "DIVIDE with ALL(Product) calculates % of total correctly.",
+"tip": "Always use ALL to ignore product filter for grand total.",
+"tags": ["dax","percentage","scenario"],
+"category": "dax",
+"difficulty": "Intermediate"
+},
+
+{
+"id": 60,
+"question": "You want a measure that returns 1 if sales exceed 5000 and 0 otherwise. Which DAX formula is correct?",
+"description": "Conditional flag measure",
+"answers": {
+"answer_a": "IF([Sales]>5000,1,0)",
+"answer_b": "SWITCH([Sales],5000,1,0)",
+"answer_c": "CALCULATE([Sales]>5000)",
+"answer_d": "SUM([Sales])>5000"
+},
+"multiple_correct_answers": "false",
+"correct_answers": {
+"answer_a_correct": "true",
+"answer_b_correct": "false",
+"answer_c_correct": "false",
+"answer_d_correct": "false"
+},
+"explanation": "IF condition evaluates measure and returns 1/0 based on threshold.",
+"tip": null,
+"tags": ["dax","conditional","scenario"],
+"category": "dax",
+"difficulty": "Beginner"
+}
 ]

@@ -108,14 +108,20 @@ const percentage =
             </div>
           </div>
 
-          <Box className="quiz-btn" onClick={retryQuiz}>
+          <Box 
+            className="quiz-btn" 
+            onClick={retryQuiz}
+          >
             <div>
               <p><FaSpinner /></p>
             </div>
             <p>Retry Quiz</p>
           </Box>
 
-          <Box className="quiz-btn">
+          <Box 
+            className="quiz-btn" 
+            onClick={() => navigate('/tune')}
+          >
             <div>
               <p><FaTrophy /></p>
             </div>
@@ -136,7 +142,10 @@ const percentage =
             </div>
           </Box>
 
-          <Box className="quiz-btn" onClick={tryAnotherQuiz}>
+          <Box 
+            className="quiz-btn" 
+            onClick={tryAnotherQuiz}
+          >
             <div>
               <p><FaHouse /></p>
             </div>

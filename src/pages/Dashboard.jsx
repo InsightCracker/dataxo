@@ -50,7 +50,7 @@ const Dashboard = () => {
                     <div className="content">
                         <h3>PDF COnverter</h3>
                         <p>Turn your PDFs into actionable data in seconds! Convert to Excel (XLSX) or CSV instantly and get your information ready for analysis, reporting, and smarter decisions - no manual work required.</p>
-                        <a href="/#" className="btn card-btn">Explore</a>
+                        <a href="/tune" className="btn card-btn">Explore</a>
                     </div>
                 </div>
 
@@ -69,7 +69,7 @@ const Dashboard = () => {
                     <div className="content">
                         <h3>Concepts Mastery</h3>
                         <p>Learn data concepts deeply and clearly, even if you’re just starting out. Explore practical examples to master each topic.</p>
-                        <a href="/multiplayer" className="btn card-btn">Explore</a>
+                        <a href="/tune" className="btn card-btn">Explore</a>
                     </div>
                 </div>
 
@@ -88,7 +88,7 @@ const Dashboard = () => {
                     <div className="content">
                         <h3>Instant Report Generator</h3>
                         <p>Upload a screenshot of your dashboard and get a professional report instantly. Available in PDF, Word, or README format. Turn your visuals into clear, actionable insights with just a few clicks.</p>
-                        <a href="/#" className="btn card-btn">Explore</a>
+                        <a href="/tune" className="btn card-btn">Explore</a>
                     </div>
                 </div>
 

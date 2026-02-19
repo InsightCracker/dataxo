@@ -7,7 +7,7 @@ const Hero = () => {
     <Box className="hero" id="hero">
         <h1>Your Data Workflow, All in One Hub</h1>
 
-        <p>Engage with quizzes, convert PDFs to Excel, and generate reports — seamlessly.</p>
+        <p>Engage with quizzes, convert PDFs to Excel, and generate reports - seamlessly.</p>
 
         <Box sx={{
             display: 'flex',
