@@ -5,9 +5,9 @@ import {
 const Hero = () => {
     return (
     <Box className="hero" id="hero">
-        <h1>Your Complete Data Learning Hub</h1>
+        <h1>Your Data Workflow, All in One Hub</h1>
 
-        <p>Master data through interactive quizzes, real-world questions, and instant feedback - all in one seamless platform.</p>
+        <p>Engage with quizzes, convert PDFs to Excel, and generate reports — seamlessly.</p>
 
         <Box sx={{
             display: 'flex',

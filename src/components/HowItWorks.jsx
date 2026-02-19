@@ -28,7 +28,7 @@ const HowItWorks = () => {
                 <div className="step-number">3</div>
                 <div className="step-icon">📈</div>
                 <h3>Track & Showcase</h3>
-                <p >Monitor your progress, identify knowledge gaps, and showcase your completed projects in a professional portfolio to highlight your expertise.</p>
+                <p >Monitor your progress, see how you rank on the leaderboard, and share your quiz results with others to showcase your skills and achievements.</p>
             </div>
         </Box>
     </Box>

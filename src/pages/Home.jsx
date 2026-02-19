@@ -1,5 +1,5 @@
-import { useContext } from "react";
-import { Link, useLocation } from "react-router-dom";
+import { useContext, useState } from "react";
+import { Link } from "react-router-dom";
 import { QuizContext } from "../Helpers/Contexts";
 import { categoriesList } from "../util/categories";
 
@@ -7,7 +7,8 @@ import {
   Box,
   Input, 
   InputGroup,
-  InputLeftElement
+  InputLeftElement,
+  Heading
 } from "@chakra-ui/react";
 
 import { LuSearchCheck } from "react-icons/lu";
@@ -22,80 +23,78 @@ const Home = () => {
     setDifficulty
   } = useContext(QuizContext);
 
-  const location = useLocation();
+  const [searchTerm, setSearchTerm] = useState("");
+
+  // Filter categories based on search input
+  const filteredCategories = categoriesList.filter((cat) =>
+    cat.name.toLowerCase().includes(searchTerm.toLowerCase())
+  );
 
 
 
-    return (
-    <Box className="" >
-      <div className="sidebar-container">
-        <SideBar />
+  return (
+  <Box className="" >
+    <div className="sidebar-container">
+      <SideBar />
+    </div>
+
+    <div className="about-text home-container">
+      <div className="top-bar">
+        <InputGroup>
+          <InputLeftElement pointerEvents="none">
+            <LuSearchCheck />
+          </InputLeftElement>
+          <Input 
+            value={searchTerm}
+            onChange={(e) => setSearchTerm(e.target.value)}
+            aria-label="Search categories"
+            placeholder="Search..." 
+          />
+        </InputGroup>
       </div>
 
-      <div className="about-text home-container">
-        <div className="top-bar">
-          <InputGroup>
-            <InputLeftElement pointerEvents="none">
-              <LuSearchCheck />
-            </InputLeftElement>
-            <Input placeholder="Search..." />
-          </InputGroup>
-        </div>
+      <Heading size="mr">Choose Difficulty:</Heading>
+      <div className="level-btns">
+        {["Beginner", "Intermediate", "Advanced"].map((level) => (
+          <button className="level-btn"
+            onClick={() => setDifficulty(level)}
+          >
+            {level}
+          </button>
+          ))}
+      </div>
 
-        <div className="level-btns">
-          <button 
-              onClick={() => setDifficulty("Beginner")}
-              className="level-btn"
-            >
-              Beginner
-            </button>
+      <Box className="about-grid home-card-con">
+        {filteredCategories.map((cat) => (
+          <div className="card visible" key={cat.name}>
+            <div className="content">
+              <h3>{cat.name}</h3>
+              <p>{cat.description}</p>
 
-            <button 
-              onClick={() => setDifficulty("Intermediate")}
-              className="level-btn"
-            >
-              Intermediate
-            </button>
+              <div className="btns-box">
+                <Link
+                  to="/solo"
+                  onClick={() => setCategories(cat.name)}
+                  className="btn card-btn"
+                >
+                  Quick Play
+                </Link>
 
-            <button 
-              onClick={() => setDifficulty("Advanced")}
-              className="level-btn"
-            >
-              Advanced
-            </button>
-        </div>
-
-        <Box className="about-grid home-card-con">
-          {categoriesList.map((cat) => (
-            <div className="card visible" key={cat.name}>
-              <div className="content">
-                <h3>{cat.name}</h3>
-                <p>{cat.description}</p>
-
-                <div className="btns-box">
-                  <Link
-                    to="/solo"
-                    onClick={() => setCategories(cat.name)}
-                    className="btn card-btn"
-                  >
-                    Quick Play
-                  </Link>
-
-                  <Link
-                    to="/vsbot"
-                    onClick={() => setCategories(cat.name)}
-                    className="btn card-btn"
-                  >
-                    Bot Mode
-                  </Link>
-                </div>
+                <Link
+                  to="/vsbot"
+                  onClick={() => setCategories(cat.name)}
+                  className="btn card-btn"
+                >
+                  Bot Mode
+                </Link>
               </div>
             </div>
-          ))}
-        </Box>
-      </div>
-    </Box>
-    )
+          </div>
+        ))}
+      </Box>
+    </div>
+  </Box>
+  )
 }
 
 export default Home

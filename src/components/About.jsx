@@ -7,17 +7,22 @@ const About = () => {
     <Box className="about" id="about">
         <h2>About Us</h2>
 
-        <p>Building a smarter way to learn data</p>
+        <p>Building a Smarter Way to Master Data</p>
 
         <div className="about-text">
-            <p>Our platform uses interactive quizzes and real-world scenarios to help analysts and data scientists move beyond just using tools. Empowering them to think critically, reason with data, and make better analytical decisions.</p>
+            <p>Dataox combines interactive quizzes, PDF-to-Excel conversion, and real-world scenarios to help analysts and data enthusiasts go beyond just using tools. Our platform empowers you to think critically, reason with data, and make smarter analytical decisions.</p>
 
-            <p>We bridge the gap between tool proficiency and deep conceptual understanding so learners can truly master their craft.</p>
+            <p>We bridge the gap between tool proficiency and deep conceptual understanding, so you can truly master your data skills and workflow.</p>
 
             <Box className="about-grid">
                 <div className="about-feature visible">
                     <h3>📊 Smart Data Quizzes</h3>
-                    <p>Take engaging, hands-on quizzes on Excel, Power BI, and Tableau that not only test your skills but also help you master real-world analytics scenarios. Track your progress and see your confidence grow with every challenge.</p>
+                    <p>Take interactive, hands-on quizzes on Excel, Power BI, data modeling, and more. Test your skills, master real-world analytics scenarios, and track your progress as your confidence grows with every challenge.</p>
+                </div>
+
+                <div className="about-feature visible">
+                    <h3>📄 PDF to CSV/XLSX Converter</h3>
+                    <p>Easily convert PDFs to CSV or Excel files. Streamline your workflow, save time, and get accurate data ready for analysis.</p>
                 </div>
 
                 <div className="about-feature visible">
@@ -26,13 +31,8 @@ const About = () => {
                 </div>
 
                 <div className="about-feature visible">
-                    <h3>📝 Report Writing & Insights</h3>
-                    <p>Turn data into actionable insights. Learn how to create professional, clear, and persuasive reports that communicate your findings effectively, making your analysis stand out.</p>
-                </div>
-
-                <div className="about-feature visible">
-                    <h3>🚀 Project Showcase Studio</h3>
-                    <p>Showcase real-world data projects in a professional portfolio. Gain credibility, demonstrate your skills, and make a lasting impression on recruiters, clients, or your team.</p>
+                    <h3>📝 Instant Report Generator</h3>
+                    <p>Upload a screenshot of your dashboard and get a professional report instantly — available in PDF, Word, or README format. Turn your visuals into clear, actionable insights with just a few clicks.</p>
                 </div>
             </Box>
         </div>

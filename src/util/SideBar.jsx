@@ -2,14 +2,12 @@ import {
   Box
 } from "@chakra-ui/react";
 
-import {
-  FaHome,  
-} from 'react-icons/fa';
-
 import { 
-  LuSettings,
-  LuSearch
- } from "react-icons/lu";
+  FaHouse,
+  FaRetweet,
+  FaBookOpenReader,
+  FaRegFileLines 
+} from "react-icons/fa6";
 
 const SideBar = () => {
 
@@ -21,13 +19,16 @@ const SideBar = () => {
 
       <div className="icons">
         <div>
-          <a href="/dashboard"><FaHome /></a>
+          <a href="/dashboard"><FaHouse /></a>
         </div>
         <div>
-          <a href="/search"><LuSearch /></a>
+          <a href="/search"><FaRetweet /></a>
         </div>
         <div>
-          <a href="/settings"><LuSettings /></a>
+          <a href="/settings"><FaBookOpenReader /></a>
+        </div>
+        <div>
+          <a href="/settings"><FaRegFileLines /></a>
         </div>
       </div>
     </Box>
