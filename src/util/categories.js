@@ -16,7 +16,7 @@ export const categoriesList = [
     description: "Data cleaning is the process of finding and fixing errors, inconsistencies, and missing values in data to make it accurate and usable."
   },
   {
-    name: "Python",
+    name: "python",
     description: "Python is a high-level, versatile programming language used for web development, data analysis, automation, and machine learning due to its readability and extensive libraries."
   },
   {
