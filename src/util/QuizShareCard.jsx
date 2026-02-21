@@ -14,10 +14,10 @@ import {
 } from "react-icons/fa"
 
 const getBadgeEmoji = (percentage) => {
-  if (percentage >= 90) return "🏆";
-  if (percentage >= 70) return "🔥";
-  if (percentage >= 50) return "👏";
-  return "💪";
+  if (percentage >= 90) return "🥇";
+  if (percentage >= 70) return "🥈";
+  if (percentage >= 50) return "🥉";
+  return "👏";
 };
 
 // Quiz Share Card Component

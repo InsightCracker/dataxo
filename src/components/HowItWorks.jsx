@@ -4,7 +4,7 @@ import {
 
 const HowItWorks = () => {
     return (
-    <Box className="howitworks">
+    <Box className="howitworks" id="services">
         <h2>How It Works</h2>
 
         <p>Get started in three steps</p>

@@ -47,7 +47,7 @@ const Login = () => {
   return (
     <Box className="login-page" id="login">
       <Box className="login-card">
-          <h2>DATAXO</h2>
+          <h2>DATA<span className="dataxo">XO</span></h2>
 
           <p>Enter your Name:</p>
 

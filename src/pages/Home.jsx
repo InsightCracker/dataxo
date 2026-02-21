@@ -53,16 +53,18 @@ const Home = () => {
         </InputGroup>
       </div>
 
-      <Heading size="mr">Choose Difficulty:</Heading>
-      <div className="level-btns">
-        {["Beginner", "Intermediate", "Advanced"].map((level) => (
-          <button className="level-btn"
-            onClick={() => setDifficulty(level)}
-          >
-            {level}
-          </button>
-          ))}
-      </div>
+      <Box className="level-box">
+        <Heading size="mr">Choose Difficulty:</Heading>
+        <div className="level-btns">
+          {["Beginner", "Intermediate", "Advanced"].map((level) => (
+            <button className="level-btn"
+              onClick={() => setDifficulty(level)}
+            >
+              {level}
+            </button>
+            ))}
+        </div>
+      </Box>
 
       <Box className="about-grid home-card-con">
         {filteredCategories.map((cat) => (

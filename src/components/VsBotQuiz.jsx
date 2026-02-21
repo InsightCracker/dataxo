@@ -24,7 +24,8 @@ const VsBotQuiz = () => {
     setCurrQuestion, 
     setBotScore,
     questions,
-    setScore
+    setScore,
+    difficulty
   } = useContext(QuizContext);
 
   const currentQuestion = questions[currQuestion];
@@ -46,9 +47,10 @@ const VsBotQuiz = () => {
   // Function to generate smart bot answer
   const getSmartBotAnswer = () => {
     const chance = Math.random(); // 0–1
-    let difficultyChance = 0.6; // default medium
-    if (currentQuestion.difficulty === "Easy") difficultyChance = 0.4;
-    if (currentQuestion.difficulty === "Hard") difficultyChance = 0.85;
+    let difficultyChance = 0.7; // default 
+    if (difficulty === "Beginner") difficultyChance = 0.5;
+    if (difficulty === "Intermediate") difficultyChance = 0.7;
+    if (difficulty === "Advanced") difficultyChance = 0.85;
 
     const correctOptionKey = correctKey.replace("_correct", "");
 

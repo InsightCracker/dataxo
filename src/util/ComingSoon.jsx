@@ -10,7 +10,7 @@ const ComingSoon = () => {
   return (
     <Box className="coming-soon">
         <div className="rocket"><FaRocket /></div>
-        <div className="contianer-tune">
+        <div className="container-tune">
             <h1>Coming Soon!</h1>
             <p>Exciting new features are on the way. Stay tuned!</p>
         </div>
