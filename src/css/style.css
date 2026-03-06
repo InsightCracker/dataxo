@@ -504,6 +504,12 @@ ul {
 }
 
 .level-btn:hover {
+  background: rgba(10, 14, 39, 0.616);
+  color: #fff;
+  transition: transform 0.2s, background 0.2s;
+}
+
+.level-btn.active {
   background: rgba(10, 14, 39, 0.95);
   color: #fff;
   transition: transform 0.2s, background 0.2s;
@@ -527,6 +533,7 @@ ul {
 }
 
 .question-board{
+  background-color: #f3f3f3;
   width: 100%;
   min-height: 7rem;
   display: flex;
@@ -534,13 +541,14 @@ ul {
   align-items: center;
   color: rgba(10, 14, 39, 0.95);
   text-align: center;
-  margin-top: .5rem;
+  margin: 1rem 0 .5rem 0;
   border-top: 1px solid rgba(0, 0, 0, 0.384);
 }
 
 .option-btn {
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1), 0 1px 3px rgba(0, 0, 0, 0.08); 
   transition: transform 0.2s, box-shadow 0.2s;
+  padding-right: 10rem;
 }
 
 .other-btns {
@@ -551,8 +559,7 @@ ul {
   align-items: center;
   gap: 15px;
   background-color: rgba(10, 14, 39, 0.95);
-  position: fixed;
-  bottom: 0;
+  margin-top: 1rem;
   padding: 1rem 0;
 }
 
@@ -730,7 +737,7 @@ ul {
   justify-content: center;
   align-items: center;
   gap: 40px;
-  margin: 1rem .5rem;
+  margin: 2rem 1rem;
   color: #000;
 }
 
@@ -800,17 +807,16 @@ ul {
   transition: transform 0.2s, box-shadow 0.2s;
   text-align: left;
   text-transform: capitalize;
-  padding: '5px 0';
+  margin: 5px 10px;
   border-radius: 5px;
 }
 
 .ai-btn-label {
   background-color: #d3d3d3;
   color: rgba(10, 14, 39, 0.95);
-  padding: 7px 12px;
+  padding: 5px 12px;
   border-radius: 100%;
   font-weight: bold;
-  margin-right: 15px;
 }
 
 .ai-btn-other {
@@ -818,19 +824,27 @@ ul {
   justify-content: center;
   align-items: center;
   background-color: #FF7A00;
-  margin-top: 1rem;
+  margin-top: 2rem;
+  margin-bottom: 1rem;
   border-radius: 5px;
-  padding: 8px 12px;
+  padding: 10px 12px;
   cursor: pointer;
 }
 
 .ai-btn-other p {
   color: #fff;
-  font-size: .9rem;
+  font-size: 1rem;
+  font-weight: 500;
+}
+
+.vsbot-answer-btn {
+  display: flex;
+  align-items: center;
+  gap: 10px;
 }
 
 .ai-btn-other-label {
-  margin-left: 15px;
+  padding-left: 1rem;
 }
 
 /* Share Card */
@@ -1037,7 +1051,7 @@ ul {
   }
 
   .question-board {
-    padding: 0 .5rem;
+    padding: 0 1rem;
   }
 }
 

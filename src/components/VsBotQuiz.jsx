@@ -103,54 +103,54 @@ const VsBotQuiz = () => {
   const letters = ["A", "B", "C", "D"];
 
   return (
-    <Box className="ai-container" sx={{
-        p: '0 20px'
-      }} >
-      <Box sx={{
-          w: '100%',
-          p: '10px',
-          mb: '15px',
-          textAlign: 'center',
-          color: 'rgba(10, 14, 39, 0.95)'
-        }}>
-          <h1>{questions[currQuestion].question}</h1>
+    <Box className="ai-container">
+      <Box className="question-board">
+        <h1>{questions[currQuestion].question}</h1>
       </Box>
 
-      {answerKeys.map((key, index) => (
-        <button
-          key={key}
-          onClick={() => handleUserSelect(key)}
-          className="ai-btn"
-          style={{
-            display: "block",
-            width: "100%",
-            margin: "5px 0",
-            padding: "10px",
-            backgroundColor:
-              userAnswer === key
-                ? "rgba(10, 14, 39, 0.95)"
-                : "#fff",
-            color: 
-              userAnswer === key
-                ? "#fff"
-                : "rgba(10, 14, 39, 0.95)"
-          }}
-        >
-          <span className="ai-btn-label">{letters[index]}</span> {answerValues[index]}
-        </button>))
-      }      
+      <Box sx={{
+        width: '100%',
+        padding: "0 10px",
+      }}>
+        {answerKeys.map((key, index) => (
+          <button
+            key={key}
+            onClick={() => handleUserSelect(key)}
+            className="ai-btn"
+            style={{
+              display: "block",
+              width: "100%",
+              margin: "10px 0",
+              padding: "5px .5rem 5px 5px",
+              backgroundColor:
+                userAnswer === key
+                  ? "rgba(10, 14, 39, 0.95)"
+                  : "#fff",
+              color: 
+                userAnswer === key
+                  ? "#fff"
+                  : "rgba(10, 14, 39, 0.95)"
+            }}
+          >
+            <div className="vsbot-answer-btn">
+              <span className="ai-btn-label">{letters[index]}</span> 
+              <span>{answerValues[index]}</span>
+            </div>
+          </button>))
+        }      
 
-      {currQuestion === questions.length - 1 ? (
-        <Box onClick={finishQuiz} className="ai-btn-other">
-          <p>Finish</p>
-          <p className="ai-btn-other-label"><FaRegCheckCircle /></p>
-        </Box>
-      ) : (
-        <Box onClick={nextQuestion} className="ai-btn-other">
-          <p>Next</p>
-          <p className="ai-btn-other-label"><ArrowRightIcon /></p>
-        </Box>
-      )}
+        {currQuestion === questions.length - 1 ? (
+          <Box onClick={finishQuiz} className="ai-btn-other">
+            <p>Finish</p>
+            <p className="ai-btn-other-label"><FaRegCheckCircle /></p>
+          </Box>
+        ) : (
+          <Box onClick={nextQuestion} className="ai-btn-other">
+            <p>Next</p>
+            <p className="ai-btn-other-label"><ArrowRightIcon /></p>
+          </Box>
+        )}
+      </Box>
     </Box>
   )
 }

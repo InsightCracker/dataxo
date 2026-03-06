@@ -70,13 +70,13 @@ const Quiz = () => {
   }
 
   const flexStyle = {
+    width: "100%",
+    margin: "5px 10px",
     display: 'flex',
     alignItems: 'center',
-    padding: '5px',
-    borderRadius: '20px',
+    padding: '5px .5rem 5px 5px',
+    borderRadius: '5px',
     cursor: 'pointer',
-    width: '250px',
-    margin: '5px'
   }
 
   const optionStyle = {
@@ -90,14 +90,11 @@ const Quiz = () => {
 
   return (
     <Box className="quiz-container">
-      <Box className="question-board" sx={{
-          
-        }}>
-          <h1>{questions[currQuestion].question}</h1>
+      <Box className="question-board">
+        <h1>{questions[currQuestion].question}</h1>
       </Box>
 
-      <Box sx={{
-        maxW: '700px',
+      <Box className="option-btn-box" sx={{
         display: 'flex',
         justifyContent: 'center',
         flexWrap: 'wrap'

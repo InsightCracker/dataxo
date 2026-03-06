@@ -23,13 +23,13 @@ import { TimerProvider } from './util/TimerProvider';
 
 function App() {
   const [questions, setQuestions] = useState([]);
-  const [categories, setCategories] = useState('');
+  const [categories, setCategories] = useState("");
   const [score, setScore] = useState(0);
   const [wrongAnswer, setWrongAnswer] = useState(0);
   const [botScore, setBotScore] = useState(0);
   const [currQuestion, setCurrQuestion] = useState(0);
   const [name, setName] = useState("");
-  const [difficulty, setDifficulty] = useState('');
+  const [difficulty, setDifficulty] = useState("Beginner");
   const [refresh, setRefresh] = useState(true);
   const [isLoading, setIsLoading] = useState(true);
   const [currentQuestion, setCurrentQuestion] = useState(null);

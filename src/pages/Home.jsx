@@ -42,14 +42,14 @@ const Home = () => {
     setCategories(cat.name)
   }; 
 
-  const botMode = () => {
-    // if (window.gtag) {
-    //   window.gtag('event', 'bot_mode', {
-    //     event_category: 'engagement',
-    //     event_label: 'Bot Mode Button',
-    //     value: 1
-    //   });
-    // }
+  const botMode = (cat) => {
+    if (window.gtag) {
+      window.gtag('event', 'bot_mode', {
+        event_category: 'engagement',
+        event_label: 'Bot Mode Button',
+        value: 1
+      });
+    }
 
     setCategories(cat.name)
   }; 
@@ -57,7 +57,7 @@ const Home = () => {
 
 
   return (
-  <Box className="" >
+  <Box>
     <div className="sidebar-container">
       <SideBar />
     </div>
@@ -81,7 +81,9 @@ const Home = () => {
         <Heading size="mr">Choose Difficulty:</Heading>
         <div className="level-btns">
           {["Beginner", "Intermediate", "Advanced"].map((level) => (
-            <button className="level-btn"
+            <button 
+              key={level}
+              className="level-btn"
               onClick={() => setDifficulty(level)}
             >
               {level}
@@ -92,7 +94,7 @@ const Home = () => {
 
       <Box className="about-grid home-card-con">
         {filteredCategories.map((cat) => (
-          <div className="card visible" key={cat.name}>
+          <div className="card visible" key={cat.id}>
             <div className="content">
               <h3>{cat.name}</h3>
               <p>{cat.description}</p>
