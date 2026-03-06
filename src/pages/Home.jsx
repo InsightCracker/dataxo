@@ -19,6 +19,7 @@ import SideBar from "../util/SideBar";
 const Home = () => {
 
   const {
+    difficulty,
     setCategories,
     setDifficulty
   } = useContext(QuizContext);
@@ -83,7 +84,7 @@ const Home = () => {
           {["Beginner", "Intermediate", "Advanced"].map((level) => (
             <button 
               key={level}
-              className="level-btn"
+              className={`level-btn ${difficulty === level ? "active" : ""}`}
               onClick={() => setDifficulty(level)}
             >
               {level}
