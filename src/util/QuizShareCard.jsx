@@ -50,7 +50,7 @@ const QuizShareCard = ({
 
     const shareMessages = [
       `I just scored ${percentage}% on the DataXO ${sentenceCaseCategory} Quiz! 😎 Think you can beat me?`,
-      `${percentage}% on the DataXO ${sentenceCaseCategory} Quiz! 💪 Bet you can't beat my score 😏`,
+      `${percentage}% on the DataXO ${sentenceCaseCategory} Quiz! Bet you can't beat my score 😏`,
       `I scored ${percentage}% on the DataXO ${sentenceCaseCategory} Quiz! 🎉 Can you do better?`,
       `I scored ${percentage}% on the DataXO ${sentenceCaseCategory} Quiz! Ready to challenge yourself?😏`
     ];

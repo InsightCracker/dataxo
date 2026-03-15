@@ -4,7 +4,7 @@ import {
   Input,
   useToast 
 } from "@chakra-ui/react";
-import { useContext } from "react";
+import { useContext, useState } from "react";
 import { useNavigate } from "react-router-dom";
 import { QuizContext } from "../Helpers/Contexts";
 
@@ -35,7 +35,7 @@ const Login = () => {
   const navigate = useNavigate();
 
   const login = () => {
-    name !== '' && navigate('/dashboard');
+    name !== '' && navigate('/datahub');
   }
 
   const emptyToast = () => {
@@ -62,8 +62,8 @@ const Login = () => {
                 color: '#fff'
               }}
               value={name}
-              variant={'filled'}
-              placeholder={'InsightCracker'}
+              variant={'outline'}
+              placeholder={''}
               onChange={(e) => setName(e.target.value)}
               type={'text'} 
             />

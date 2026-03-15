@@ -471,15 +471,57 @@ ul {
   display: flex;
   flex-direction: column;
   align-items: center;
+  padding: 0 20px;
 }
 
 .profile {
-  display: block;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
   padding: 1.5rem 1rem;
   background-color: #ffffff;
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1), 0 1px 3px rgba(0, 0, 0, 0.08); 
   transition: transform 0.2s, box-shadow 0.2s;
   border-radius: 5px;
+}
+
+.dash-list {
+  display: flex;
+  justify-content: space-between;
+  border-radius: 5px;
+}
+
+.colored {
+  background-color: #304dcf17;
+  padding: .8rem 1rem;
+}
+
+.dash-list-board {
+  display: inline-flex;
+}
+
+.dash-list-card{
+  display: flex;
+  gap: .5rem;
+}
+
+.dash-list-card .icon {
+  font-size: 1.3rem;
+}
+
+.list-text {
+  font-size: .8rem;
+  line-height: 1.2rem;
+}
+
+.list-text h3 {
+  font-weight: 500;
+  font-size: 1rem;
+}
+
+.list-text p{
+  color: #3b3b3b;
 }
 
 /* HOME PAGE */
