@@ -9,6 +9,10 @@ import { useNavigate } from "react-router-dom";
 import { QuizContext } from "../Helpers/Contexts";
 
 const Login = () => {
+  const [mode, setMode] = useState("guest"); 
+  const [email, setEmail] = useState("");
+  const [password, setPassword] = useState("");
+
   const { 
     name, 
     setName

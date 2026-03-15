@@ -6,7 +6,8 @@ import {
   FaHouse,
   FaRetweet,
   FaBookOpenReader,
-  FaRegFileLines 
+  FaRegFileLines,
+  FaUser 
 } from "react-icons/fa6";
 
 const SideBar = () => {
@@ -19,7 +20,10 @@ const SideBar = () => {
 
       <div className="icons">
         <div>
-          <a href="/dashboard"><FaHouse /></a>
+          <a href="/dashboard"><FaUser /></a>
+        </div>
+        <div>
+          <a href="/datahub"><FaHouse /></a>
         </div>
         <div>
           <a href="/tune"><FaRetweet /></a>

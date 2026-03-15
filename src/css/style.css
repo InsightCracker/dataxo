@@ -382,7 +382,7 @@ ul {
   margin-bottom: .5rem;
 }
 
-/* DASHBOARD */
+/* DataHub */
 
 .dashboard {
   background: #fff;
@@ -466,6 +466,22 @@ ul {
   transition: all 0.3s;
 }
 
+/* Dashboard */
+.dashboard_container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.profile {
+  display: block;
+  padding: 1.5rem 1rem;
+  background-color: #ffffff;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1), 0 1px 3px rgba(0, 0, 0, 0.08); 
+  transition: transform 0.2s, box-shadow 0.2s;
+  border-radius: 5px;
+}
+
 /* HOME PAGE */
 .home-container {
   padding: 5rem 1rem 0 5rem;
@@ -533,7 +549,7 @@ ul {
 }
 
 .question-board{
-  background-color: #f3f3f3;
+  background-color: #f3f3f3;    
   width: 100%;
   min-height: 7rem;
   display: flex;
@@ -849,16 +865,16 @@ ul {
 
 /* Share Card */
 .container-quiz-share {
+  min-height: 100dvh;
   display: flex;
   justify-content: center;
   align-items: center; 
+  padding: 20px;
 }
 
 .quiz-share-card {
-  max-width: 350px;
-  position:absolute;
-  top: 0;
-  z-index: 1000;
+  max-width: 400px;
+  width: 90%;
   margin: 20px 0;
   padding: 20px;
   background: linear-gradient(135deg, #6a11cb 0%, #2575fc 100%);

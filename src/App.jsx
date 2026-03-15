@@ -4,19 +4,24 @@ import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import { ChakraProvider, Box } from '@chakra-ui/react'; 
 
 import axios from "axios";
-import Home from "./pages/Home"
+
+// Quiz Pages
 import QuickPlay from "./pages/QuickPlay";
 import Login from "./pages/Login";
+import Home from './pages/Home';
 import ResultPage from "./pages/ResultPage";
 import VsBot from "./pages/VsBot";
 import MultiEnd from "./pages/MultiEnd";
-import Help from "./pages/Help";
 import FirstPage from "./pages/FirstPage";
+import Datahub from './pages/Datahub';
 import Dashboard from './pages/Dashboard';
-import QuizShareCard from './util/QuizShareCard';
-import PDFConverter from './pages/PDFConverter';
-import ComingSoon from './util/ComingSoon';
 import Leaderboard from './util/LeaderBoard';
+
+// PDF COnverter
+import PDFConverter from './pages/PDFConverter';
+
+// Upcoming Feature
+import ComingSoon from './util/ComingSoon';
 
 import { QuizContext } from "./Helpers/Contexts";
 import { TimerProvider } from './util/TimerProvider';
@@ -121,20 +126,13 @@ function App() {
           <Routes>
             <Route path="/" element={<FirstPage />} />
             <Route path="/login" element={<Login />} />
+            <Route path="/datahub" element={<Datahub />} />
             <Route path="/dashboard" element={<Dashboard />} />
             <Route path="/quiz" element={<Home />} />
             <Route path="/solo" element={<QuickPlay />} />
             <Route path="/result" element={<ResultPage />} />
             <Route path="/multiend" element={<MultiEnd />} />
             <Route path="/vsbot" element={<VsBot />} />
-            <Route path="/help" element={<Help />} />
-            <Route path="/share" element={<QuizShareCard 
-                score={score} 
-                setScore={setScore}
-                questions={questions} 
-                categories={categories}
-              />} 
-            />
             <Route path="/converter" element={<PDFConverter />} />
             <Route path="/tune" element={<ComingSoon />} />
             <Route path="/board" element={<Leaderboard />} />
