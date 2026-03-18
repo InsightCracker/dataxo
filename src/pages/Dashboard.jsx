@@ -7,10 +7,14 @@ import {
 
 import { 
   FaAward,
-  FaLetterboxd,
-  FaGraduationCap
+  FaBullseye,
+  FaGraduationCap,
+  FaLaptopFile,
+  FaChartColumn,
+  FaCheckDouble,
+  FaTrophy,
+  FaFaceSmile
 } from "react-icons/fa6";
-import { color } from "framer-motion";
 
 const Dashboard = () => {
     const { 
@@ -23,25 +27,24 @@ const Dashboard = () => {
           w: '100%',
           m: '0 auto'
         }} className="dashboard_container">
-        <h1>DataXO</h1>
         <div className="profile">
-            <h1>Welcome back, <span>{name}</span> 💪</h1>
+            <h1 >Welcome back <span>{name}</span> <FaFaceSmile /></h1>
 
             <div className="dash-list">
                 <div style={{
                     display: 'flex',
                     justifyContent: 'space-between', 
                     alignItems: 'center', 
-                    gap: '1rem'
+                    gap: '.5rem'
                 }}>
-                    <h1><FaAward /> </h1>
+                    <h1 style={{
+                        color: 'rgb(146, 124, 0)'
+                    }}><FaAward /> </h1>
 
                     <div>Advance Analyst</div>
-
-                    <h1><FaLetterboxd /></h1>
                 </div>
 
-                <div className="other-share-btn-left">
+                <div className="profile-btn">
                     View Leaderboard
                 </div>
             </div>
@@ -49,7 +52,7 @@ const Dashboard = () => {
             <div className="dash-list colored">
                 <div className="dash-list-card">
                     <Box className="icon" 
-                        sx={{color: 'purple' }} 
+                        sx={{color: '#304ecf' }} 
                     >
                         <FaGraduationCap />
                     </Box>
@@ -62,9 +65,9 @@ const Dashboard = () => {
 
                 <div className="dash-list-card">
                     <Box className="icon" 
-                        sx={{color: 'purple' }} 
+                        sx={{color: '#304ecf' }} 
                     >
-                        <FaGraduationCap />
+                        <FaCheckDouble />
                     </Box>
 
                     <div className="list-text">
@@ -72,6 +75,76 @@ const Dashboard = () => {
                         <h3>18</h3>
                     </div>
                 </div>
+            </div>
+        </div>
+
+        <div className="low-box">
+            <div className=" max_box left-side-box">
+                <div className="first_box">
+                    <h2><FaBullseye className="box_icon" /> 
+                        Daily Challenge
+                    </h2>
+
+                    <p>Answer today's question!</p>
+
+                    <p><span>Reward:</span> +20 points</p>
+
+                    <div className="max-box-btn">
+                        Start Challenge
+                    </div>
+                </div>
+
+                <div className="second_box">
+                    <h2>
+                        <FaLaptopFile className="box_icon" />
+                        Continue Learning
+                    </h2>
+
+                    <p>Test your skill level.</p>
+
+                    <div className="max-box-btn">
+                        Resume Quiz
+                    </div>
+                </div>
+
+                <div className="third_box">
+                    <h2>
+                        <FaChartColumn className="box_icon" />
+                        Your Data Journey
+                    </h2>
+                    
+                    <div className="third-inner">
+                        <div>
+                            <p>Quizzes Taken: <span>18</span></p>
+                            <p>Best Skill: <span>Excel</span></p>
+                        </div>
+
+
+                        <div>
+                            <p>Average Score <span>82%</span></p>
+                            <p>Weak Skill: <span>SQL</span></p>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+
+            <div className="max_box right-side-box">
+                <div style={{
+                    display: 'flex',
+                    justifyContent: 'space-between', 
+                    alignItems: 'center', 
+                    gap: '.5rem',
+                    fontWeight: '600'
+                }}>
+                    <h1 style={{
+                        color: 'rgb(146, 124, 0)'
+                    }}><FaTrophy /> </h1>
+
+                    <div>Top DataXO Analysts</div>
+                </div>
+
+                
             </div>
         </div>
     </Box>
