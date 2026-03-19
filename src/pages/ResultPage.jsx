@@ -68,7 +68,7 @@ const ResultPage = () => {
         {/* Navbar */}
         <div className="resultpage-navbar">
           <p><FaReceipt /></p>
-          <p>Result Page!</p>
+          <p>Result!</p>
         </div>
         
         <div className="resultpage-scoreboard">

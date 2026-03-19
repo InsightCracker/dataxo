@@ -1,12 +1,45 @@
 import FileUploader from "../components/FileUploader";
 
-const PDFConverter = () => {
-  return (
-    <div style={{ maxWidth: "600px", margin: "50px auto", textAlign: "center", fontFamily: "Arial, sans-serif" }}>
-      <h1>PDF → Excel / CSV Converter</h1>
+import { 
+  Box,
+  Input
+} from "@chakra-ui/react";
+
+import {
+  FaUserCircle 
+} from "react-icons/fa";
+
+const PDFConverter = () => (
+  <Box sx={{
+    maxW: '600px',
+    w: '100%',
+    m: '0 auto'
+  }} className="converter">
+    <div className="nav">
+      <div className="">
+        <a href="/">Data<span className="dataxo">XO</span></a>
+      </div>
+
+      <div>
+        <ul>
+          <li>Datahub</li>
+        </ul>
+      </div>
+
+      <div>
+        <a href="/dashboard" style={{
+          fontSize: "1.5rem",
+          cursor: "pointer"
+        }}>
+          <FaUserCircle />
+        </a>
+      </div>
+    </div>
+
+    <div className="uploader">
       <FileUploader />
     </div>
-  );
-}
+  </Box>
+)
 
 export default PDFConverter

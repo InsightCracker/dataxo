@@ -133,9 +133,13 @@ function App() {
             <Route path="/result" element={<ResultPage />} />
             <Route path="/multiend" element={<MultiEnd />} />
             <Route path="/vsbot" element={<VsBot />} />
-            <Route path="/converter" element={<PDFConverter />} />
-            <Route path="/tune" element={<ComingSoon />} />
             <Route path="/board" element={<Leaderboard />} />
+
+            {/* Converter */}
+            <Route path="/converter" element={<PDFConverter />} />
+
+            {/* Coming Soon */}
+            <Route path="/tune" element={<ComingSoon />} />
           </Routes>
         </QuizContext.Provider>
         </TimerProvider>

@@ -27,7 +27,7 @@ html::-webkit-scrollbar-thumb {
 }
 
 body {
-  background-color: #cecece;
+  background-color: red;
   color: #000;
 }
 
@@ -512,6 +512,7 @@ ul {
 
 .right-side-box {
   width: 40%;
+  height: 100%;
 }
 
 .max_box {
@@ -575,11 +576,13 @@ ul {
 .third-inner {
   display: flex;
   justify-content: space-between;
+  align-items: center;
 }
 
 .dash-list {
   display: flex;
   justify-content: space-between;
+  align-items: center;
   border-radius: 5px;
 }
 
@@ -1171,6 +1174,179 @@ ul {
   font-size: 1.2rem;
 }
 
+/* Converter */
+.converter {
+  padding: 2rem;
+}
+
+.converter .nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.converter .nav ul {
+  display: inline-flex;
+  gap: .7rem;
+}
+
+.converter .nav li {
+  font-size: .8rem;
+  cursor: pointer;
+}
+
+/* FIle Uploader */
+
+/* Container */
+.uploader-container {
+  color: #000;
+  margin: 1rem 0;
+}
+
+/* Card */
+.upload-card {
+  background: #ffffff;
+  border-radius: 20px;
+  padding: 20px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1), 0 1px 3px rgba(0, 0, 0, 0.08); 
+}
+
+/* Title */
+.upload-title {
+  font-size: 26px;
+  font-weight: 600;
+  color: #1e293b;
+  margin-bottom: 20px;
+}
+
+/* Drag Area */
+.drop-zone {
+  border: 2px dashed #c7d2fe;
+  border-radius: 16px;
+  padding: 50px 20px;
+  text-align: center;
+  background: linear-gradient(180deg, #f8fafc, #eef2ff);
+  transition: all 0.3s ease;
+}
+
+.drop-zone:hover {
+  background: #eef2ff;
+  border-color: #6366f1;
+}
+
+/* Upload Icon */
+.upload-icon {
+  font-size: 40px;
+  margin-bottom: 10px;
+}
+
+/* Text */
+.upload-text {
+  font-size: 16px;
+  color: #475569;
+  margin-bottom: 15px;
+}
+
+/* Button */
+.upload-btn {
+  display: inline-block;
+  background: linear-gradient(135deg, #4f46e5, #2563eb);
+  color: white;
+  padding: 12px 24px;
+  border-radius: .5rem 1rem;
+  font-size: 14px;
+  cursor: pointer;
+  transition: 0.3s;
+  margin-bottom: 1rem;
+}
+
+.upload-btn:hover {
+  transform: translateY(-1px);
+  box-shadow: 0 5px 15px rgba(37, 99, 235, 0.3);
+}
+
+/* File Info */
+.file-info {
+  margin-top: 20px;
+  background: #f8fafc;
+  padding: 15px;
+  border-radius: 12px;
+  border: 1px solid #e2e8f0;
+}
+
+.file-name {
+  font-weight: 500;
+  color: #1e293b;
+}
+
+.file-size {
+  font-size: 13px;
+  color: #64748b;
+}
+
+/* Error */
+.error-text {
+  color: #ef4444;
+  margin-top: 10px;
+  font-size: 14px;
+}
+
+/* Convert Button */
+.convert-btn {
+  margin-top: 25px;
+  width: 100%;
+  padding: 14px;
+  border: none;
+  border-radius: .5rem 1.5rem;
+  background: linear-gradient(135deg, #2563eb, #1d4ed8);
+  color: white;
+  font-size: 16px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.convert-btn:hover {
+  opacity: 0.9;
+}
+
+/* Options Section */
+.options {
+  margin-top: 25px;
+}
+
+.option-item {
+  display: flex;
+  align-items: center;
+  margin-bottom: 10px;
+  color: #535353;
+}
+
+.option-item input {
+  margin-right: 10px;
+}
+
+/* Convert Type Buttons */
+.convert-types {
+  display: flex;
+  gap: 7px;
+  margin-top: 15px;
+}
+
+.type-btn {
+  padding: 5px 18px;
+  border-radius: 5px;
+  border: none;
+  background: #e0e7ff;
+  color: #3730a3;
+  cursor: pointer;
+}
+
+.type-btn.active {
+  background: #22c55e;
+  color: white;
+}
+
+/* Media Query */
 
 @media (max-width: 768px) {
   .navbar .large_nav ul {

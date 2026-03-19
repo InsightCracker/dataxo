@@ -27,6 +27,7 @@ const Dashboard = () => {
           w: '100%',
           m: '0 auto'
         }} className="dashboard_container">
+
         <div className="profile">
             <h1 >Welcome back <span>{name}</span> <FaFaceSmile /></h1>
 
@@ -143,8 +144,21 @@ const Dashboard = () => {
 
                     <div>Top DataXO Analysts</div>
                 </div>
-
                 
+                <div>
+
+                </div>
+                
+                <p style={{
+                        color: '#304ecf',
+                        paddingTop: '.5rem',
+                        marginTop: '.5rem',
+                        textAlign: 'center',
+                        fontSize: '.7rem',
+                        fontWeight: '500',
+                        borderTop: '.7px solid #304dcf52'
+                    }}>View Full Leaderboard
+                </p>
             </div>
         </div>
     </Box>

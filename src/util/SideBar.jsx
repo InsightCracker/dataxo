@@ -3,7 +3,6 @@ import {
 } from "@chakra-ui/react";
 
 import { 
-  FaHouse,
   FaRetweet,
   FaBookOpenReader,
   FaRegFileLines,
@@ -21,9 +20,6 @@ const SideBar = () => {
       <div className="icons">
         <div>
           <a href="/dashboard"><FaUser /></a>
-        </div>
-        <div>
-          <a href="/datahub"><FaHouse /></a>
         </div>
         <div>
           <a href="/tune"><FaRetweet /></a>
