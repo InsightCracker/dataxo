@@ -15,7 +15,7 @@ const Hero = () => {
             justifyContent: 'center',
             flexWrap: 'wrap'
         }}>
-            <a href="/login" className="btn btn-primary">Start Now</a>
+            <a href="/users/login" className="btn btn-primary">Start Now</a>
 
             <a href='#services' className="btn btn-secondary">Explore Services</a>
         </Box>

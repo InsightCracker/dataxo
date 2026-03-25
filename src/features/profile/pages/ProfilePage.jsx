@@ -1,5 +1,7 @@
+import '../styles/profile.css'
+
 import { useContext } from "react";
-import { QuizContext } from "../Helpers/Contexts";
+import { QuizContext } from "../../../util/Contexts";
 
 import { 
     Box
@@ -16,14 +18,13 @@ import {
   FaFaceSmile
 } from "react-icons/fa6";
 
-const Dashboard = () => {
+const ProfilePage = () => {
     const { 
         name,
       } = useContext(QuizContext);
 
     return (
     <Box sx={{
-          maxW: '600px',
           w: '100%',
           m: '0 auto'
         }} className="dashboard_container">
@@ -165,4 +166,4 @@ const Dashboard = () => {
     )
 }
 
-export default Dashboard;
+export default ProfilePage;

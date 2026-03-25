@@ -19,8 +19,8 @@
 }
 
 .hero {
-    background: linear-gradient(180deg, #0a0e27 0%, #0d1234 100%);
-    padding-top: 8rem;
+  background: linear-gradient(180deg, #0a0e27 0%, #0d1234 100%);
+  padding-top: 8rem;
 }
 
 .hero h1 {
@@ -124,10 +124,9 @@
 /* HOW IT WORKS */
 .howitworks,
 .features {
-  background: #0a0f23;
+  background: linear-gradient(135deg, #011779, #002550);
   position: relative;
   overflow: hidden;
-  /* padding: 6rem 5%; */
 }
 
 .steps-container {
@@ -197,7 +196,7 @@
 }
 
 .features {
-    background: linear-gradient(135deg, #011779, #002550);
+    background: #0a0f23;
 }
 
 .footer {
@@ -241,15 +240,6 @@
 
 /* Media Query */
 @media (max-width: 425px) {
-    .hero,
-    .about,
-    .dashboard, 
-    .howitworks,
-    .features {
-        padding-top: 1.5rem;
-        padding-bottom: 1.5rem;
-    }
-
     .nav-btn {
         padding: 1rem 2rem;
     }

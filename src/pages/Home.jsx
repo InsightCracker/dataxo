@@ -1,6 +1,6 @@
 import { useContext, useState } from "react";
 import { Link } from "react-router-dom";
-import { QuizContext } from "../Helpers/Contexts";
+import { QuizContext } from "../util/Contexts";
 import { categoriesList } from "../util/categories";
 
 import { 

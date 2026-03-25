@@ -1,6 +1,6 @@
 import { useState, useContext } from "react";
 import { useNavigate } from 'react-router-dom';
-import { QuizContext } from "../Helpers/Contexts";
+import { QuizContext } from "../util/Contexts";
 
 import { 
   Box

@@ -1,5 +1,5 @@
 import QuizTimer from "./QuizTimer";
-import { QuizContext } from "../Helpers/Contexts";
+import { QuizContext } from "./Contexts";
 import { TimerContext } from "./TimerProvider";
 
 import { 

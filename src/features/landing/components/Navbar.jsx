@@ -19,7 +19,7 @@ const Navbar = () => {
       padding: '1rem 5%',
       borderBottom: '1px solid rgba(19, 44, 207, 0.2)'
     }} className='navbar'>
-        <Text className="logo">Data<span className="dataxo">xo</span></Text>
+        <Text className="logo">Data<span className="dataxo">Ere</span></Text>
 
         <Box  className="large_nav">
         <ul sx={{
@@ -40,7 +40,7 @@ const Navbar = () => {
         </ul>
       </Box>
         
-        <a href="/login" className="btn nav-btn">Get Started</a>
+        <a href="/users/login" className="btn nav-btn">Get Started</a>
     </Box>
   )
 }

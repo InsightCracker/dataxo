@@ -6,15 +6,17 @@ import { GoogleGenerativeAI } from "@google/generative-ai";
 import axios from "axios";
 
 // Quiz Pages
-import QuickPlay from "./pages/QuickPlay";
-import Login from "./pages/Login";
+import LandingPage from "./features/landing/pages/LandingPage";
+import LoginPage from "./features/auth/pages/LoginPage";
+import SignupPage from './features/auth/pages/SIgnupPage';
+import ProfilePage from './features/profile/pages/ProfilePage';
 import Home from './pages/Home';
 import ResultPage from "./pages/ResultPage";
 import VsBot from "./pages/VsBot";
 import MultiEnd from "./pages/MultiEnd";
-import LandingPage from "./features/landing/pages/LandingPage";
+import QuickPlay from "./pages/QuickPlay";
 import Datahub from './pages/Datahub';
-import Dashboard from './pages/Dashboard';
+
 import Leaderboard from './util/LeaderBoard';
 
 // PDF COnverter
@@ -23,7 +25,7 @@ import PDFConverter from './pages/PDFConverter';
 // Upcoming Feature
 import ComingSoon from './util/ComingSoon';
 
-import { QuizContext } from "./Helpers/Contexts";
+import { QuizContext } from "./util/Contexts";
 import { TimerProvider } from './util/TimerProvider';
 
 function App() {
@@ -33,7 +35,8 @@ function App() {
   const [wrongAnswer, setWrongAnswer] = useState(0);
   const [botScore, setBotScore] = useState(0);
   const [currQuestion, setCurrQuestion] = useState(0);
-  const [name, setName] = useState("");
+  const [email, setEmail] = useState("");
+  const [password, setPassword] = useState("");
   const [difficulty, setDifficulty] = useState("Beginner");
   const [refresh, setRefresh] = useState(true);
   const [isLoading, setIsLoading] = useState(true);
@@ -91,8 +94,10 @@ function App() {
           setScore, 
           currQuestion, 
           setCurrQuestion,
-          name,
-          setName,
+          email,
+          setEmail,
+          password,
+          setPassword,
           botScore,
           setBotScore,
           categories,
@@ -107,9 +112,10 @@ function App() {
         }}>
           <Routes>
             <Route path="/" element={<LandingPage />} />
-            <Route path="/login" element={<Login />} />
+            <Route path="/users/login" element={<LoginPage />} />
+            <Route path="/users/signup" element={<SignupPage />} />
+            <Route path="/users/profile" element={<ProfilePage />} />
             <Route path="/datahub" element={<Datahub />} />
-            <Route path="/dashboard" element={<Dashboard />} />
             <Route path="/quiz" element={<Home />} />
             <Route path="/solo" element={<QuickPlay />} />
             <Route path="/result" element={<ResultPage />} />

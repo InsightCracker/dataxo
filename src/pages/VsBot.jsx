@@ -1,7 +1,7 @@
 import { Box, Text } from "@chakra-ui/react";
 import { useContext } from "react";
 import { Link } from "react-router-dom";
-import { QuizContext } from "../Helpers/Contexts";
+import { QuizContext } from "../util/Contexts";
 import { FaHome } from "react-icons/fa";
 import Navbar from "../util/Navbar";
 import MultiBoard from "../components/MultiBoard";
