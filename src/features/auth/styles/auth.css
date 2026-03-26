@@ -51,3 +51,13 @@
 span {
     color: #304ecf;
 }
+
+@media (max-width: 425px) {
+    .login-card{
+        padding: 25px 10px;
+    }
+
+    .mini {
+        padding: 10px;
+    }
+}

@@ -45,7 +45,6 @@ const LoginPage = () => {
     padding: '5px',
     borderRadius: '5px',
     cursor: 'pointer',
-    color: 'blue.800',
     margin: '10px auto',
     p: '7px'
   }
@@ -59,7 +58,7 @@ const LoginPage = () => {
   const emptyToast = () => {
     email === '' && toast({
       title: '',
-      description: 'Enter Name',
+      description: 'Enter Details',
       status: 'error',
       duration: '2000',
       position: 'bottom-left'

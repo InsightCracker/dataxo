@@ -1,30 +1,19 @@
 import { useContext, useState } from "react";
 import { Link } from "react-router-dom";
-import { QuizContext } from "../util/Contexts";
-import { categoriesList } from "../util/categories";
+import { QuizContext } from "../../../util/Contexts";
+import { categoriesList } from "../../../util/categories";
 
 import { 
-  Box,
-  Input, 
-  InputGroup,
-  InputLeftElement,
-  Heading
+  Box
 } from "@chakra-ui/react";
 
-import { LuSearchCheck } from "react-icons/lu";
 
-import SideBar from "../util/SideBar";
-
-
-const Home = () => {
+const Cards = () => {
 
   const {
-    difficulty,
     setCategories,
-    setDifficulty
+    searchTerm
   } = useContext(QuizContext);
-
-  const [searchTerm, setSearchTerm] = useState("");
 
   // Filter categories based on search input
   const filteredCategories = categoriesList.filter((cat) =>
@@ -56,15 +45,11 @@ const Home = () => {
   }; 
 
 
-
   return (
   <Box>
-    <div className="sidebar-container">
-      <SideBar />
-    </div>
 
-    <div className="about-text home-container">
-      <div className="top-bar">
+    <div>
+      {/* <div className="top-bar">
         <InputGroup>
           <InputLeftElement pointerEvents="none">
             <LuSearchCheck />
@@ -76,24 +61,9 @@ const Home = () => {
             placeholder="Search..." 
           />
         </InputGroup>
-      </div>
+      </div> */}
 
-      <Box className="level-box">
-        <Heading size="mr">Choose Difficulty:</Heading>
-        <div className="level-btns">
-          {["Beginner", "Intermediate", "Advanced"].map((level) => (
-            <button 
-              key={level}
-              className={`level-btn ${difficulty === level ? "active" : ""}`}
-              onClick={() => setDifficulty(level)}
-            >
-              {level}
-            </button>
-            ))}
-        </div>
-      </Box>
-
-      <Box className="about-grid home-card-con">
+      <Box className="card-grid">
         {filteredCategories.map((cat) => (
           <div className="card visible" key={cat.id}>
             <div className="content">
@@ -126,4 +96,4 @@ const Home = () => {
   )
 }
 
-export default Home
+export default Cards

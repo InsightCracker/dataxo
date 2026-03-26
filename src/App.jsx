@@ -10,7 +10,7 @@ import LandingPage from "./features/landing/pages/LandingPage";
 import LoginPage from "./features/auth/pages/LoginPage";
 import SignupPage from './features/auth/pages/SIgnupPage';
 import ProfilePage from './features/profile/pages/ProfilePage';
-import Home from './pages/Home';
+import Home from './features/quiz/pages/Home';
 import ResultPage from "./pages/ResultPage";
 import VsBot from "./pages/VsBot";
 import MultiEnd from "./pages/MultiEnd";
@@ -41,6 +41,7 @@ function App() {
   const [refresh, setRefresh] = useState(true);
   const [isLoading, setIsLoading] = useState(true);
   const [currentQuestion, setCurrentQuestion] = useState(null);
+  const [searchTerm, setSearchTerm] = useState("");
 
   // Shuffle utility
   const shuffleArray = (array) => {
@@ -108,7 +109,9 @@ function App() {
           setRefresh,
           isLoading,
           wrongAnswer,
-          setWrongAnswer
+          setWrongAnswer,
+          searchTerm,
+          setSearchTerm
         }}>
           <Routes>
             <Route path="/" element={<LandingPage />} />
