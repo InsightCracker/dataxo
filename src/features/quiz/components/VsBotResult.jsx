@@ -1,6 +1,6 @@
 import { useContext, useState } from "react";
 import { useNavigate } from 'react-router-dom';
-import { QuizContext } from "../util/Contexts";
+import { QuizContext } from "../../../util/Contexts";
 import { 
   Box
 } from "@chakra-ui/react";
@@ -15,7 +15,7 @@ import {
 } from "react-icons/fa6";
 
 
-import QuizShareCard from "../util/QuizShareCard";
+import QuizShareCard from "./QuizShareCard";
 
 
 const MultiEnd = () => {
@@ -48,7 +48,7 @@ const percentage =
     setWrongAnswer(0);
     setCurrQuestion(0);
     setRefresh(!refresh);
-    navigate('/vsbot')
+    navigate('/quiz/vsbot')
   }
 
   const tryAnotherQuiz = () => {
@@ -57,7 +57,7 @@ const percentage =
     setWrongAnswer(0);
     setCurrQuestion(0);
     setRefresh(!refresh);
-    navigate('/quiz')
+    navigate('/quiz/topics')
   }
   
   return (

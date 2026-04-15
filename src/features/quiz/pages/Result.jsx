@@ -1,5 +1,5 @@
 import { useSearchParams } from "react-router-dom";
-import QuickPlayResult from "../components/QuickplayResult";
+import SoloResult from "../components/SoloResult";
 import VsBotResult from "../components/VsBotResult";
 
 const Results = () => {
@@ -8,7 +8,7 @@ const Results = () => {
 
   return (
     <div>
-      {mode === "quickplay" && <QuickPlayResult />}
+      {mode === "solo" && <SoloResult />}
       {mode === "vsbot" && <VsBotResult />}
     </div>
   );

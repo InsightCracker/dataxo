@@ -97,7 +97,7 @@ const VsBotPlay = () => {
     }
 
     setCurrQuestion(0);
-    navigate('/multiend');
+    navigate(`/results?mode=vsbot`);
   }
   
   const letters = ["A", "B", "C", "D"];

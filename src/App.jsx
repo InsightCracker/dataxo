@@ -11,9 +11,10 @@ import LoginPage from "./features/auth/pages/LoginPage";
 import SignupPage from './features/auth/pages/SIgnupPage';
 import ProfilePage from './features/profile/pages/ProfilePage';
 import QuizDashboard from './features/quiz/pages/QuizDashboard';
-import ResultPage from "./features/quiz/components/QuickplayResult";
+import ResultPage from "./features/quiz/components/SoloResult";
+import Results from './features/quiz/pages/Result';
 import VsBot from "./features/quiz/pages/VsBot";
-import MultiEnd from "./pages/MultiEnd";
+// import MultiEnd from "./pages/MultiEnd";
 import QuickPlay from "./features/quiz/pages/QuickPlay";
 import Datahub from './pages/Datahub';
 
@@ -120,11 +121,10 @@ useEffect(() => {
             <Route path="/datahub" element={<Datahub />} />
             <Route path="/quiz/topics" element={<QuizDashboard />} />
             <Route path="/quiz/solo" element={<QuickPlay />} />
-            <Route path="/result" element={<ResultPage />} />
-            <Route path="/multiend" element={<MultiEnd />} />
+            <Route path="/results" element={<Results />} />
+            {/* <Route path="/multiend" element={<MultiEnd />} /> */}
             <Route path="/quiz/vsbot" element={<VsBot />} />
             <Route path="/board" element={<Leaderboard />} />
-
             {/* Converter */}
             <Route path="/converter" element={<PDFConverter />} />
 

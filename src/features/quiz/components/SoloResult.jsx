@@ -15,9 +15,9 @@ import {
   FaTrophy 
 } from "react-icons/fa6";
 
-import QuizShareCard from "../../../util/QuizShareCard";
+import QuizShareCard from "./QuizShareCard";
 
-const QuickPlayResult = () => {
+const SoloResult = () => {
   const navigate = useNavigate();
   const [show, setShow] = useState(false)
 
@@ -44,7 +44,7 @@ const QuickPlayResult = () => {
     setWrongAnswer(0);
     setCurrQuestion(0);
     setRefresh(!refresh);
-    navigate('/solo')
+    navigate('/quiz/solo')
   }
 
   const tryAnotherQuiz = () => {
@@ -52,7 +52,7 @@ const QuickPlayResult = () => {
     setWrongAnswer(0);
     setCurrQuestion(0);
     setRefresh(!refresh);
-    navigate('/quiz')
+    navigate('/quiz/topics')
   }
 
   
@@ -160,4 +160,4 @@ const QuickPlayResult = () => {
   )
 }
 
-export default QuickPlayResult;
+export default SoloResult;

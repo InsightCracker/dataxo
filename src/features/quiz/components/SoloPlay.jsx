@@ -66,7 +66,7 @@ const SoloPlay = () => {
 
     setOptionChosenBG('');
     setCurrQuestion(0);
-    navigate('/result');
+    navigate(`/results?mode=solo`);
   }
 
   const flexStyle = {
