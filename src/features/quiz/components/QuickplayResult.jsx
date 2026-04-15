@@ -1,6 +1,6 @@
 import { useContext, useState } from "react";
 import { useNavigate } from 'react-router-dom';
-import { QuizContext } from "../util/Contexts";
+import { QuizContext } from "../../../util/Contexts";
 import { 
   Box,
 } from "@chakra-ui/react";
@@ -15,9 +15,9 @@ import {
   FaTrophy 
 } from "react-icons/fa6";
 
-import QuizShareCard from "../util/QuizShareCard";
+import QuizShareCard from "../../../util/QuizShareCard";
 
-const ResultPage = () => {
+const QuickPlayResult = () => {
   const navigate = useNavigate();
   const [show, setShow] = useState(false)
 
@@ -160,4 +160,4 @@ const ResultPage = () => {
   )
 }
 
-export default ResultPage
+export default QuickPlayResult;

@@ -10,16 +10,16 @@ import LandingPage from "./features/landing/pages/LandingPage";
 import LoginPage from "./features/auth/pages/LoginPage";
 import SignupPage from './features/auth/pages/SIgnupPage';
 import ProfilePage from './features/profile/pages/ProfilePage';
-import Home from './features/quiz/pages/Home';
-import ResultPage from "./pages/ResultPage";
-import VsBot from "./pages/VsBot";
+import QuizDashboard from './features/quiz/pages/QuizDashboard';
+import ResultPage from "./features/quiz/components/QuickplayResult";
+import VsBot from "./features/quiz/pages/VsBot";
 import MultiEnd from "./pages/MultiEnd";
-import QuickPlay from "./pages/QuickPlay";
+import QuickPlay from "./features/quiz/pages/QuickPlay";
 import Datahub from './pages/Datahub';
 
 import Leaderboard from './util/LeaderBoard';
 
-// PDF COnverter
+// PDF Converter
 import PDFConverter from './pages/PDFConverter';
 
 // Upcoming Feature
@@ -44,42 +44,41 @@ function App() {
   const [searchTerm, setSearchTerm] = useState("");
 
   // Shuffle utility
-  const shuffleArray = (array) => {
-    const arr = [...array];
-    for (let i = arr.length - 1; i > 0; i--) {
-      const j = Math.floor(Math.random() * (i + 1));
-      [arr[i], arr[j]] = [arr[j], arr[i]];
-    }
-    return arr;
-  };
+const shuffleArray = (array) => {
+  return [...array].sort(() => Math.random() - 0.5);
+};
 
-// Fetch AI-generated questions from backend
-  const fetchAIQuestions = async () => {
-    try {
-      setIsLoading(true);
+// Fetch questions from JSON
+const fetchQuestions = async () => {
+  try {
+    setIsLoading(true);
 
-      // Call your Express backend API
-      const response = await axios.post("http://localhost:5000/api/generate", {
-        topic: categories || "General Knowledge",
-        difficulty: difficulty
-      });
+    const response = await fetch("/questions.json");
+    const data = await response.json();
 
-      // Shuffle and pick first 20 questions
-      const shuffledQuestions = shuffleArray(response.data).slice(0, 20);
+    // Filter by category & difficulty
+    const filteredQuestions = data.filter((q) => {
+      const matchCategory = categories ? q.category === categories : true;
+      const matchDifficulty = difficulty ? q.difficulty === difficulty : true;
+      return matchCategory && matchDifficulty;
+    });
 
-      setQuestions(shuffledQuestions);
-      setCurrentQuestion(shuffledQuestions[0] || null);
-      setIsLoading(false);
-    } catch (error) {
-      console.error("Error fetching AI questions:", error);
-      setIsLoading(false);
-    }
-  };
+    // Shuffle and limit to 20
+    const finalQuestions = shuffleArray(filteredQuestions).slice(0, 20);
 
-  // Re-fetch questions when difficulty, category, or refresh changes
-  useEffect(() => {
-    fetchAIQuestions(); // eslint-disable-next-line
-  }, [categories, difficulty, refresh]);
+    setQuestions(finalQuestions);
+    setCurrentQuestion(finalQuestions[0] || null);
+  } catch (error) {
+    console.error("Error loading questions:", error);
+  } finally {
+    setIsLoading(false); // ✅ cleaner
+  }
+};
+
+// Re-fetch when dependencies change
+useEffect(() => {
+  fetchQuestions();
+}, [categories, difficulty, refresh]);
 
   return (
     <Router>
@@ -119,11 +118,11 @@ function App() {
             <Route path="/users/signup" element={<SignupPage />} />
             <Route path="/users/profile" element={<ProfilePage />} />
             <Route path="/datahub" element={<Datahub />} />
-            <Route path="/quiz" element={<Home />} />
-            <Route path="/solo" element={<QuickPlay />} />
+            <Route path="/quiz/topics" element={<QuizDashboard />} />
+            <Route path="/quiz/solo" element={<QuickPlay />} />
             <Route path="/result" element={<ResultPage />} />
             <Route path="/multiend" element={<MultiEnd />} />
-            <Route path="/vsbot" element={<VsBot />} />
+            <Route path="/quiz/vsbot" element={<VsBot />} />
             <Route path="/board" element={<Leaderboard />} />
 
             {/* Converter */}

@@ -16,7 +16,7 @@ import Searchbar from "../components/Searchbar";
 import Cards from "../components/Cards";
 
 
-const Home = () => {
+const QuizDashboard = () => {
 
   const {
     difficulty,
@@ -101,4 +101,4 @@ const Home = () => {
   )
 }
 
-export default Home
+export default QuizDashboard

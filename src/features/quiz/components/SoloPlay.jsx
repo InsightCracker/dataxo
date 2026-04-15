@@ -1,6 +1,6 @@
 import { useState, useContext } from "react";
 import { useNavigate } from 'react-router-dom';
-import { QuizContext } from "../util/Contexts";
+import { QuizContext } from "../../../util/Contexts";
 
 import { 
   Box,
@@ -15,7 +15,7 @@ import {
 import { FaRegCheckCircle } from "react-icons/fa";
 
 
-const Quiz = () => {
+const SoloPlay = () => {
   const navigate = useNavigate();
 
   const {
@@ -204,4 +204,4 @@ const Quiz = () => {
   )
 }
 
-export default Quiz
+export default SoloPlay

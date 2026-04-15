@@ -105,11 +105,11 @@ const ProfilePage = () => {
 
                     <div 
                         onClick={() => {
-                            navigate('/quiz')
+                            navigate('/quiz/topics')
                         }}
                         className="max-box-btn"
                     >
-                        Resume Quiz
+                        Start Quiz
                     </div>
                 </div>
 

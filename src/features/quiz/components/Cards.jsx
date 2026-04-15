@@ -49,20 +49,6 @@ const Cards = () => {
   <Box>
 
     <div>
-      {/* <div className="top-bar">
-        <InputGroup>
-          <InputLeftElement pointerEvents="none">
-            <LuSearchCheck />
-          </InputLeftElement>
-          <Input 
-            value={searchTerm}
-            onChange={(e) => setSearchTerm(e.target.value)}
-            aria-label="Search categories"
-            placeholder="Search..." 
-          />
-        </InputGroup>
-      </div> */}
-
       <Box className="card-grid">
         {filteredCategories.map((cat) => (
           <div className="card visible" key={cat.id}>
@@ -72,7 +58,7 @@ const Cards = () => {
 
               <div className="btns-box">
                 <Link
-                  to="/solo"
+                  to="/quiz/solo"
                   onClick={() => quickPlay(cat)}
                   className="btn card-btn"
                 >
@@ -80,7 +66,7 @@ const Cards = () => {
                 </Link>
 
                 <Link
-                  to="/vsbot"
+                  to="/quiz/vsbot"
                   onClick={() =>  botMode(cat)}
                   className="btn card-btn"
                 >
