@@ -1,6 +1,6 @@
 import { useState, useContext } from "react";
 import { useNavigate } from 'react-router-dom';
-import { QuizContext } from "../util/Contexts";
+import { QuizContext } from "../../../util/Contexts";
 
 import { 
   Box
@@ -13,7 +13,7 @@ import {
 import { FaRegCheckCircle } from "react-icons/fa";
 
 
-const VsBotQuiz = () => {
+const VsBotPlay = () => {
   const [userAnswer, setUserAnswer] = useState(null);
   const [botAnswer, setBotAnswer] = useState(null);
 
@@ -97,7 +97,7 @@ const VsBotQuiz = () => {
     }
 
     setCurrQuestion(0);
-    navigate('/multiend');
+    navigate(`/results?mode=vsbot`);
   }
   
   const letters = ["A", "B", "C", "D"];
@@ -155,4 +155,4 @@ const VsBotQuiz = () => {
   )
 }
 
-export default VsBotQuiz
+export default VsBotPlay;

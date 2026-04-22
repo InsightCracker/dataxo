@@ -1,7 +1,5 @@
 import { useContext, useState } from "react";
-import { Link } from "react-router-dom";
 import { QuizContext } from "../../../util/Contexts";
-import { categoriesList } from "../../../util/categories";
 
 import { 
   Box,
@@ -14,7 +12,6 @@ import { LuSearchCheck } from "react-icons/lu";
 
 
 const Searchbar = () => {
-
   const {
     setCategories,
     searchTerm,

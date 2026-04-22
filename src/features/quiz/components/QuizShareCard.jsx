@@ -2,8 +2,8 @@ import {
   useEffect,
   useContext 
 } from "react";
-import { useNavigate, useLocation } from 'react-router-dom';
-import { QuizContext } from "./Contexts";
+import { useNavigate, useLocation, useSearchParams } from 'react-router-dom';
+import { QuizContext } from "../../../util/Contexts";
 import confetti from "canvas-confetti";
 
 import {
@@ -35,7 +35,9 @@ const QuizShareCard = ({
   } = useContext(QuizContext);
 
   const navigate = useNavigate();
-  const location = useLocation();
+  const [searchParams] = useSearchParams();
+
+  const mode = searchParams.get("mode");
 
   // Convert categories to sentence case
   const sentenceCaseCategory = categories.charAt(0).toUpperCase() + categories.slice(1).toLowerCase();
@@ -118,12 +120,13 @@ const QuizShareCard = ({
   const retry = () => {
     resetQuizState();
 
-    if (location.pathname === "/result") {
+    if (mode === "solo") {
       setRefresh(prev => !prev);
-      navigate("/solo");
-    } else if (location.pathname === "/multiend") {
+      navigate("/quiz/solo");
+    } 
+    else if (mode === "vsbot") {
       setRefresh(prev => !prev);
-      navigate("/vsbot");
+      navigate("/quiz/vsbot");
     }
   };
 
@@ -131,7 +134,7 @@ const QuizShareCard = ({
 
   const goToDashboard = () => {  
     resetQuizState();
-    navigate("/quiz");
+    navigate("/quiz/topics");
   };
 
 
