@@ -25,24 +25,22 @@ import {
 import { useContext, useState } from "react";
 import { useNavigate } from "react-router-dom";
 import { QuizContext } from "../../../util/Contexts";
+import { useAuth } from "../../../util/AuthContext";
+import { loginUser } from "../../../util/api";
 
 const LoginPage = () => {
   const [show, setShow] = useState(false);
   const [loading, setLoading] = useState(false);
   const togglePassword = () => setShow(!show);
 
-  const {
-    email,
-    setEmail,
-    password,
-    setPassword,
-  } = useContext(QuizContext);
+  const { email, setEmail, password, setPassword } = useContext(QuizContext);
+  const { login } = useAuth();
 
   const toast = useToast();
   const navigate = useNavigate();
 
-  const login = async () => {
-    if (email === "") {
+  const login_handler = async () => {
+    if (email === "" || password === "") {
       toast({
         description: "Please enter your details",
         status: "error",
@@ -51,10 +49,31 @@ const LoginPage = () => {
       });
       return;
     }
+
     setLoading(true);
-    await new Promise((r) => setTimeout(r, 1200)); // remove when wiring real API
-    setLoading(false);
+    try {
+      const res = await loginUser(email, password);
+      if (res.token) {
+   login({ email }, res.token);
     navigate("/users/profile");
+      } else {
+        toast({
+          description: res.message || "Invalid credentials",
+          status: "error",
+          duration: 3000,
+          position: "bottom-left",
+        });
+      }
+    } catch (err) {
+      toast({
+        description: "Something went wrong. Try again.",
+        status: "error",
+        duration: 3000,
+        position: "bottom-left",
+      });
+    } finally {
+      setLoading(false);
+    }
   };
 
   return (
@@ -71,10 +90,6 @@ const LoginPage = () => {
         <Box className="login-badge">✦ Welcome back</Box>
 
         <h2>Log in to DataEre</h2>
-        {/* <p className="login-subtitle">
-          Don't have an account?{" "}
-          <a href="/users/signup" className="login-link">Sign up free</a>
-        </p> */}
 
         <div className="form">
 
@@ -163,7 +178,7 @@ const LoginPage = () => {
           <Box
             as="button"
             className="login-btn"
-            onClick={login}
+            onClick={login_handler}
             disabled={loading}
             sx={{
               width: "100%",
