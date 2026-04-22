@@ -20,29 +20,30 @@ import {
 import {
   LuMail,
   LuLock,
+  LuUser,
 } from "react-icons/lu";
 
-import { useContext, useState } from "react";
+import { useState } from "react";
 import { useNavigate } from "react-router-dom";
-import { QuizContext } from "../../../util/Contexts";
+import { useAuth } from "../../../util/AuthContext";
+import { registerUser } from "../../../util/api";
 
 const SignupPage = () => {
   const [show, setShow] = useState(false);
   const [loading, setLoading] = useState(false);
+  const [firstName, setFirstName] = useState("");
+  const [lastName, setLastName] = useState("");
+  const [email, setEmail] = useState("");
+  const [password, setPassword] = useState("");
+  const [passwordConfirmation, setPasswordConfirmation] = useState("");
+
   const togglePassword = () => setShow(!show);
-
-  const {
-    email,
-    setEmail,
-    password,
-    setPassword,
-  } = useContext(QuizContext);
-
+  const { login } = useAuth();
   const toast = useToast();
   const navigate = useNavigate();
 
-  const signup = async () => {
-    if (email === "" || password === "") {
+  const signup_handler = async () => {
+    if (!firstName || !lastName || !email || !password || !passwordConfirmation) {
       toast({
         description: "Please fill in all fields",
         status: "error",
@@ -51,10 +52,42 @@ const SignupPage = () => {
       });
       return;
     }
+
+    if (password !== passwordConfirmation) {
+      toast({
+        description: "Passwords do not match",
+        status: "error",
+        duration: 2000,
+        position: "bottom-left",
+      });
+      return;
+    }
+
     setLoading(true);
-    await new Promise((r) => setTimeout(r, 1200)); // remove when wiring real API
-    setLoading(false);
-    navigate("/users/profile");
+    try {
+      const res = await registerUser(firstName, lastName, email, password, passwordConfirmation);
+
+      if (res.token) {
+        login(res.data, res.token);
+        navigate("/users/profile");
+      } else {
+        toast({
+          description: res.message || "Registration failed. Try again.",
+          status: "error",
+          duration: 3000,
+          position: "bottom-left",
+        });
+      }
+    } catch (err) {
+      toast({
+        description: "Something went wrong. Try again.",
+        status: "error",
+        duration: 3000,
+        position: "bottom-left",
+      });
+    } finally {
+      setLoading(false);
+    }
   };
 
   const inputSx = {
@@ -85,12 +118,49 @@ const SignupPage = () => {
         <Box className="login-badge">✦ Get started for free</Box>
 
         <h2>Create your DataEre account</h2>
-        {/* <p className="login-subtitle">
-          Already have an account?{" "}
-          <a href="/users/login" className="login-link">Log in</a>
-        </p> */}
 
         <div className="form">
+
+          {/* First Name & Last Name */}
+          <div style={{ display: 'flex', gap: '12px' }}>
+            <div className="field-group" style={{ flex: 1 }}>
+              <p className="field-label">First name</p>
+              <div className="input">
+                <InputGroup>
+                  <InputLeftElement pointerEvents="none">
+                    <LuUser color="#4a6fa5" />
+                  </InputLeftElement>
+                  <Input
+                    value={firstName}
+                    variant="outline"
+                    onChange={(e) => setFirstName(e.target.value)}
+                    type="text"
+                    placeholder="John"
+                    sx={inputSx}
+                  />
+                </InputGroup>
+              </div>
+            </div>
+
+            <div className="field-group" style={{ flex: 1 }}>
+              <p className="field-label">Last name</p>
+              <div className="input">
+                <InputGroup>
+                  <InputLeftElement pointerEvents="none">
+                    <LuUser color="#4a6fa5" />
+                  </InputLeftElement>
+                  <Input
+                    value={lastName}
+                    variant="outline"
+                    onChange={(e) => setLastName(e.target.value)}
+                    type="text"
+                    placeholder="Doe"
+                    sx={inputSx}
+                  />
+                </InputGroup>
+              </div>
+            </div>
+          </div>
 
           {/* Email */}
           <div className="field-group">
@@ -142,10 +212,30 @@ const SignupPage = () => {
             </div>
           </div>
 
+          {/* Confirm Password */}
+          <div className="field-group">
+            <p className="field-label">Confirm password</p>
+            <div className="input">
+              <InputGroup>
+                <InputLeftElement pointerEvents="none">
+                  <LuLock color="#4a6fa5" />
+                </InputLeftElement>
+                <Input
+                  value={passwordConfirmation}
+                  variant="outline"
+                  type={show ? "text" : "password"}
+                  placeholder="Repeat your password"
+                  onChange={(e) => setPasswordConfirmation(e.target.value)}
+                  sx={inputSx}
+                />
+              </InputGroup>
+            </div>
+          </div>
+
           {/* Submit */}
           <Box
             as="button"
-            onClick={signup}
+            onClick={signup_handler}
             disabled={loading}
             sx={{
               width: "100%",
