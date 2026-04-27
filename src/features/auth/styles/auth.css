@@ -14,7 +14,7 @@
   font-family: 'Plus Jakarta Sans', sans-serif;
 }
 
-/* ─── Logo ──────────────────────────────────────────────── */
+/* ─── Logo ─────────────────────────────────────────────── */
 .logo {
   font-size: 24px;
   font-weight: 800;
@@ -25,6 +25,15 @@
 
 .dataxo {
   color: #3b82f6;
+}
+
+.auth-heading {
+  font-weight: 700;
+  color: #fff;
+  margin-bottom: 20px;
+  letter-spacing: 0.3px;
+  line-height: 1.2;
+  font-size: 24px;
 }
 
 /* ─── Card ──────────────────────────────────────────────── */
@@ -106,6 +115,7 @@
   font-size: 12px;
   font-weight: 600;
   color: #60a5fa;
+  margin-bottom: 7px;
   text-decoration: none;
   transition: color 0.2s;
 }
@@ -137,4 +147,18 @@
   text-align: center;
   font-size: 13px;
   color: rgba(255, 255, 255, 0.4);
+}
+
+/* Media Query */
+
+@media (max-width: 768px) {
+  .auth-heading {
+    font-size: 22px;
+  }
+}
+
+@media (max-width: 480px) {
+  .auth-heading {
+    font-size: 20px;
+  }
 }

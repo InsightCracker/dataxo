@@ -54,7 +54,7 @@ const ProfilePage = () => {
               </Box>
               <div className="list-text">
                 <p>Total Points</p>
-                <h3>0</h3>
+                <h3>0 pts</h3>
               </div>
             </div>
           </div>
@@ -71,7 +71,7 @@ const ProfilePage = () => {
               <p>Answer today's question!</p>
 
               <p>
-                <span>Reward:</span> +20 points
+                <span>Reward:</span> +20 pts
               </p>
 
                 <div className="max-box-btn">

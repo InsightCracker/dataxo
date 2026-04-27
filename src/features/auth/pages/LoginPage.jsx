@@ -23,6 +23,7 @@ import {
 } from "react-icons/lu";
 
 import { useContext, useState } from "react";
+import { showToast } from '../../../util/toastUtil';
 import { useNavigate } from "react-router-dom";
 import { QuizContext } from "../../../util/Contexts";
 import { useAuth } from "../../../util/AuthContext";
@@ -41,36 +42,31 @@ const LoginPage = () => {
 
   const login_handler = async () => {
     if (email === "" || password === "") {
-      toast({
-        description: "Please enter your details",
-        status: "error",
-        duration: 2000,
-        position: "bottom-left",
-      });
+      showToast(toast, "warning", "Please enter your email and password");
       return;
     }
 
     setLoading(true);
     try {
       const res = await loginUser(email, password);
+
       if (res.token) {
-   login({ email }, res.token);
-    navigate("/users/profile");
+        showToast(toast, "success", "Login successful");
+        login({ email }, res.token);
+        navigate("/users/profile");
       } else {
-        toast({
-          description: res.message || "Invalid credentials",
-          status: "error",
-          duration: 3000,
-          position: "bottom-left",
-        });
+        showToast(
+          toast,
+          "error",
+          res.message || "Incorrect email or password"
+        );
       }
     } catch (err) {
-      toast({
-        description: "Something went wrong. Try again.",
-        status: "error",
-        duration: 3000,
-        position: "bottom-left",
-      });
+      showToast(
+        toast,
+        "error",
+        "Unable to login. Check your connection and try again."
+      );
     } finally {
       setLoading(false);
     }
@@ -88,8 +84,8 @@ const LoginPage = () => {
       <Box className="login-card">
 
         <Box className="login-badge">✦ Welcome back</Box>
-
-        <h2>Log in to DataEre</h2>
+        
+        <Text className="auth-heading">Log in to DataEre</Text>
 
         <div className="form">
 
@@ -218,7 +214,7 @@ const LoginPage = () => {
           <Box className="login-signup-row">
             <Text>
               New to DataEre?{" "}
-              <a href="/users/signup" className="login-link">Create a free account →</a>
+              <a href="/users/signup" className="login-link">Create a free account</a>
             </Text>
           </Box>
 

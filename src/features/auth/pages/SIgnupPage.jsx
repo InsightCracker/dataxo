@@ -25,6 +25,7 @@ import {
 
 import { useState } from "react";
 import { useNavigate } from "react-router-dom";
+import { showToast } from '../../../util/toastUtil';
 import { useAuth } from "../../../util/AuthContext";
 import { registerUser } from "../../../util/api";
 
@@ -44,22 +45,22 @@ const SignupPage = () => {
 
   const signup_handler = async () => {
     if (!firstName || !lastName || !email || !password || !passwordConfirmation) {
-      toast({
-        description: "Please fill in all fields",
-        status: "error",
-        duration: 2000,
-        position: "bottom-left",
-      });
+      showToast(toast, "warning", "All fields are required");
+      return;
+    }
+
+    // 🔐 Password strength check
+    if (password.length < 6) {
+      showToast(
+        toast,
+        "warning",
+        "Password must be at least 6 characters"
+      );
       return;
     }
 
     if (password !== passwordConfirmation) {
-      toast({
-        description: "Passwords do not match",
-        status: "error",
-        duration: 2000,
-        position: "bottom-left",
-      });
+      showToast(toast, "warning", "Passwords do not match");
       return;
     }
 
@@ -68,23 +69,27 @@ const SignupPage = () => {
       const res = await registerUser(firstName, lastName, email, password, passwordConfirmation);
 
       if (res.token) {
+        showToast(toast, "success", "Account created successfully 🎉");
+
         login(res.data, res.token);
-        navigate("/users/profile");
+
+        // slight delay so user sees feedback
+        setTimeout(() => {
+          navigate("/users/profile");
+        }, 800);
       } else {
-        toast({
-          description: res.message || "Registration failed. Try again.",
-          status: "error",
-          duration: 3000,
-          position: "bottom-left",
-        });
+        showToast(
+          toast,
+          "error",
+          res.message || "Registration failed. Please try again."
+        );
       }
     } catch (err) {
-      toast({
-        description: "Something went wrong. Try again.",
-        status: "error",
-        duration: 3000,
-        position: "bottom-left",
-      });
+      showToast(
+        toast,
+        "error",
+        "Unable to register. Check your connection and try again."
+      );
     } finally {
       setLoading(false);
     }
@@ -116,8 +121,8 @@ const SignupPage = () => {
       <Box className="login-card">
 
         <Box className="login-badge">✦ Get started for free</Box>
-
-        <h2>Create your DataEre account</h2>
+        
+        <Text className="auth-heading">Create your DataEre account</Text>
 
         <div className="form">
 
@@ -275,7 +280,7 @@ const SignupPage = () => {
           <Box className="login-signup-row">
             <Text>
               Already a member?{" "}
-              <a href="/users/login" className="login-link">Log in to your account →</a>
+              <a href="/users/login" className="login-link">Log in to your account</a>
             </Text>
           </Box>
 
