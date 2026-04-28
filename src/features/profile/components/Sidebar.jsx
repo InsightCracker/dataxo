@@ -34,18 +34,22 @@ const location = useLocation();
       {/* <div className="sidebar-logo">
         <h1>DataEre</h1>
       </div> */}
-   {/* User Profile Section */}
-<div className="sidebar-profile">
-  <div className="sidebar-avatar">
-    {user?.firstName ? user.firstName[0].toUpperCase() : user?.email ? user.email[0].toUpperCase() : "U"}
-  </div>
-  <div className="sidebar-user-info">
-    <p className="sidebar-user-name">
-      {user?.firstName ? `${user.firstName} ${user.lastName}` : "Welcome!"}
-    </p>
-    <p className="sidebar-user-email">{user?.email || ""}</p>
-  </div>
-</div>
+    {/* User Profile Section */}
+      <div className="sidebar-profile">
+        <div className="sidebar-avatar">
+          {
+            user?.firstName ? 
+            user.firstName[0].toUpperCase() : 
+            user?.email ? 
+            user.email[0].toUpperCase() : "U"}
+        </div>
+        <div className="sidebar-user-info">
+          <p className="sidebar-user-name">
+            {user?.firstName ? `${user.firstName} ${user.lastName}` : "Welcome!"}
+          </p>
+          <p className="sidebar-user-email">{user?.email || ""}</p>
+        </div>
+      </div>
       {/* Nav Links Section */}
       <nav className="sidebar-nav">
         <ul>

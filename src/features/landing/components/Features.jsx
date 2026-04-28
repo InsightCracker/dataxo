@@ -5,26 +5,26 @@ const features = [
   {
     icon: FaRocket,
     color: "#4a9eff",
-    title: "Fast-Track Your Learning",
-    desc: "Engaging quizzes and practical challenges that accelerate your journey from beginner to confident data professional.",
+    title: "Real-World Practice, Not Passive Learning",
+    desc: "Engaging scenario-based quizzes with messy, realistic datasets that mirror actual analyst work — so you can move beyond tutorials and build real confidence.",
   },
   {
     icon: FaBrain,
     color: "#b388ff",
     title: "Beyond Tools — Real Thinking",
-    desc: "We help you master concepts, critical reasoning, and problem-solving — not just software buttons.",
+    desc: "Go beyond clicking buttons. Develop strong analytical reasoning, decision-making, and problem-solving skills that help you handle ambiguity and deliver actionable insights.",
   },
   {
     icon: FaGlobe,
     color: "#69f0ae",
-    title: "Learn From Anywhere",
-    desc: "Accessible to students, analysts, and aspiring data scientists across the world at your own pace.",
+    title: "Built for Real Progress",
+    desc: "Whether you're an aspiring data analyst, career switcher, student, or junior professional — DataEre helps you learn faster, retain more, and perform better in real job situations.",
   },
   {
     icon: FaLightbulb,
     color: "#ffd740",
-    title: "Smart Feedback & Guidance",
-    desc: "Actionable insights on your progress so you always know what to improve and why.",
+    title: "Instant Feedback & Progress Tracking",
+    desc: "Receive smart, actionable feedback after every challenge so you clearly understand your strengths and exactly what to improve.",
   },
 ];
 
@@ -78,7 +78,7 @@ const Features = () => {
           maxW="500px"
           lineHeight="1.8"
         >
-          Building a smarter way to learn data — for everyone, everywhere.
+          We don’t just teach you tools. We train you to think and solve problems like a professional data analyst.
         </Text>
       </Flex>
 

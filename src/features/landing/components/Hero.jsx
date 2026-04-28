@@ -104,7 +104,7 @@ const Hero = () => {
         px={{ base: "1.5rem", md: "5%" }}
         position="relative"
         zIndex="1"
-        maxW="850px"
+        maxW="900px"
         gap="1.5rem"
         pt={{ base: "5rem", md: "6rem" }}
         pb={{ base: "2rem", md: "3rem" }}
@@ -128,19 +128,19 @@ const Hero = () => {
         {/* Headline */}
         <Text
           as="h1"
-          fontSize={{ base: "2.6rem", md: "4rem", lg: "4.5rem" }}
+          fontSize={{ base: "2.5rem", md: "3rem", lg: "3.5rem" }}
           fontWeight="800"
           lineHeight="1.15"
           color="white"
           letterSpacing="-1px"
         >
-          Your Data Workflow,{" "}
+          World Data Skills,{" "}
           <Text
             as="span"
             bgGradient="linear(135deg, #304ecf, #4a9eff)"
             bgClip="text"
           >
-            All in One Hub
+            Not Just Tools
           </Text>
         </Text>
 
@@ -151,8 +151,7 @@ const Hero = () => {
           maxW="580px"
           lineHeight="1.7"
         >
-          Engage with quizzes, convert PDFs to Excel, and generate reports —
-          seamlessly.
+          Practice real-world data challenges, convert messy PDFs into clean Excel files, and turn your analysis into clear, actionable reports — all in one powerful platform.
         </Text>
 
         {/* Buttons */}
@@ -205,7 +204,7 @@ const Hero = () => {
           flexWrap="wrap"
           justify="center"
         >
-          {["Interactive Quizzes", "PDF to Excel", "Real-time Reports"].map(
+          {["Start Practicing for Free", "Try PDF to Excel Converter", "Real-time Reports"].map(
             (stat) => (
               <HStack key={stat} spacing="0.4rem">
                 <Box w="6px" h="6px" borderRadius="full" bg="#4a9eff" />

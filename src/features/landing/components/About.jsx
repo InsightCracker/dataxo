@@ -7,13 +7,13 @@ const features = [
     icon: BsBarChartFill,
     color: "#4a9eff",
     title: "Smart Data Quizzes",
-    desc: "Take interactive, hands-on quizzes on Excel, Power BI, data modeling, and more. Track your progress as your confidence grows with every challenge.",
+    desc: "Tackle real-world challenges with messy datasets and ambiguous business questions. Practice cleaning data, choosing the right approach, and turning insights into recommendations — just like on the job.",
   },
   {
     icon: FaFilePdf,
     color: "#ff6b6b",
     title: "PDF to CSV/XLSX Converter",
-    desc: "Easily convert PDFs to CSV or Excel files. Streamline your workflow, save time, and get accurate data ready for analysis.",
+    desc: "Instantly convert scanned reports, stakeholder documents, and messy PDFs into structured, analysis-ready Excel files. Practice one of the most frequent and painful tasks analysts face daily",
   },
   {
     icon: FaBrain,
@@ -25,7 +25,7 @@ const features = [
     icon: FaFileAlt,
     color: "#69f0ae",
     title: "Instant Report Generator",
-    desc: "Upload a screenshot of your dashboard and get a professional report instantly — available in PDF, Word, or README format.",
+    desc: "Turn your analysis into clear, professional reports that communicate insights effectively to stakeholders.",
   },
 ];
 
@@ -79,9 +79,7 @@ const About = () => {
           maxW="600px"
           lineHeight="1.8"
         >
-          DataEre combines interactive quizzes, PDF-to-Excel conversion, and
-          real-world scenarios to help analysts and data enthusiasts go beyond
-          just using tools.
+          DataEre helps aspiring and junior data analysts go beyond passive tutorials — with real-world quizzes, PDF-to-Excel conversion, and messy scenario challenges that teach you to think and perform like a confident data professional.
         </Text>
       </Flex>
 
