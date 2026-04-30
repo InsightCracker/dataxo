@@ -8,9 +8,9 @@ const QuizTimer = ({ initialTime = 300 }) => { // default = 5 minute
 
   useEffect(() => {
     if (timeLeft <= 0) {
-      if (location.pathname === "/solo") {
-        navigate("/result");
-      } else if (location.pathname === "/vsbot") {
+      if (location.pathname === "/quiz/solo") {
+        navigate("/quiz/result");
+      } else if (location.pathname === "/quiz/vsbot") {
         navigate("/multiend");
       }
       

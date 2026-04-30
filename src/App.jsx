@@ -119,7 +119,7 @@ useEffect(() => {
             <Route path="/users/profile" element={<ProfilePage />} />
             <Route path="/quiz/topics" element={<QuizDashboard />} />
             <Route path="/quiz/solo" element={<QuickPlay />} />
-            <Route path="/results" element={<Results />} />
+            <Route path="/quiz/results" element={<Results />} />
             <Route path="/quiz/vsbot" element={<VsBot />} />
             <Route path="/board" element={<Leaderboard />} />
             {/* Converter */}
